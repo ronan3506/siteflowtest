@@ -3,7 +3,6 @@ import imgImage3 from "../../../imports/4OnboardingFinalFixed/106e321b1f59737e2c
 import svgPaths from "../../../imports/4OnboardingFinalFixed/svg-5hfjsbxx4a";
 import { useLanguage } from "../../i18n/LanguageContext";
 import { useTranslations } from "../../i18n/translations";
-import { LangPickerModal } from "../LangPickerModal";
 
 function ChecklistRow({ text }: { text: string }) {
   return (
@@ -21,10 +20,9 @@ function ChecklistRow({ text }: { text: string }) {
 }
 
 export function Screen4({ onNext }: { onNext: () => void }) {
-  const { lang } = useLanguage();
+export function Screen4({ onNext }: { onNext: () => void }) {
+  const { lang, setLangModalOpen } = useLanguage();
   const t = useTranslations(lang);
-  const [langOpen, setLangOpen] = useState(false);
-
   return (
     <div className="relative size-full" style={{ background: "#fbf9f8" }}>
       {/* Header */}
@@ -40,7 +38,7 @@ export function Screen4({ onNext }: { onNext: () => void }) {
           </div>
         </div>
         <button
-          onClick={() => setLangOpen(true)}
+          onClick={() => setLangModalOpen(true)}
           className="bg-[#7a3100] h-[31px] rounded-[28.6px] flex items-center px-[14px] gap-[8px] active:opacity-80 transition-opacity"
         >
           <span className="capitalize font-['Outfit:Regular',sans-serif] text-[15.3px] text-white whitespace-nowrap leading-none">
@@ -95,8 +93,6 @@ export function Screen4({ onNext }: { onNext: () => void }) {
         </span>
       </button>
 
-      {/* Language Picker Modal */}
-      <LangPickerModal open={langOpen} onClose={() => setLangOpen(false)} />
     </div>
   );
 }

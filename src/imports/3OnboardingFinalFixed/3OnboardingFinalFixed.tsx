@@ -1,5 +1,7 @@
 import svgPaths from "./svg-m3tdp6kh6r";
 import imgImage2 from "./e87d585257b79bd34e441e463dd87be18886084e.png";
+import { useLanguage } from "../../app/i18n/LanguageContext";
+import { useTranslations } from "../../app/i18n/translations";
 
 function HeroIllustration() {
   return <div className="absolute h-[336px] left-[24px] top-[342px] w-[342px]" data-name="Hero Illustration" />;
@@ -142,13 +144,15 @@ function MdiExchange() {
 }
 
 function LangChangeButton() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="bg-[#7a3100] h-[31px] rounded-[28.615px] flex items-center px-[10px] gap-[4px]" data-name="Lang Change Button">
       <span
         className="capitalize font-['Outfit:Regular','Noto_Sans_Kannada:Regular',sans-serif] text-[15.296px] text-white tracking-[-0.1683px] whitespace-nowrap leading-none"
         style={{ fontVariationSettings: "'wdth' 100, 'wght' 400" }}
       >
-        ಕನ್ನ
+        {t("langPillLabel")}
       </span>
       <MdiExchange />
     </div>

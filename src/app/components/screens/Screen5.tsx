@@ -3,7 +3,6 @@ import { motion } from "motion/react";
 import svgPaths from "../../../imports/5RoleSelectionFixed/svg-xze5wifxs3";
 import { useLanguage } from "../../i18n/LanguageContext";
 import { useTranslations } from "../../i18n/translations";
-import { LangPickerModal } from "../LangPickerModal";
 
 export function Screen5({
   onContinue,
@@ -12,10 +11,9 @@ export function Screen5({
   onContinue: (role: string) => void;
   returningUser?: boolean;
 }) {
-  const { lang } = useLanguage();
+  const { lang, setLangModalOpen } = useLanguage();
   const t = useTranslations(lang);
   const [selected, setSelected] = useState<string | null>(null);
-  const [langOpen, setLangOpen] = useState(false);
   const enabled = selected !== null;
 
   const ROLES = [
@@ -48,7 +46,7 @@ export function Screen5({
           </div>
         </div>
         <button
-          onClick={() => setLangOpen(true)}
+          onClick={() => setLangModalOpen(true)}
           className="bg-[#7a3100] h-[31px] rounded-[28.6px] flex items-center px-[14px] gap-[8px] active:opacity-80 transition-opacity"
         >
           <span className="capitalize font-['Outfit:Regular',sans-serif] text-[15.3px] text-white whitespace-nowrap leading-none">
@@ -131,8 +129,6 @@ export function Screen5({
           </motion.button>
         </div>
       )}
-
-      <LangPickerModal open={langOpen} onClose={() => setLangOpen(false)} />
     </div>
   );
 }

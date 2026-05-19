@@ -6,7 +6,8 @@
   display: none;
 }
 
-/* Thin dark bezel surrounding the phone shell */
+/* Scale the fixed 390x844 design to fit any viewport while preserving
+   aspect ratio. */
 .phone-bezel {
   display: inline-flex;
   flex-shrink: 0;
@@ -17,6 +18,8 @@
     0 0 0 1px rgba(255,255,255,0.06) inset,
     0 32px 64px -16px rgba(0,0,0,0.55),
     0 8px 24px -4px rgba(0,0,0,0.35);
+  transform-origin: center center;
+  transform: scale(min(1, calc(100svw / 410), calc(100svh / 864)));
 }
 
 .phone-shell {
@@ -30,22 +33,12 @@
   transform-origin: center center;
 }
 
-/* Scale the fixed 390x844 design to fit any viewport while preserving
-   aspect ratio. Uses svw/svh (small viewport units) so the scale stays
-   stable when the mobile URL bar shows/hides — no live resizing.
-   Internal layouts remain pixel-identical across every device. */
-@media (max-width: 500px), (max-height: 960px) {
+@media (max-width: 500px) {
   .phone-bezel {
     border-radius: 0;
     padding: 0;
     background: transparent;
     box-shadow: none;
-  }
-  .phone-shell {
-    transform: scale(
-      min(calc(100svw / 390), calc(100svh / 844))
-    );
-    border-radius: 0;
-    box-shadow: none;
+    transform: scale(min(calc(100svw / 390), calc(100svh / 844)));
   }
 }

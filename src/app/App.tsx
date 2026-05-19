@@ -11,7 +11,8 @@ import { ContractorApp } from "./components/ContractorApp";
 import { ArchitectApp } from "./components/ArchitectApp";
 import { ClientApp } from "./components/ClientApp";
 import { WorkerApp } from "./components/WorkerApp";
-import { LanguageProvider } from "./i18n/LanguageContext";
+import { LanguageProvider, useLanguage } from "./i18n/LanguageContext";
+import { LangPickerModal } from "./components/LangPickerModal";
 
 type Step = 1 | 2 | 3 | 4 | 5 | 6 | 7;
 
@@ -21,6 +22,7 @@ function AppInner() {
   const [mode, setMode] = useState<"onboarding" | "contractor">("onboarding");
   const [role, setRole] = useState("contractor");
   const [loginMode, setLoginMode] = useState(false);
+  const { isLangModalOpen, setLangModalOpen } = useLanguage();
 
   const go = (next: Step) => {
     setDirection(next > step ? 1 : -1);
@@ -103,6 +105,7 @@ function AppInner() {
               </motion.div>
             )}
           </AnimatePresence>
+          <LangPickerModal open={isLangModalOpen} onClose={() => setLangModalOpen(false)} />
         </div>
       </div>
     </div>

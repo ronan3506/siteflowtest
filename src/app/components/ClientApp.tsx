@@ -11,7 +11,6 @@ import TimelineDecisionDetail from "./TimelineDecisionDetail";
 import TimelineSiteUpdateDetail from "./TimelineSiteUpdateDetail";
 import { useLanguage } from "../i18n/LanguageContext";
 import { useTranslations } from "../i18n/translations";
-import { LangPickerModal } from "./LangPickerModal";
 
 // Client Figma screen imports
 import Component2Descisons from "../../imports/2Descisons/2Descisons";
@@ -126,9 +125,8 @@ const detailVariants = {
 
 // ─── PersistentHeader ─────────────────────────────────────────────────────────
 function PersistentHeader({ onMenuOpen }: { onMenuOpen: () => void }) {
-  const { lang } = useLanguage();
+  const { lang, setLangModalOpen } = useLanguage();
   const t = useTranslations(lang);
-  const [langOpen, setLangOpen] = useState(false);
   return (
     <div className="absolute top-0 left-0 right-0 overflow-hidden bg-white z-40" style={{ height: HEADER_H }}>
       <div style={{
@@ -144,7 +142,7 @@ function PersistentHeader({ onMenuOpen }: { onMenuOpen: () => void }) {
             style={{ left: 8, top: 8, width: 56, height: 48, background: "transparent", zIndex: 10 }}
           />
           {/* Language toggle */}
-          <button onClick={() => setLangOpen(true)} className="absolute bg-[#7a3100] h-[31px] left-[300px] rounded-[28.615px] top-[17px] px-[12px] flex items-center gap-[6px] cursor-pointer active:opacity-80 transition-opacity" style={{ border: 'none', zIndex: 20 }}>
+          <button onClick={() => setLangModalOpen(true)} className="absolute bg-[#7a3100] h-[31px] left-[300px] rounded-[28.615px] top-[17px] px-[12px] flex items-center gap-[6px] cursor-pointer active:opacity-80 transition-opacity" style={{ border: 'none', zIndex: 20 }}>
             <span className="capitalize font-['Outfit:Regular',sans-serif] text-[15.3px] text-white whitespace-nowrap leading-none">
               {t("langPillLabel")}
             </span>
@@ -177,7 +175,6 @@ function PersistentHeader({ onMenuOpen }: { onMenuOpen: () => void }) {
           </div>
         </div>
       </div>
-      <LangPickerModal open={langOpen} onClose={() => setLangOpen(false)} />
     </div>
   );
 }

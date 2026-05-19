@@ -3,15 +3,13 @@ import { motion } from "motion/react";
 import svgPaths from "../../../imports/6ProfileSetupMobilePhoneSync/svg-fu02xaf4y6";
 import { useLanguage } from "../../i18n/LanguageContext";
 import { useTranslations } from "../../i18n/translations";
-import { LangPickerModal } from "../LangPickerModal";
 
 export function Screen6({ onContinue }: { onContinue: () => void }) {
-  const { lang } = useLanguage();
+  const { lang, setLangModalOpen } = useLanguage();
   const t = useTranslations(lang);
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
   const [photo, setPhoto] = useState<string | null>(null);
-  const [langOpen, setLangOpen] = useState(false);
   const fileRef = useRef<HTMLInputElement>(null);
 
   const enabled = name.trim().length > 0 && phone.trim().length >= 10;
@@ -36,7 +34,7 @@ export function Screen6({ onContinue }: { onContinue: () => void }) {
           </div>
         </div>
         <button
-          onClick={() => setLangOpen(true)}
+          onClick={() => setLangModalOpen(true)}
           className="bg-[#7a3100] h-[31px] rounded-[28.6px] flex items-center px-[14px] gap-[8px] active:opacity-80 transition-opacity"
         >
           <span className="capitalize font-['Outfit:Regular',sans-serif] text-[15.3px] text-white whitespace-nowrap leading-none">
@@ -129,8 +127,6 @@ export function Screen6({ onContinue }: { onContinue: () => void }) {
           {t("continue")}
         </motion.button>
       </div>
-
-      <LangPickerModal open={langOpen} onClose={() => setLangOpen(false)} />
     </div>
   );
 }

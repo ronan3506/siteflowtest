@@ -4,7 +4,6 @@ import headerSvgPaths from "../../imports/1TodayBoardHomeScreen-1/svg-dgyex2e769
 import { Screen5 } from "./screens/Screen5";
 import { useLanguage } from "../i18n/LanguageContext";
 import { useTranslations } from "../i18n/translations";
-import { LangPickerModal } from "./LangPickerModal";
 
 // ─── Images (relative imports matching the Figma source directories) ──────────
 import imgImage2 from "../../imports/1TaskListHomeFinalColor/f068387a9ecb0831125f5b8205e70bd6b4c10d22.png";
@@ -116,9 +115,8 @@ function BackChevron() {
 
 // ─── SITEFLOW Header (Active Tasks home only) ─────────────────────────────────
 function SiteflowHeader({ onHamburger }: { onHamburger: () => void }) {
-  const { lang } = useLanguage();
+  const { lang, setLangModalOpen } = useLanguage();
   const t = useTranslations(lang);
-  const [langOpen, setLangOpen] = useState(false);
   return (
     <div
       className="absolute top-0 left-0 right-0 overflow-hidden"
@@ -137,7 +135,7 @@ function SiteflowHeader({ onHamburger }: { onHamburger: () => void }) {
       >
         <div className="absolute bg-[#fbf9f8] h-[64px] left-0 top-0 w-[412px]">
           {/* Language toggle */}
-          <button onClick={() => setLangOpen(true)} className="absolute bg-[#7a3100] h-[31px] left-[300px] rounded-[28.615px] top-[17px] px-[12px] flex items-center gap-[6px] cursor-pointer active:opacity-80 transition-opacity" style={{ border: 'none', zIndex: 20 }}>
+          <button onClick={() => setLangModalOpen(true)} className="absolute bg-[#7a3100] h-[31px] left-[300px] rounded-[28.615px] top-[17px] px-[12px] flex items-center gap-[6px] cursor-pointer active:opacity-80 transition-opacity" style={{ border: 'none', zIndex: 20 }}>
             <span className="capitalize font-['Outfit:Regular',sans-serif] text-[15.3px] text-white whitespace-nowrap leading-none">
               {t("langPillLabel")}
             </span>
@@ -179,7 +177,6 @@ function SiteflowHeader({ onHamburger }: { onHamburger: () => void }) {
           </div>
         </div>
       </div>
-      <LangPickerModal open={langOpen} onClose={() => setLangOpen(false)} />
     </div>
   );
 }
