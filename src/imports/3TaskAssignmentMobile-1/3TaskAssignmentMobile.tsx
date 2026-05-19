@@ -1,3 +1,5 @@
+import { useLanguage } from "../../app/i18n/LanguageContext";
+import { useTranslations } from "../../app/i18n/translations";
 import svgPaths from "./svg-ybiry1cibf";
 import imgImage14 from "./181963f2d49061eccafc8eb373f52a6dd6870927.png";
 import imgImage13 from "./f4775925dd8ae51fa91df8581e2ff018eeedf1fa.png";
@@ -5,26 +7,32 @@ import imgImage12 from "./c79072b03053f8d4e1dfff5980541de18329d1f1.png";
 import imgImage15 from "./8397a0af8108bd240a71798f6fa6a6f4edcebf3b.png";
 
 function Heading() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="h-[16.5px] relative shrink-0 w-[130.59px]" data-name="Heading 2">
       <div className="-translate-y-1/2 absolute flex flex-col font-['Manrope:ExtraBold',sans-serif] font-extrabold justify-center leading-[0] left-0 text-[#564239] text-[11px] top-[7.5px] tracking-[1.1px] uppercase whitespace-nowrap">
-        <p className="leading-[16.5px]">01. SITE AREA</p>
+        <p className="leading-[16.5px]">{t("1SITEAREA")}</p>
       </div>
     </div>
   );
 }
 
 function Container1() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="content-stretch flex flex-col items-start relative shrink-0" data-name="Container">
       <div className="flex flex-col font-['Manrope:ExtraBold',sans-serif] font-black justify-center leading-[0] relative shrink-0 text-[#8a7267] text-[9px] tracking-[-0.45px] whitespace-nowrap">
-        <p className="leading-[13.5px]">REQUIRED</p>
+        <p className="leading-[13.5px]">{t("rEQUIRED")}</p>
       </div>
     </div>
   );
 }
 
 function Container() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="content-stretch flex items-end justify-between relative shrink-0 w-full" data-name="Container">
       <Heading />
@@ -34,6 +42,8 @@ function Container() {
 }
 
 function Container3() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="relative shrink-0 w-full" data-name="Container">
       <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex flex-col items-start relative size-full">
@@ -48,16 +58,20 @@ function Container3() {
 }
 
 function Container5() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="content-stretch flex flex-col items-start relative shrink-0 w-full" data-name="Container">
       <div className="flex flex-col font-['Manrope:ExtraBold',sans-serif] font-extrabold justify-center leading-[0] relative shrink-0 text-[#1b1c1c] text-[14px] uppercase w-full">
-        <p className="leading-[20px]">Ground floor</p>
+        <p className="leading-[20px]">{t("groundFloor")}</p>
       </div>
     </div>
   );
 }
 
 function Container6() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="content-stretch flex flex-col items-start relative shrink-0 w-full" data-name="Container">
       <div className="flex flex-col font-['Manrope:Medium',sans-serif] font-medium justify-center leading-[0] relative shrink-0 text-[#564239] text-[10px] uppercase w-full">
@@ -68,6 +82,8 @@ function Container6() {
 }
 
 function Container4() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="relative shrink-0 w-full" data-name="Container">
       <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex flex-col items-start relative size-full">
@@ -79,6 +95,8 @@ function Container4() {
 }
 
 function BackgroundBorder() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="absolute bg-white content-stretch flex flex-col h-[128px] items-start justify-between left-0 min-w-[200px] p-[21px] rounded-[12px] top-0 w-[200px]" data-name="Background+Border">
       <div aria-hidden="true" className="absolute border border-[#7a3100] border-solid inset-0 pointer-events-none rounded-[12px]" />
@@ -89,6 +107,8 @@ function BackgroundBorder() {
 }
 
 function Container7() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="relative shrink-0 w-full" data-name="Container">
       <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex flex-col items-start relative size-full">
@@ -103,16 +123,20 @@ function Container7() {
 }
 
 function Container9() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="content-stretch flex flex-col items-start relative shrink-0 w-full" data-name="Container">
       <div className="flex flex-col font-['Manrope:ExtraBold',sans-serif] font-extrabold justify-center leading-[0] relative shrink-0 text-[#1b1c1c] text-[14px] uppercase w-full">
-        <p className="leading-[20px]">1st floor</p>
+        <p className="leading-[20px]">{t("1stFloor")}</p>
       </div>
     </div>
   );
 }
 
 function Container10() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="content-stretch flex flex-col items-start relative shrink-0 w-full" data-name="Container">
       <div className="flex flex-col font-['Manrope:Medium',sans-serif] font-medium justify-center leading-[0] relative shrink-0 text-[#564239] text-[10px] uppercase w-full">
@@ -123,6 +147,8 @@ function Container10() {
 }
 
 function Container8() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="relative shrink-0 w-full" data-name="Container">
       <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex flex-col items-start relative size-full">
@@ -134,6 +160,8 @@ function Container8() {
 }
 
 function BackgroundBorder1() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="absolute bg-[#fbf9f8] content-stretch flex flex-col h-[128px] items-start justify-between left-[216px] min-w-[200px] p-[21px] rounded-[12px] top-0 w-[200px]" data-name="Background+Border">
       <div aria-hidden="true" className="absolute border border-[#bdbdbd] border-solid inset-0 pointer-events-none rounded-[12px]" />
@@ -144,6 +172,8 @@ function BackgroundBorder1() {
 }
 
 function Container11() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="relative shrink-0 w-full" data-name="Container">
       <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex flex-col items-start relative size-full">
@@ -158,26 +188,32 @@ function Container11() {
 }
 
 function Container13() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="content-stretch flex flex-col items-start relative shrink-0 w-full" data-name="Container">
       <div className="flex flex-col font-['Manrope:ExtraBold',sans-serif] font-extrabold justify-center leading-[0] relative shrink-0 text-[#1b1c1c] text-[14px] uppercase w-full">
-        <p className="leading-[20px]">EXTERIOR C-01</p>
+        <p className="leading-[20px]">{t("eXTERIORC1")}</p>
       </div>
     </div>
   );
 }
 
 function Container14() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="content-stretch flex flex-col items-start relative shrink-0 w-full" data-name="Container">
       <div className="flex flex-col font-['Manrope:Medium',sans-serif] font-medium justify-center leading-[0] relative shrink-0 text-[#564239] text-[10px] uppercase w-full">
-        <p className="leading-[15px]">LANDSCAPING PHASE 1</p>
+        <p className="leading-[15px]">{t("lANDSCAPINGPHASE1")}</p>
       </div>
     </div>
   );
 }
 
 function Container12() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="relative shrink-0 w-full" data-name="Container">
       <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex flex-col items-start relative size-full">
@@ -189,6 +225,8 @@ function Container12() {
 }
 
 function BackgroundBorder2() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="absolute bg-[#fbf9f8] content-stretch flex flex-col h-[128px] items-start justify-between left-[432px] min-w-[200px] p-[21px] rounded-[12px] top-0 w-[200px]" data-name="Background+Border">
       <div aria-hidden="true" className="absolute border border-[rgba(0,0,0,0)] border-solid inset-0 pointer-events-none rounded-[12px]" />
@@ -199,6 +237,8 @@ function BackgroundBorder2() {
 }
 
 function Container2() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="no-scrollbar h-[136px] overflow-auto relative shrink-0 w-full" data-name="Container">
       <BackgroundBorder />
@@ -209,6 +249,8 @@ function Container2() {
 }
 
 function Section1ZoneSelection() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="content-stretch flex flex-col gap-[16px] items-start relative shrink-0 w-full" data-name="Section 1: Zone Selection">
       <Container />
@@ -218,16 +260,20 @@ function Section1ZoneSelection() {
 }
 
 function Heading1() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="content-stretch flex flex-col items-start relative shrink-0 w-full" data-name="Heading 2">
       <div className="flex flex-col font-['Manrope:ExtraBold',sans-serif] font-extrabold justify-center leading-[0] relative shrink-0 text-[#564239] text-[11px] tracking-[1.1px] uppercase w-full">
-        <p className="leading-[16.5px]">02. SKILL SETS</p>
+        <p className="leading-[16.5px]">{t("2SKILLSETS")}</p>
       </div>
     </div>
   );
 }
 
 function Container16() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="h-[16px] relative shrink-0 w-[18px]" data-name="Container">
       <svg className="absolute block inset-0 size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 18 16">
@@ -240,16 +286,20 @@ function Container16() {
 }
 
 function Container17() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="content-stretch flex flex-col items-start relative shrink-0" data-name="Container">
       <div className="flex flex-col font-['Manrope:ExtraBold',sans-serif] font-extrabold justify-center leading-[0] relative shrink-0 text-[#564239] text-[9px] uppercase whitespace-nowrap">
-        <p className="leading-[13.5px]">ELECTRIC</p>
+        <p className="leading-[13.5px]">{t("eLECTRIC")}</p>
       </div>
     </div>
   );
 }
 
 function Background() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="bg-[#fbf9f8] col-2 justify-self-stretch relative rounded-[12px] row-1 self-center shrink-0" data-name="Background">
       <div className="flex flex-col items-center justify-center size-full">
@@ -263,6 +313,8 @@ function Background() {
 }
 
 function Container18() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="h-[19px] relative shrink-0 w-[16px]" data-name="Container">
       <svg className="absolute block inset-0 size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 16 19">
@@ -275,16 +327,20 @@ function Container18() {
 }
 
 function Container19() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="content-stretch flex flex-col items-start relative shrink-0" data-name="Container">
       <div className="flex flex-col font-['Manrope:ExtraBold',sans-serif] font-extrabold justify-center leading-[0] relative shrink-0 text-[#564239] text-[9px] uppercase whitespace-nowrap">
-        <p className="leading-[13.5px]">Paint</p>
+        <p className="leading-[13.5px]">{t("paint")}</p>
       </div>
     </div>
   );
 }
 
 function Background1() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="bg-[#fbf9f8] col-3 justify-self-stretch relative rounded-[12px] row-1 self-center shrink-0" data-name="Background">
       <div className="flex flex-col items-center justify-center size-full">
@@ -298,6 +354,8 @@ function Background1() {
 }
 
 function Container20() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="h-[18.025px] relative shrink-0 w-[18.525px]" data-name="Container">
       <svg className="absolute block inset-0 size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 18.525 18.025">
@@ -310,16 +368,20 @@ function Container20() {
 }
 
 function Container21() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="content-stretch flex flex-col items-start relative shrink-0" data-name="Container">
       <div className="flex flex-col font-['Manrope:ExtraBold',sans-serif] font-extrabold justify-center leading-[0] relative shrink-0 text-[#564239] text-[9px] uppercase whitespace-nowrap">
-        <p className="leading-[13.5px]">MASONRY</p>
+        <p className="leading-[13.5px]">{t("mASONRY")}</p>
       </div>
     </div>
   );
 }
 
 function Background2() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="bg-[#fbf9f8] col-4 justify-self-stretch relative rounded-[12px] row-1 self-center shrink-0" data-name="Background">
       <div className="flex flex-col items-center justify-center size-full">
@@ -333,6 +395,8 @@ function Background2() {
 }
 
 function Container22() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="h-[19.55px] relative shrink-0 w-[16.3px]" data-name="Container">
       <svg className="absolute block inset-0 size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 16.3 19.55">
@@ -345,16 +409,20 @@ function Container22() {
 }
 
 function Container23() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="content-stretch flex flex-col items-start relative shrink-0" data-name="Container">
       <div className="flex flex-col font-['Manrope:ExtraBold',sans-serif] font-extrabold justify-center leading-[0] relative shrink-0 text-[9px] text-white uppercase whitespace-nowrap">
-        <p className="leading-[13.5px]">PLUMBING</p>
+        <p className="leading-[13.5px]">{t("pLUMBING")}</p>
       </div>
     </div>
   );
 }
 
 function Background3() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="bg-[#7a3100] col-1 justify-self-stretch relative rounded-[12px] row-1 self-center shrink-0" data-name="Background">
       <div className="flex flex-col items-center justify-center size-full">
@@ -368,6 +436,8 @@ function Background3() {
 }
 
 function Container15() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="gap-x-[8px] gap-y-[8px] grid grid-cols-[repeat(4,minmax(0,1fr))] grid-rows-[_77.50px] relative shrink-0 w-full" data-name="Container">
       <Background />
@@ -379,6 +449,8 @@ function Container15() {
 }
 
 function Section2SkillSelection() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="content-stretch flex flex-col gap-[16px] items-start relative shrink-0 w-full" data-name="Section 2: Skill Selection">
       <Heading1 />
@@ -388,16 +460,20 @@ function Section2SkillSelection() {
 }
 
 function Heading2() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="content-stretch flex flex-col items-start relative shrink-0 w-full" data-name="Heading 2">
       <div className="flex flex-col font-['Manrope:ExtraBold',sans-serif] font-extrabold justify-center leading-[0] relative shrink-0 text-[#564239] text-[11px] tracking-[1.1px] uppercase w-full">
-        <p className="leading-[16.5px]">03. ASSIGN WORKERS</p>
+        <p className="leading-[16.5px]">{t("3ASSIGNWORKERS")}</p>
       </div>
     </div>
   );
 }
 
 function Container26() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="h-[7.015px] relative shrink-0 w-[9.508px]" data-name="Container">
       <svg className="absolute block inset-0 size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 9.50833 7.01458">
@@ -410,6 +486,8 @@ function Container26() {
 }
 
 function Background4() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="absolute bg-[#7a3100] right-[-3px] size-[20px] top-[-3px]" data-name="Background">
       <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex items-center justify-center relative size-full">
@@ -420,6 +498,8 @@ function Background4() {
 }
 
 function BackgroundBorder3() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="bg-white content-stretch flex flex-col items-start justify-center p-[5px] relative rounded-[12px] shrink-0 size-[64px]" data-name="Background+Border">
       <div aria-hidden="true" className="absolute border border-[#7a3100] border-solid inset-0 pointer-events-none rounded-[12px]" />
@@ -434,16 +514,20 @@ function BackgroundBorder3() {
 }
 
 function Container27() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="content-stretch flex flex-col items-start relative shrink-0" data-name="Container">
       <div className="flex flex-col font-['Manrope:ExtraBold',sans-serif] font-extrabold justify-center leading-[0] relative shrink-0 text-[#1b1c1c] text-[10px] uppercase whitespace-nowrap">
-        <p className="leading-[15px]">RAJU</p>
+        <p className="leading-[15px]">{t("rAJU")}</p>
       </div>
     </div>
   );
 }
 
 function Container25() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="content-stretch flex flex-col gap-[8px] items-center relative self-stretch shrink-0" data-name="Container">
       <BackgroundBorder3 />
@@ -453,6 +537,8 @@ function Container25() {
 }
 
 function BackgroundBorder4() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="content-stretch flex flex-col items-start justify-center opacity-60 p-[5px] relative rounded-[12px] shrink-0 size-[64px]" data-name="Background+Border">
       <div aria-hidden="true" className="absolute inset-0 pointer-events-none rounded-[12px]">
@@ -470,16 +556,20 @@ function BackgroundBorder4() {
 }
 
 function Container29() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="content-stretch flex flex-col items-start relative shrink-0" data-name="Container">
       <div className="flex flex-col font-['Manrope:ExtraBold',sans-serif] font-extrabold justify-center leading-[0] relative shrink-0 text-[#564239] text-[10px] uppercase whitespace-nowrap">
-        <p className="leading-[15px]">SURAJ</p>
+        <p className="leading-[15px]">{t("sURAJ")}</p>
       </div>
     </div>
   );
 }
 
 function Container28() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="content-stretch flex flex-col gap-[8px] items-center relative self-stretch shrink-0" data-name="Container">
       <BackgroundBorder4 />
@@ -489,6 +579,8 @@ function Container28() {
 }
 
 function BackgroundBorder5() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="content-stretch flex flex-col items-start justify-center opacity-60 p-[5px] relative rounded-[12px] shrink-0 size-[64px]" data-name="Background+Border">
       <div aria-hidden="true" className="absolute inset-0 pointer-events-none rounded-[12px]">
@@ -506,16 +598,20 @@ function BackgroundBorder5() {
 }
 
 function Container31() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="content-stretch flex flex-col items-start relative shrink-0" data-name="Container">
       <div className="flex flex-col font-['Manrope:ExtraBold',sans-serif] font-extrabold justify-center leading-[0] relative shrink-0 text-[#564239] text-[10px] uppercase whitespace-nowrap">
-        <p className="leading-[15px]">KIRAN</p>
+        <p className="leading-[15px]">{t("kIRAN")}</p>
       </div>
     </div>
   );
 }
 
 function Container30() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="content-stretch flex flex-col gap-[8px] items-center relative self-stretch shrink-0" data-name="Container">
       <BackgroundBorder5 />
@@ -525,6 +621,8 @@ function Container30() {
 }
 
 function BackgroundBorder6() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="content-stretch flex flex-col items-start justify-center opacity-60 p-[5px] relative rounded-[12px] shrink-0 size-[64px]" data-name="Background+Border">
       <div aria-hidden="true" className="absolute inset-0 pointer-events-none rounded-[12px]">
@@ -542,16 +640,20 @@ function BackgroundBorder6() {
 }
 
 function Container33() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="content-stretch flex flex-col items-start relative shrink-0" data-name="Container">
       <div className="flex flex-col font-['Manrope:ExtraBold',sans-serif] font-extrabold justify-center leading-[0] relative shrink-0 text-[#564239] text-[10px] uppercase whitespace-nowrap">
-        <p className="leading-[15px]">ARNAB</p>
+        <p className="leading-[15px]">{t("aRNAB")}</p>
       </div>
     </div>
   );
 }
 
 function Container32() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="content-stretch flex flex-col gap-[8px] items-center relative self-stretch shrink-0" data-name="Container">
       <BackgroundBorder6 />
@@ -561,6 +663,8 @@ function Container32() {
 }
 
 function Container24() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="no-scrollbar content-stretch flex gap-[24px] h-[103px] items-start overflow-auto py-[8px] relative shrink-0 w-full" data-name="Container">
       <Container25 />
@@ -572,6 +676,8 @@ function Container24() {
 }
 
 function Section3WorkerSelection() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="content-stretch flex flex-col gap-[16px] items-start relative shrink-0 w-full" data-name="Section 3: Worker Selection">
       <Heading2 />
@@ -581,6 +687,8 @@ function Section3WorkerSelection() {
 }
 
 function Heading3() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="content-stretch flex flex-col items-start relative shrink-0 w-full" data-name="Heading 2">
       <div className="flex flex-col font-['Manrope:ExtraBold',sans-serif] font-extrabold justify-center leading-[0] relative shrink-0 text-[#564239] text-[11px] tracking-[1.1px] uppercase w-full">
@@ -591,6 +699,8 @@ function Heading3() {
 }
 
 function Container34() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="h-[24px] relative shrink-0 w-[33px]" data-name="Container">
       <svg className="absolute block inset-0 size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 33 24">
@@ -603,11 +713,13 @@ function Container34() {
 }
 
 function Container36() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="content-stretch flex flex-col items-center relative shrink-0 w-full" data-name="Container">
       <div className="flex flex-col font-['Manrope:ExtraBold',sans-serif] font-extrabold justify-center leading-[0] relative shrink-0 text-[#1b1c1c] text-[14px] text-center uppercase w-[244px]">
         <p className="leading-[20px] mb-0">UPLOAD PHOTOS, DRAWINGS, PDFS, OR SITE</p>
-        <p className="leading-[20px]">REFERENCES</p>
+        <p className="leading-[20px]">{t("rEFERENCES")}</p>
       </div>
     </div>
   );
@@ -618,6 +730,8 @@ function Container37() {
 }
 
 function Container35() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="relative shrink-0 w-[290px]" data-name="Container">
       <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex flex-col items-start relative size-full">
@@ -629,6 +743,8 @@ function Container35() {
 }
 
 function BackgroundBorder7() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="bg-[#f5f3f3] content-stretch flex flex-col gap-[12px] h-[192px] items-center justify-center p-[2px] relative rounded-[12px] shrink-0 w-full" data-name="Background+Border">
       <div aria-hidden="true" className="absolute border-2 border-[#ddc1b4] border-dashed inset-0 pointer-events-none rounded-[12px]" />
@@ -639,6 +755,8 @@ function BackgroundBorder7() {
 }
 
 function Section4DocumentUpload() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="content-stretch flex flex-col gap-[16px] items-start relative shrink-0 w-full" data-name="Section 4: Document Upload">
       <Heading3 />
@@ -648,21 +766,25 @@ function Section4DocumentUpload() {
 }
 
 function Heading4() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="content-stretch flex flex-col items-start relative shrink-0 w-full" data-name="Heading 2">
       <div className="flex flex-col font-['Manrope:ExtraBold',sans-serif] font-extrabold justify-center leading-[0] relative shrink-0 text-[#564239] text-[11px] tracking-[1.1px] uppercase w-full">
-        <p className="leading-[16.5px]">05. TASK DESCRIPTION</p>
+        <p className="leading-[16.5px]">{t("5TASKDESCRIPTION")}</p>
       </div>
     </div>
   );
 }
 
 function Container39() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="flex-[1_0_0] min-w-px relative" data-name="Container">
       <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex flex-col items-start relative size-full">
         <div className="flex flex-col font-['Manrope:Regular',sans-serif] font-normal justify-center leading-[0] relative shrink-0 text-[#6b7280] text-[14px] w-full">
-          <p className="leading-[20px]">Describe the work to be completed…</p>
+          <p className="leading-[20px]">{t("describeTheWorkToBeCompleted")}</p>
         </div>
       </div>
     </div>
@@ -670,6 +792,8 @@ function Container39() {
 }
 
 function Textarea() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="bg-white h-[128px] relative rounded-[12px] shrink-0 w-full" data-name="Textarea">
       <div className="no-scrollbar flex flex-row justify-center overflow-auto size-full">
@@ -683,6 +807,8 @@ function Textarea() {
 }
 
 function Container40() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="h-[19px] relative shrink-0 w-[14px]" data-name="Container">
       <svg className="absolute block inset-0 size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 14 19">
@@ -695,6 +821,8 @@ function Container40() {
 }
 
 function Button() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="absolute bottom-[12px] content-stretch flex flex-col items-center justify-center right-[12px]" data-name="Button">
       <Container40 />
@@ -703,6 +831,8 @@ function Button() {
 }
 
 function Container38() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="content-stretch flex flex-col items-start relative shrink-0 w-full" data-name="Container">
       <Textarea />
@@ -712,6 +842,8 @@ function Container38() {
 }
 
 function Section() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="content-stretch flex flex-col gap-[16px] items-start relative shrink-0 w-full" data-name="Section">
       <Heading4 />
@@ -721,6 +853,8 @@ function Section() {
 }
 
 function Main() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="absolute content-stretch flex flex-col gap-[30px] h-[1103px] items-start left-0 px-[24px] right-0 top-[70px]" data-name="Main">
       <Section1ZoneSelection />
@@ -733,6 +867,8 @@ function Main() {
 }
 
 function Container41() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="h-[16px] relative shrink-0 w-[19px]" data-name="Container">
       <svg className="absolute block inset-0 size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 19 16">
@@ -745,11 +881,13 @@ function Container41() {
 }
 
 function Button1() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="absolute bg-[#7a3100] content-stretch flex gap-[12px] items-center justify-center left-[25px] py-[20px] right-[25px] rounded-[12px] top-[1044px]" data-name="Button">
       <div className="absolute bg-[rgba(255,255,255,0)] inset-0 rounded-[12px] shadow-[0px_20px_25px_-5px_rgba(0,0,0,0.1),0px_8px_10px_-6px_rgba(0,0,0,0.1)]" data-name="Button:shadow" />
       <div className="flex flex-col font-['Manrope:ExtraBold',sans-serif] font-extrabold justify-center leading-[0] relative shrink-0 text-[14px] text-center text-white tracking-[1.4px] uppercase whitespace-nowrap">
-        <p className="leading-[20px]">ASSIGN TASK</p>
+        <p className="leading-[20px]">{t("aSSIGNTASK")}</p>
       </div>
       <Container41 />
     </div>
@@ -757,6 +895,8 @@ function Button1() {
 }
 
 function Container43() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="h-[15px] relative shrink-0 w-[9.09px]" data-name="Container">
       <svg className="absolute block inset-0 size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 9.09005 15">
@@ -769,6 +909,8 @@ function Container43() {
 }
 
 function Button2() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="absolute content-stretch flex items-center justify-center left-0 rounded-[9999px] size-[40px] top-0" data-name="Button">
       <Container43 />
@@ -777,17 +919,21 @@ function Button2() {
 }
 
 function Container42() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="-translate-y-1/2 absolute h-[40px] left-[16px] top-1/2 w-[374px]" data-name="Container">
       <Button2 />
       <div className="-translate-y-1/2 absolute flex flex-col font-['Manrope:Bold',sans-serif] font-bold justify-center leading-[0] left-[56px] text-[#7a3100] text-[16px] top-[20px] tracking-[0.8px] uppercase whitespace-nowrap">
-        <p className="leading-[24px]">ADD TASK</p>
+        <p className="leading-[24px]">{t("aDDTASK")}</p>
       </div>
     </div>
   );
 }
 
 function HeaderTopAppBar() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="-translate-x-1/2 absolute bg-white h-[64px] left-1/2 top-0 w-[412px]" data-name="Header - TopAppBar">
       <Container42 />
@@ -796,6 +942,8 @@ function HeaderTopAppBar() {
 }
 
 export default function Component3TaskAssignmentMobile() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="bg-white relative size-full" data-name="3. Task Assignment (Mobile)">
       <Main />

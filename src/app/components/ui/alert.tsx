@@ -1,3 +1,5 @@
+import { useLanguage } from "../../i18n/LanguageContext";
+import { useTranslations } from "../../i18n/translations";
 import * as React from "react";
 import { cva, type VariantProps } from "class-variance-authority";
 
@@ -23,7 +25,9 @@ function Alert({
   className,
   variant,
   ...props
-}: React.ComponentProps<"div"> & VariantProps<typeof alertVariants>) {
+}: React.ComponentProps<"div"> {t("VariantProps1")}<typeof alertVariants>) {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div
       data-slot="alert"
@@ -35,6 +39,8 @@ function Alert({
 }
 
 function AlertTitle({ className, ...props }: React.ComponentProps<"div">) {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div
       data-slot="alert-title"
@@ -51,6 +57,8 @@ function AlertDescription({
   className,
   ...props
 }: React.ComponentProps<"div">) {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div
       data-slot="alert-description"

@@ -1,3 +1,5 @@
+import { useLanguage } from "../../i18n/LanguageContext";
+import { useTranslations } from "../../i18n/translations";
 "use client";
 
 import * as React from "react";
@@ -46,6 +48,8 @@ function ChartContainer({
     typeof RechartsPrimitive.ResponsiveContainer
   >["children"];
 }) {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   const uniqueId = React.useId();
   const chartId = `chart-${id || uniqueId.replace(/:/g, "")}`;
 
@@ -118,14 +122,15 @@ function ChartTooltipContent({
   color,
   nameKey,
   labelKey,
-}: React.ComponentProps<typeof RechartsPrimitive.Tooltip> &
-  React.ComponentProps<"div"> & {
+}: React.ComponentProps<typeof RechartsPrimitive.Tooltip> {t("ReactComponentProps")}<"div"> & {
     hideLabel?: boolean;
     hideIndicator?: boolean;
     indicator?: "line" | "dot" | "dashed";
     nameKey?: string;
     labelKey?: string;
   }) {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   const { config } = useChart();
 
   const tooltipLabel = React.useMemo(() => {
@@ -256,11 +261,12 @@ function ChartLegendContent({
   payload,
   verticalAlign = "bottom",
   nameKey,
-}: React.ComponentProps<"div"> &
-  Pick<RechartsPrimitive.LegendProps, "payload" | "verticalAlign"> & {
+}: React.ComponentProps<"div"> {t("Pick")}<RechartsPrimitive.LegendProps, "payload" | "verticalAlign"> & {
     hideIcon?: boolean;
     nameKey?: string;
   }) {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   const { config } = useChart();
 
   if (!payload?.length) {

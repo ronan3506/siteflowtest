@@ -1,3 +1,5 @@
+import { useLanguage } from "../i18n/LanguageContext";
+import { useTranslations } from "../i18n/translations";
 import { useState } from "react";
 import imgWorkerA from "../../imports/3TaskAssignmentMobile-1/181963f2d49061eccafc8eb373f52a6dd6870927.png";
 import imgWorkerB from "../../imports/3TaskAssignmentMobile-1/f4775925dd8ae51fa91df8581e2ff018eeedf1fa.png";
@@ -33,6 +35,8 @@ const STATUS_CONFIG: Record<AttendanceStatus, { label: string; bg: string; color
 const ALL_STATUSES: AttendanceStatus[] = ["present", "late", "break", "absent"];
 
 function PanelHeader({ onBack }: { onBack: () => void }) {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div
       className="sticky top-0 left-0 right-0 z-10 flex items-center"
@@ -50,7 +54,7 @@ function PanelHeader({ onBack }: { onBack: () => void }) {
           className="font-['Manrope:Bold',sans-serif] font-bold uppercase"
           style={{ fontSize: 15, letterSpacing: "0.7px", color: "#7a3100", marginLeft: 14 }}
         >
-          TODAY'S BOARD
+          {t("tODAYSBOARD")}
         </span>
       </button>
     </div>
@@ -66,6 +70,8 @@ function StatusPill({
   active: boolean;
   onSelect: () => void;
 }) {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   const cfg = STATUS_CONFIG[status];
   return (
     <button
@@ -117,6 +123,8 @@ function WorkerCard({
   status: AttendanceStatus;
   onStatusChange: (s: AttendanceStatus) => void;
 }) {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   const cfg = STATUS_CONFIG[status];
   return (
     <div
@@ -203,6 +211,8 @@ export function WorkerAttendancePanel({
   onBack: () => void;
   onConfirm: () => void;
 }) {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   const [attendance, setAttendance] = useState<Record<string, AttendanceStatus>>(
     WORKERS.reduce((acc, w) => ({ ...acc, [w.id]: w.defaultStatus }), {} as Record<string, AttendanceStatus>)
   );
@@ -224,19 +234,19 @@ export function WorkerAttendancePanel({
           className="font-['Manrope:Regular',sans-serif] uppercase"
           style={{ fontSize: 10, letterSpacing: "1.1px", color: "#564239", marginBottom: 4 }}
         >
-          TODAY'S BOARD
+          {t("tODAYSBOARD")}
         </p>
         <p
           className="font-['Manrope:Bold',sans-serif] font-bold uppercase"
           style={{ fontSize: 22, letterSpacing: "-0.5px", color: "#1a1a1a", lineHeight: "26px", marginBottom: 4 }}
         >
-          WORKER ATTENDANCE
+          {t("wORKERATTENDANCE")}
         </p>
         <p
           className="font-['Manrope:Regular',sans-serif]"
           style={{ fontSize: 13, color: "#6b5e55", marginBottom: 20 }}
         >
-          Morning shift · East Terrace Site
+          {t("morningShiftEastTerraceSite")}
         </p>
 
         {/* Summary stats */}
@@ -299,7 +309,7 @@ export function WorkerAttendancePanel({
             className="font-['Manrope:Bold',sans-serif] font-bold uppercase"
             style={{ fontSize: 13, letterSpacing: "0.6px", color: "white" }}
           >
-            CONFIRM ATTENDANCE
+            {t("cONFIRMATTENDANCE")}
           </span>
         </button>
       </div>

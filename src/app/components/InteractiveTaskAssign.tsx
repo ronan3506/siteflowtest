@@ -1,3 +1,5 @@
+import { useLanguage } from "../i18n/LanguageContext";
+import { useTranslations } from "../i18n/translations";
 import { useState } from "react";
 import svgPaths from "../../imports/3TaskAssignmentMobile-1/svg-ybiry1cibf";
 import imgImage14 from "../../imports/3TaskAssignmentMobile-1/181963f2d49061eccafc8eb373f52a6dd6870927.png";
@@ -60,6 +62,8 @@ interface ZoneCardProps {
 }
 
 function ZoneCard({ label, sub, iconPath, iconViewBox, iconW, iconH, selected, left, onClick }: ZoneCardProps) {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div
       className="absolute h-[128px] w-[200px] min-w-[200px] cursor-pointer"
@@ -122,6 +126,8 @@ interface SkillCardProps {
 }
 
 function SkillCard({ label, iconPath, iconViewBox, iconW, iconH, selected, onClick }: SkillCardProps) {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div
       className="justify-self-stretch relative rounded-[12px] self-center shrink-0 cursor-pointer transition-colors duration-150"
@@ -169,6 +175,8 @@ interface WorkerCardProps {
 }
 
 function WorkerCard({ worker, selected, onClick }: WorkerCardProps) {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div
       className="flex flex-col gap-[8px] items-center relative self-stretch shrink-0 cursor-pointer"
@@ -245,6 +253,8 @@ function WorkerCard({ worker, selected, onClick }: WorkerCardProps) {
 // ─── MAIN INTERACTIVE COMPONENT ────────────────────────────────────────────────
 
 export function InteractiveTaskAssign() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   const [selectedZone, setSelectedZone] = useState<Zone | null>(null);
   const [selectedSkill, setSelectedSkill] = useState<Skill | null>(null);
   const [selectedWorkers, setSelectedWorkers] = useState<Set<string>>(new Set());
@@ -291,11 +301,11 @@ export function InteractiveTaskAssign() {
           <div className="flex items-end justify-between relative shrink-0 w-full">
             <div className="h-[16.5px] relative shrink-0 w-[130.59px]">
               <div className="-translate-y-1/2 absolute flex flex-col font-['Manrope:ExtraBold',sans-serif] font-extrabold justify-center leading-[0] left-0 text-[#564239] text-[11px] top-[7.5px] tracking-[1.1px] uppercase whitespace-nowrap">
-                <p className="leading-[16.5px]">01. SITE AREA</p>
+                <p className="leading-[16.5px]">{t("1SITEAREA")}</p>
               </div>
             </div>
             <div className="flex flex-col font-['Manrope:ExtraBold',sans-serif] font-black justify-center leading-[0] relative shrink-0 text-[#8a7267] text-[9px] tracking-[-0.45px] whitespace-nowrap">
-              <p className="leading-[13.5px]">REQUIRED</p>
+              <p className="leading-[13.5px]">{t("rEQUIRED")}</p>
             </div>
           </div>
           {/* Horizontal scroll zone cards */}
@@ -321,7 +331,7 @@ export function InteractiveTaskAssign() {
         <div className="flex flex-col gap-[16px] items-start relative shrink-0 w-full">
           <div className="flex flex-col items-start relative shrink-0 w-full">
             <div className="flex flex-col font-['Manrope:ExtraBold',sans-serif] font-extrabold justify-center leading-[0] relative shrink-0 text-[#564239] text-[11px] tracking-[1.1px] uppercase w-full">
-              <p className="leading-[16.5px]">02. SKILL SETS</p>
+              <p className="leading-[16.5px]">{t("2SKILLSETS")}</p>
             </div>
           </div>
           <div className="gap-x-[8px] gap-y-[8px] grid grid-cols-[repeat(4,minmax(0,1fr))] grid-rows-[_77.50px] relative shrink-0 w-full">
@@ -344,7 +354,7 @@ export function InteractiveTaskAssign() {
         <div className="flex flex-col gap-[16px] items-start relative shrink-0 w-full">
           <div className="flex flex-col items-start relative shrink-0 w-full">
             <div className="flex flex-col font-['Manrope:ExtraBold',sans-serif] font-extrabold justify-center leading-[0] relative shrink-0 text-[#564239] text-[11px] tracking-[1.1px] uppercase w-full">
-              <p className="leading-[16.5px]">03. ASSIGN WORKERS</p>
+              <p className="leading-[16.5px]">{t("3ASSIGNWORKERS")}</p>
             </div>
           </div>
           <div
@@ -380,7 +390,7 @@ export function InteractiveTaskAssign() {
               <div className="flex flex-col items-center relative size-full">
                 <div className="flex flex-col font-['Manrope:ExtraBold',sans-serif] font-extrabold justify-center leading-[0] relative shrink-0 text-[#1b1c1c] text-[14px] text-center uppercase w-[244px]">
                   <p className="leading-[20px] mb-0">UPLOAD PHOTOS, DRAWINGS, PDFS, OR SITE</p>
-                  <p className="leading-[20px]">REFERENCES</p>
+                  <p className="leading-[20px]">{t("rEFERENCES")}</p>
                 </div>
                 <div className="h-[15px] relative shrink-0 w-full" />
               </div>
@@ -392,7 +402,7 @@ export function InteractiveTaskAssign() {
         <div className="flex flex-col gap-[16px] items-start relative shrink-0 w-full">
           <div className="flex flex-col items-start relative shrink-0 w-full">
             <div className="flex flex-col font-['Manrope:ExtraBold',sans-serif] font-extrabold justify-center leading-[0] relative shrink-0 text-[#564239] text-[11px] tracking-[1.1px] uppercase w-full">
-              <p className="leading-[16.5px]">05. TASK DESCRIPTION</p>
+              <p className="leading-[16.5px]">{t("5TASKDESCRIPTION")}</p>
             </div>
           </div>
           <div className="flex flex-col items-start relative shrink-0 w-full">
@@ -401,7 +411,7 @@ export function InteractiveTaskAssign() {
                 <div className="flex items-start justify-center p-[17px] relative size-full">
                   <div className="flex-[1_0_0] min-w-px relative">
                     <div className="flex flex-col font-['Manrope:Regular',sans-serif] font-normal justify-center leading-[0] relative shrink-0 text-[#6b7280] text-[14px] w-full">
-                      <p className="leading-[20px]">Describe the work to be completed…</p>
+                      <p className="leading-[20px]">{t("describeTheWorkToBeCompleted")}</p>
                     </div>
                   </div>
                 </div>
@@ -424,7 +434,7 @@ export function InteractiveTaskAssign() {
       <div className="absolute bg-[#7a3100] flex gap-[12px] items-center justify-center left-[25px] py-[20px] right-[25px] rounded-[12px] top-[1044px]">
         <div className="absolute bg-[rgba(255,255,255,0)] inset-0 rounded-[12px] shadow-[0px_20px_25px_-5px_rgba(0,0,0,0.1),0px_8px_10px_-6px_rgba(0,0,0,0.1)]" />
         <div className="flex flex-col font-['Manrope:ExtraBold',sans-serif] font-extrabold justify-center leading-[0] relative shrink-0 text-[14px] text-center text-white tracking-[1.4px] uppercase whitespace-nowrap">
-          <p className="leading-[20px]">ASSIGN TASK</p>
+          <p className="leading-[20px]">{t("aSSIGNTASK")}</p>
         </div>
         <div className="h-[16px] relative shrink-0 w-[19px]">
           <svg className="absolute block inset-0 size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 19 16">
@@ -445,7 +455,7 @@ export function InteractiveTaskAssign() {
             </div>
           </div>
           <div className="-translate-y-1/2 absolute flex flex-col font-['Manrope:Bold',sans-serif] font-bold justify-center leading-[0] left-[56px] text-[#7a3100] text-[16px] top-[20px] tracking-[0.8px] uppercase whitespace-nowrap">
-            <p className="leading-[24px]">ADD TASK</p>
+            <p className="leading-[24px]">{t("aDDTASK")}</p>
           </div>
         </div>
       </div>

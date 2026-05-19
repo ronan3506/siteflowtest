@@ -1,8 +1,12 @@
+import { useLanguage } from "../../app/i18n/LanguageContext";
+import { useTranslations } from "../../app/i18n/translations";
 import svgPaths from "./svg-9arhtto7z3";
 import imgAb6AXuDNtyiOZoLiMpRiJmvIzoo3L74LsUxX8OmbYtwPh24A7LLDqOhhHq70O2SrHznve614Dejh8W5XXvZGdQ5IrwnQc4X8Evj3QSjbhYirmgr3FdeNaPRk2U6Muq3TR033IG4XfTfEwEiBMurppHBsPe7TQgZkBhono8PUfEqYgWsywNXeMj51NKpXqYSnOrjRe7YdE5ONghNtizsm0IJo2JyzWx92REjGSsh82D6Lx0Rfko7Gh4Yzdu7OUrgF4COiTfXlUic from "./6a6304f351d8e9b12a162600ef85a762d67bfa15.png";
 import imgAb6AXuDNtyiOZoLiMpRiJmvIzoo3L74LsUxX8OmbYtwPh24A7LLDqOhhHq70O2SrHznve614Dejh8W5XXvZGdQ5IrwnQc4X8Evj3QSjbhYirmgr3FdeNaPRk2U6Muq3TR033IG4XfTfEwEiBMurppHBsPe7TQgZkBhono8PUfEqYgWsywNXeMj51NKpXqYSnOrjRe7YdE5ONghNtizsm0IJo2JyzWx92REjGSsh82D6Lx0Rfko7Gh4Yzdu7OUrgF4COiTfXlUic1 from "./d6698214b01f936b8b0315eea3a42a14e2174325.png";
 
 function Ab6AXuDNtyiOZoLiMpRiJmvIzoo3L74LsUxX8OmbYtwPh24A7LLDqOhhHq70O2SrHznve614Dejh8W5XXvZGdQ5IrwnQc4X8Evj3QSjbhYirmgr3FdeNaPRk2U6Muq3TR033IG4XfTfEwEiBMurppHBsPe7TQgZkBhono8PUfEqYgWsywNXeMj51NKpXqYSnOrjRe7YdE5ONghNtizsm0IJo2JyzWx92REjGSsh82D6Lx0Rfko7Gh4Yzdu7OUrgF4COiTfXlUic() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="absolute h-[192px] left-0 opacity-80 top-0 w-[292px]" data-name="AB6AXuDNtyiOZoLiMPRiJmvIZOO3L74lsUxX8OmbYtwPh24A7L-lDqOhhHq70O2SrHZNVE6_1_4dejh8W5xXvZGdQ5IRWNQc4X8evj3qSjbhYIRMGR3FDE_NaPRk2u6Muq3tR033iG4xfTf_ewEiBMurppHBsPE7TQgZkBhono8-pUFEqYgWsyw-nXeMJ51NKpXqYSnOrjRE7YdE5oNgh_NTIZSM0iJO2JYZWx92REj_gSSH82d6lx0Rfko7Gh4yzdu7OUrgF4COiTfXLUic">
       <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgAb6AXuDNtyiOZoLiMpRiJmvIzoo3L74LsUxX8OmbYtwPh24A7LLDqOhhHq70O2SrHznve614Dejh8W5XXvZGdQ5IrwnQc4X8Evj3QSjbhYirmgr3FdeNaPRk2U6Muq3TR033IG4XfTfEwEiBMurppHBsPe7TQgZkBhono8PUfEqYgWsywNXeMj51NKpXqYSnOrjRe7YdE5ONghNtizsm0IJo2JyzWx92REjGSsh82D6Lx0Rfko7Gh4Yzdu7OUrgF4COiTfXlUic} />
@@ -11,6 +15,8 @@ function Ab6AXuDNtyiOZoLiMpRiJmvIzoo3L74LsUxX8OmbYtwPh24A7LLDqOhhHq70O2SrHznve61
 }
 
 function Container() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="absolute h-[192px] left-[24px] overflow-clip rounded-[12px] top-[32px] w-[292px]" data-name="Container">
       <Ab6AXuDNtyiOZoLiMpRiJmvIzoo3L74LsUxX8OmbYtwPh24A7LLDqOhhHq70O2SrHznve614Dejh8W5XXvZGdQ5IrwnQc4X8Evj3QSjbhYirmgr3FdeNaPRk2U6Muq3TR033IG4XfTfEwEiBMurppHBsPe7TQgZkBhono8PUfEqYgWsywNXeMj51NKpXqYSnOrjRe7YdE5ONghNtizsm0IJo2JyzWx92REjGSsh82D6Lx0Rfko7Gh4Yzdu7OUrgF4COiTfXlUic />
@@ -19,26 +25,32 @@ function Container() {
 }
 
 function Container3() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="absolute h-[15px] left-0 top-0 w-[251px]" data-name="Container">
       <div className="-translate-y-1/2 absolute flex flex-col font-['Manrope:Regular',sans-serif] font-normal justify-center leading-[0] left-0 text-[#6b5e55] text-[10px] top-[7.5px] tracking-[1px] uppercase whitespace-nowrap">
-        <p className="leading-[15px]">OBSERVATION LOG</p>
+        <p className="leading-[15px]">{t("oBSERVATIONLOG")}</p>
       </div>
     </div>
   );
 }
 
 function Heading2() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="absolute h-[20px] left-0 top-[19px] w-[251px]" data-name="Heading 4">
       <div className="-translate-y-1/2 absolute flex flex-col font-['Manrope:Regular',sans-serif] font-normal justify-center leading-[0] left-0 text-[#2d241e] text-[14px] top-[10px] tracking-[-0.35px] uppercase whitespace-nowrap">
-        <p className="leading-[20px]">Structural demolition</p>
+        <p className="leading-[20px]">{t("structuralDemolition")}</p>
       </div>
     </div>
   );
 }
 
 function Container2() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="absolute h-[39px] left-0 top-0 w-[251px]" data-name="Container">
       <Container3 />
@@ -48,6 +60,8 @@ function Container2() {
 }
 
 function Container1() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="absolute h-[39px] left-[24px] top-[248px] w-[292px]" data-name="Container">
       <Container2 />
@@ -56,6 +70,8 @@ function Container1() {
 }
 
 function SectionArchitecturalImageFeature() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="absolute bg-[#f7f4f2] border border-[#e6e1dc] border-solid drop-shadow-[0px_0px_2.35px_rgba(0,0,0,0.25)] h-[313px] left-[24px] rounded-[16px] top-[1073px] w-[342px]" data-name="Section - Architectural Image Feature">
       <Container />
@@ -65,16 +81,20 @@ function SectionArchitecturalImageFeature() {
 }
 
 function Heading() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="absolute h-[40px] left-0 top-0 w-[342px]" data-name="Heading 1">
       <div className="-translate-y-1/2 absolute flex flex-col font-['Manrope:Bold',sans-serif] font-bold justify-center leading-[0] left-0 text-[#1a1a1a] text-[28px] top-[20px] tracking-[-0.9px] uppercase whitespace-nowrap">
-        <p className="leading-[40px]">URGENT ISSUES</p>
+        <p className="leading-[40px]">{t("uRGENTISSUES")}</p>
       </div>
     </div>
   );
 }
 
 function HeaderSection() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="absolute h-[80px] left-[24px] top-[5px] w-[342px]" data-name="Header Section">
       <Heading />
@@ -83,16 +103,20 @@ function HeaderSection() {
 }
 
 function Container4() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="absolute h-[15px] left-[24px] top-[11px] w-[113px]" data-name="Container">
       <div className="-translate-y-1/2 absolute flex flex-col font-['Manrope:Regular',sans-serif] font-normal justify-center leading-[0] left-0 text-[#6b5e55] text-[10px] top-[7.5px] tracking-[1px] uppercase whitespace-nowrap">
-        <p className="leading-[15px]">ACTIVE HIGH</p>
+        <p className="leading-[15px]">{t("aCTIVEHIGH")}</p>
       </div>
     </div>
   );
 }
 
 function BackgroundBorder() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="absolute bg-[#f7f4f2] border border-[#e6e1dc] border-solid h-[68px] left-0 rounded-[16px] top-0 w-[163px]" data-name="Background+Border">
       <Container4 />
@@ -104,16 +128,20 @@ function BackgroundBorder() {
 }
 
 function Container5() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="absolute h-[15px] left-0 top-0 w-[113px]" data-name="Container">
       <div className="-translate-y-1/2 absolute flex flex-col font-['Manrope:Regular',sans-serif] font-normal justify-center leading-[0] left-0 text-[#6b5e55] text-[10px] top-[7.5px] tracking-[1px] uppercase whitespace-nowrap">
-        <p className="leading-[15px]">STATUS</p>
+        <p className="leading-[15px]">{t("sTATUS")}</p>
       </div>
     </div>
   );
 }
 
 function Margin() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="absolute h-[19px] left-[24px] top-[16px] w-[113px]" data-name="Margin">
       <Container5 />
@@ -122,16 +150,20 @@ function Margin() {
 }
 
 function Container7() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="absolute h-[16px] left-[18px] top-0 w-[53.88px]" data-name="Container">
       <div className="-translate-y-1/2 absolute flex flex-col font-['Manrope:Regular',sans-serif] font-normal justify-center leading-[0] left-0 text-[#b23b3b] text-[12px] top-[8px] uppercase whitespace-nowrap">
-        <p className="leading-[16px]">CRITICAL</p>
+        <p className="leading-[16px]">{t("cRITICAL")}</p>
       </div>
     </div>
   );
 }
 
 function Container6() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="absolute h-[16px] left-[24px] top-[34px] w-[113px]" data-name="Container">
       <div className="absolute bg-[#b23b3b] left-0 rounded-[9999px] size-[10px] top-[3px]" data-name="Background" />
@@ -141,6 +173,8 @@ function Container6() {
 }
 
 function BackgroundBorder1() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="absolute bg-[#f7f4f2] border border-[#e6e1dc] border-solid h-[68px] left-[179px] rounded-[16px] top-0 w-[163px]" data-name="Background+Border">
       <Margin />
@@ -150,6 +184,8 @@ function BackgroundBorder1() {
 }
 
 function StatsBento1() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="col-[1/span_2] h-[68px] relative row-1 shrink-0 w-[342px]" data-name="Stats Bento">
       <BackgroundBorder />
@@ -159,6 +195,8 @@ function StatsBento1() {
 }
 
 function StatsBento() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="absolute gap-x-[16px] gap-y-[16px] grid grid-cols-[repeat(2,minmax(0,1fr))] grid-rows-[__109px_minmax(0,1fr)] h-[68px] left-[24px] top-[101px] w-[342px]" data-name="Stats Bento">
       <StatsBento1 />
@@ -167,6 +205,8 @@ function StatsBento() {
 }
 
 function Ab6AXuDNtyiOZoLiMpRiJmvIzoo3L74LsUxX8OmbYtwPh24A7LLDqOhhHq70O2SrHznve614Dejh8W5XXvZGdQ5IrwnQc4X8Evj3QSjbhYirmgr3FdeNaPRk2U6Muq3TR033IG4XfTfEwEiBMurppHBsPe7TQgZkBhono8PUfEqYgWsywNXeMj51NKpXqYSnOrjRe7YdE5ONghNtizsm0IJo2JyzWx92REjGSsh82D6Lx0Rfko7Gh4Yzdu7OUrgF4COiTfXlUic1() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="absolute h-[192px] left-0 opacity-80 top-0 w-[292px]" data-name="AB6AXuDNtyiOZoLiMPRiJmvIZOO3L74lsUxX8OmbYtwPh24A7L-lDqOhhHq70O2SrHZNVE6_1_4dejh8W5xXvZGdQ5IRWNQc4X8evj3qSjbhYIRMGR3FDE_NaPRk2u6Muq3tR033iG4xfTf_ewEiBMurppHBsPE7TQgZkBhono8-pUFEqYgWsyw-nXeMJ51NKpXqYSnOrjRE7YdE5oNgh_NTIZSM0iJO2JYZWx92REj_gSSH82d6lx0Rfko7Gh4yzdu7OUrgF4COiTfXLUic">
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
@@ -177,6 +217,8 @@ function Ab6AXuDNtyiOZoLiMpRiJmvIzoo3L74LsUxX8OmbYtwPh24A7LLDqOhhHq70O2SrHznve61
 }
 
 function Container8() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="absolute h-[192px] left-[24px] overflow-clip rounded-[12px] top-[32px] w-[292px]" data-name="Container">
       <Ab6AXuDNtyiOZoLiMpRiJmvIzoo3L74LsUxX8OmbYtwPh24A7LLDqOhhHq70O2SrHznve614Dejh8W5XXvZGdQ5IrwnQc4X8Evj3QSjbhYirmgr3FdeNaPRk2U6Muq3TR033IG4XfTfEwEiBMurppHBsPe7TQgZkBhono8PUfEqYgWsywNXeMj51NKpXqYSnOrjRe7YdE5ONghNtizsm0IJo2JyzWx92REjGSsh82D6Lx0Rfko7Gh4Yzdu7OUrgF4COiTfXlUic1 />
@@ -185,26 +227,32 @@ function Container8() {
 }
 
 function Container11() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="absolute h-[15px] left-0 top-0 w-[251px]" data-name="Container">
       <div className="-translate-y-1/2 absolute flex flex-col font-['Manrope:Regular',sans-serif] font-normal justify-center leading-[0] left-0 text-[#6b5e55] text-[10px] top-[7.5px] tracking-[1px] uppercase whitespace-nowrap">
-        <p className="leading-[15px]">OBSERVATION LOG</p>
+        <p className="leading-[15px]">{t("oBSERVATIONLOG")}</p>
       </div>
     </div>
   );
 }
 
 function Heading3() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="absolute h-[20px] left-0 top-[19px] w-[251px]" data-name="Heading 4">
       <div className="-translate-y-1/2 absolute flex flex-col font-['Manrope:Regular',sans-serif] font-normal justify-center leading-[0] left-0 text-[#2d241e] text-[14px] top-[10px] tracking-[-0.35px] uppercase whitespace-nowrap">
-        <p className="leading-[20px]">MAIN ATRIUM STRUCTURAL INTEGRITY</p>
+        <p className="leading-[20px]">{t("mAINATRIUMSTRUCTURALINTEGRITY")}</p>
       </div>
     </div>
   );
 }
 
 function Container10() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="absolute h-[39px] left-0 top-0 w-[251px]" data-name="Container">
       <Container11 />
@@ -214,6 +262,8 @@ function Container10() {
 }
 
 function Container9() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="absolute h-[39px] left-[24px] top-[248px] w-[292px]" data-name="Container">
       <Container10 />
@@ -222,6 +272,8 @@ function Container9() {
 }
 
 function SectionArchitecturalImageFeature1() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="absolute bg-[#f7f4f2] border border-[#e6e1dc] border-solid drop-shadow-[0px_0px_2.35px_rgba(0,0,0,0.25)] h-[313px] left-[24px] rounded-[16px] top-[745px] w-[342px]" data-name="Section - Architectural Image Feature">
       <Container8 />
@@ -235,6 +287,8 @@ function Container13() {
 }
 
 function Container12() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="absolute h-[156px] left-0 top-0 w-[340px]" data-name="Container">
       <div className="absolute bg-[#f9b74a] h-[170px] left-0 top-0 w-[6px]" data-name="Background" />
@@ -244,35 +298,43 @@ function Container12() {
 }
 
 function Heading1() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="absolute h-[28px] left-0 top-0 w-[182.73px]" data-name="Heading 3">
       <div className="-translate-y-1/2 absolute flex flex-col font-['Manrope:Regular',sans-serif] font-normal justify-center leading-[0] left-0 text-[#1a1a1a] text-[18px] top-[14px] tracking-[-0.45px] whitespace-nowrap">
-        <p className="leading-[28px]">Column Not Straight</p>
+        <p className="leading-[28px]">{t("columnNotStraight")}</p>
       </div>
     </div>
   );
 }
 
 function Background() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="absolute bg-[#f7f4f2] h-[19px] left-0 rounded-[12px] top-[0.01px] w-[90.123px]" data-name="Background">
       <div className="-translate-y-1/2 absolute flex flex-col font-['Manrope:Bold',sans-serif] font-bold justify-center leading-[0] left-[8px] text-[#6b5e55] text-[10px] top-[9.5px] tracking-[-0.25px] whitespace-nowrap">
-        <p className="leading-[15px]">GROUND FLOOR</p>
+        <p className="leading-[15px]">{t("gROUNDFLOOR")}</p>
       </div>
     </div>
   );
 }
 
 function Group3() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="absolute contents left-0 top-0">
       <div className="absolute bg-[#fff3e0] h-[19.021px] left-0 rounded-[4.684px] top-0 w-[80.607px]" data-name="Rectangle" />
-      <p className="absolute font-['Manrope:Bold',sans-serif] font-bold leading-[normal] left-[7.92px] text-[#f5a623] text-[8.587px] top-[3.51px] tracking-[0.3435px] whitespace-nowrap">WORK PAUSED</p>
+      <p className="absolute font-['Manrope:Bold',sans-serif] font-bold leading-[normal] left-[7.92px] text-[#f5a623] text-[8.587px] top-[3.51px] tracking-[0.3435px] whitespace-nowrap">{t("wORKPAUSED")}</p>
     </div>
   );
 }
 
 function Container17() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="absolute h-[19.021px] left-[102.12px] top-0 w-[80.607px]" data-name="Container">
       <Group3 />
@@ -281,6 +343,8 @@ function Container17() {
 }
 
 function Container16() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="absolute h-[19.021px] left-0 top-[32px] w-[182.73px]" data-name="Container">
       <Background />
@@ -290,6 +354,8 @@ function Container16() {
 }
 
 function Container15() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="absolute h-[51.021px] left-0 top-0 w-[182.73px]" data-name="Container">
       <Heading1 />
@@ -299,16 +365,20 @@ function Container15() {
 }
 
 function Button() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="absolute bg-[#7a3100] h-[31px] left-[232.72px] rounded-[12px] top-0 w-[61.28px]" data-name="Button">
       <div className="-translate-x-1/2 -translate-y-1/2 absolute flex flex-col font-['Manrope:Regular',sans-serif] font-normal justify-center leading-[0] left-[30.5px] text-[#fdfcfb] text-[10px] text-center top-[15.5px] tracking-[1px] uppercase whitespace-nowrap">
-        <p className="leading-[15px]">VIEW</p>
+        <p className="leading-[15px]">{t("vIEW")}</p>
       </div>
     </div>
   );
 }
 
 function Container14() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="absolute h-[51.021px] left-[23px] top-[16px] w-[294px]" data-name="Container">
       <Container15 />
@@ -318,17 +388,19 @@ function Container14() {
 }
 
 function Card() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="absolute bg-[#fdfcfb] border border-[#e6e1dc] border-solid h-[158px] left-0 overflow-clip rounded-[16px] shadow-[0px_0px_4.7px_0px_rgba(0,0,0,0.25)] top-0 w-[342px]" data-name="Card 1">
       <Container12 />
       <div className="absolute bg-[#e5e0da] h-px left-[23px] right-[23px] top-[89px]" data-name="Horizontal Divider" />
       <div className="-translate-y-1/2 absolute flex flex-col font-['Manrope:Medium',sans-serif] font-medium justify-center leading-[0] left-[23px] text-[#7d6c5c] text-[0px] top-[122px] tracking-[1.1px] w-[110px]">
-        <p className="leading-[17px] mb-0 text-[10px]">Impact</p>
-        <p className="leading-[17px] text-[10px] text-black">Structural Safety</p>
+        <p className="leading-[17px] mb-0 text-[10px]">{t("impact")}</p>
+        <p className="leading-[17px] text-[10px] text-black">{t("structuralSafety")}</p>
       </div>
       <div className="-translate-y-1/2 absolute flex flex-col font-['Manrope:Medium',sans-serif] font-medium justify-center leading-[0] left-[189px] text-[#7d6c5c] text-[0px] top-[122px] tracking-[1.1px] w-[111px]">
-        <p className="leading-[17px] mb-0 text-[10px]">Response Due</p>
-        <p className="leading-[17px] text-[10px] text-black">1h 30m</p>
+        <p className="leading-[17px] mb-0 text-[10px]">{t("responseDue")}</p>
+        <p className="leading-[17px] text-[10px] text-black">{t("1h30m")}</p>
       </div>
       <Container14 />
     </div>
@@ -336,20 +408,24 @@ function Card() {
 }
 
 function Heading4() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="absolute h-[28px] left-0 top-0 w-[185.313px]" data-name="Heading 3">
       <div className="-translate-y-1/2 absolute flex flex-col font-['Manrope:Regular',sans-serif] font-normal justify-center leading-[0] left-0 text-[#1a1a1a] text-[18px] top-[14px] tracking-[-0.45px] whitespace-nowrap">
-        <p className="leading-[28px]">Water leak</p>
+        <p className="leading-[28px]">{t("waterLeak")}</p>
       </div>
     </div>
   );
 }
 
 function Background1() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="absolute bg-[#f7f4f2] h-[19px] left-0 rounded-[12px] top-[0.01px] w-[75.15px]" data-name="Background">
       <div className="-translate-y-1/2 absolute flex flex-col font-['Manrope:Bold',sans-serif] font-bold justify-center leading-[0] left-[8px] text-[#6b5e55] text-[10px] top-[9.5px] tracking-[-0.25px] whitespace-nowrap">
-        <p className="leading-[15px]">FIRST FLOOR</p>
+        <p className="leading-[15px]">{t("fIRSTFLOOR")}</p>
       </div>
     </div>
   );
@@ -360,15 +436,19 @@ function Container24() {
 }
 
 function Group2() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="absolute contents left-[6.33px] top-0">
       <div className="absolute bg-[#ffebee] h-[19.021px] left-[6.33px] rounded-[4.684px] top-0 w-[91.83px]" data-name="Rectangle" />
-      <p className="absolute font-['Manrope:Bold',sans-serif] font-bold leading-[normal] left-[16.75px] text-[#c62828] text-[8.587px] top-[3.51px] tracking-[0.3435px] whitespace-nowrap">URGENT REVIEW</p>
+      <p className="absolute font-['Manrope:Bold',sans-serif] font-bold leading-[normal] left-[16.75px] text-[#c62828] text-[8.587px] top-[3.51px] tracking-[0.3435px] whitespace-nowrap">{t("uRGENTREVIEW")}</p>
     </div>
   );
 }
 
 function Container23() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="absolute h-[19.021px] left-[87.15px] top-0 w-[98.163px]" data-name="Container">
       <Container24 />
@@ -378,6 +458,8 @@ function Container23() {
 }
 
 function Container22() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="absolute h-[19.021px] left-0 top-[32px] w-[185.313px]" data-name="Container">
       <Background1 />
@@ -387,6 +469,8 @@ function Container22() {
 }
 
 function Container21() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="absolute h-[51.021px] left-0 top-0 w-[185.313px]" data-name="Container">
       <Heading4 />
@@ -396,16 +480,20 @@ function Container21() {
 }
 
 function Button1() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="absolute bg-[#7a3100] h-[31px] left-[232.72px] rounded-[12px] top-0 w-[61.28px]" data-name="Button">
       <div className="-translate-x-1/2 -translate-y-1/2 absolute flex flex-col font-['Manrope:Regular',sans-serif] font-normal justify-center leading-[0] left-[30.5px] text-[#fdfcfb] text-[10px] text-center top-[15.5px] tracking-[1px] uppercase whitespace-nowrap">
-        <p className="leading-[15px]">VIEW</p>
+        <p className="leading-[15px]">{t("vIEW")}</p>
       </div>
     </div>
   );
 }
 
 function Container20() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="absolute h-[51.021px] left-[20px] top-[20px] w-[294px]" data-name="Container">
       <Container21 />
@@ -415,6 +503,8 @@ function Container20() {
 }
 
 function Container19() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="absolute h-[170px] left-[6px] top-0 w-[334px]" data-name="Container">
       <Container20 />
@@ -423,6 +513,8 @@ function Container19() {
 }
 
 function Container18() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="absolute h-[170px] left-0 top-0 w-[340px]" data-name="Container">
       <div className="absolute bg-[#b23b3b] h-[170px] left-0 top-0 w-[6px]" data-name="Background" />
@@ -432,53 +524,63 @@ function Container18() {
 }
 
 function Card1() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="absolute bg-[#fdfcfb] border border-[#e6e1dc] border-solid h-[158px] left-0 overflow-clip rounded-[16px] shadow-[0px_0px_4.7px_0px_rgba(0,0,0,0.25)] top-[169px] w-[342px]" data-name="Card 2">
       <Container18 />
       <div className="absolute bg-[#e5e0da] h-px left-[23px] right-[23px] top-[89px]" data-name="Horizontal Divider" />
       <div className="-translate-y-1/2 absolute flex flex-col font-['Manrope:Medium',sans-serif] font-medium justify-center leading-[0] left-[23px] text-[#7d6c5c] text-[0px] top-[122px] tracking-[1.1px] w-[110px]">
-        <p className="leading-[17px] mb-0 text-[10px]">Impact</p>
-        <p className="leading-[17px] text-[10px] text-black">Water Damage</p>
+        <p className="leading-[17px] mb-0 text-[10px]">{t("impact")}</p>
+        <p className="leading-[17px] text-[10px] text-black">{t("waterDamage")}</p>
       </div>
       <div className="-translate-y-1/2 absolute flex flex-col font-['Manrope:Medium',sans-serif] font-medium justify-center leading-[0] left-[189px] text-[#7d6c5c] text-[0px] top-[122px] tracking-[1.1px] w-[111px]">
-        <p className="leading-[17px] mb-0 text-[10px]">Response Due</p>
-        <p className="leading-[17px] text-[10px] text-black">4h</p>
+        <p className="leading-[17px] mb-0 text-[10px]">{t("responseDue")}</p>
+        <p className="leading-[17px] text-[10px] text-black">{t("4h")}</p>
       </div>
     </div>
   );
 }
 
 function Heading5() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="absolute h-[28px] left-0 top-0 w-[250.83px]" data-name="Heading 3">
       <div className="-translate-y-1/2 absolute flex flex-col font-['Manrope:Regular',sans-serif] font-normal justify-center leading-[0] left-0 text-[#1a1a1a] text-[18px] top-[14px] tracking-[-0.45px] whitespace-nowrap">
-        <p className="leading-[28px]">Safety railing damaged</p>
+        <p className="leading-[28px]">{t("safetyRailingDamaged")}</p>
       </div>
     </div>
   );
 }
 
 function Background2() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="absolute bg-[#f7f4f2] h-[19px] left-0 rounded-[12px] top-[0.01px] w-[64px]" data-name="Background">
       <div className="-translate-y-1/2 absolute flex flex-col font-['Manrope:Regular',sans-serif] font-normal justify-center leading-[0] left-[8px] text-[#6b5e55] text-[10px] top-[9.5px] tracking-[-0.25px] whitespace-nowrap">
-        <p className="leading-[15px]">TERRENCE</p>
+        <p className="leading-[15px]">{t("tERRENCE")}</p>
       </div>
     </div>
   );
 }
 
 function Container29() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="absolute h-[19.021px] left-0 top-[32px] w-[250.83px]" data-name="Container">
       <Background2 />
       <div className="absolute bg-[#ffebee] h-[19.021px] left-[93.15px] rounded-[4.684px] top-[-0.04px] w-[91.83px]" data-name="Rectangle" />
-      <p className="absolute font-['Manrope:Bold',sans-serif] font-bold leading-[normal] left-[102.15px] text-[#c62828] text-[8.587px] top-[3.96px] tracking-[0.3435px] whitespace-nowrap">URGENT REVIEW</p>
+      <p className="absolute font-['Manrope:Bold',sans-serif] font-bold leading-[normal] left-[102.15px] text-[#c62828] text-[8.587px] top-[3.96px] tracking-[0.3435px] whitespace-nowrap">{t("uRGENTREVIEW")}</p>
     </div>
   );
 }
 
 function Container28() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="absolute h-[51.021px] left-0 top-0 w-[250.83px]" data-name="Container">
       <Heading5 />
@@ -488,16 +590,20 @@ function Container28() {
 }
 
 function Button2() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="absolute bg-[#7a3100] h-[31px] left-[233.15px] rounded-[12px] top-[-0.04px] w-[61.28px]" data-name="Button">
       <div className="-translate-x-1/2 -translate-y-1/2 absolute flex flex-col font-['Manrope:Regular',sans-serif] font-normal justify-center leading-[0] left-[30.5px] text-[#fdfcfb] text-[10px] text-center top-[15.5px] tracking-[1px] uppercase whitespace-nowrap">
-        <p className="leading-[15px]">VIEW</p>
+        <p className="leading-[15px]">{t("vIEW")}</p>
       </div>
     </div>
   );
 }
 
 function Container27() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="absolute h-[51.021px] left-[20px] top-[20px] w-[294px]" data-name="Container">
       <Container28 />
@@ -507,6 +613,8 @@ function Container27() {
 }
 
 function Container26() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="absolute h-[170px] left-[6px] top-0 w-[334px]" data-name="Container">
       <Container27 />
@@ -515,6 +623,8 @@ function Container26() {
 }
 
 function Container25() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="absolute h-[170px] left-0 top-0 w-[340px]" data-name="Container">
       <div className="absolute bg-[#b23b3b] h-[170px] left-0 top-0 w-[6px]" data-name="Background" />
@@ -524,23 +634,27 @@ function Container25() {
 }
 
 function Card2() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="absolute bg-[#fdfcfb] border border-[#e6e1dc] border-solid h-[158px] left-0 overflow-clip rounded-[16px] shadow-[0px_0px_4.7px_0px_rgba(0,0,0,0.25)] top-[338px] w-[342px]" data-name="Card 3">
       <Container25 />
       <div className="absolute bg-[#e5e0da] h-px left-[23px] right-[23px] top-[89px]" data-name="Horizontal Divider" />
       <div className="-translate-y-1/2 absolute flex flex-col font-['Manrope:Medium',sans-serif] font-medium justify-center leading-[0] left-[23px] text-[#7d6c5c] text-[0px] top-[122px] tracking-[1.1px] w-[110px]">
-        <p className="leading-[17px] mb-0 text-[10px]">Impact</p>
-        <p className="leading-[17px] text-[10px] text-black">Personnel Safety</p>
+        <p className="leading-[17px] mb-0 text-[10px]">{t("impact")}</p>
+        <p className="leading-[17px] text-[10px] text-black">{t("personnelSafety")}</p>
       </div>
       <div className="-translate-y-1/2 absolute flex flex-col font-['Manrope:Medium',sans-serif] font-medium justify-center leading-[0] left-[189px] text-[#7d6c5c] text-[0px] top-[122px] tracking-[1.1px] w-[111px]">
-        <p className="leading-[17px] mb-0 text-[10px]">Response Due</p>
-        <p className="leading-[17px] text-[10px] text-black">30m</p>
+        <p className="leading-[17px] mb-0 text-[10px]">{t("responseDue")}</p>
+        <p className="leading-[17px] text-[10px] text-black">{t("30m")}</p>
       </div>
     </div>
   );
 }
 
 function IssuesList() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="absolute h-[496px] left-[24px] top-[195px] w-[342px]" data-name="Issues List">
       <Card />
@@ -551,12 +665,14 @@ function IssuesList() {
 }
 
 function MainContentArea() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="absolute h-[1521px] left-0 top-[64px] w-[390px]" data-name="Main - Content Area">
       <SectionArchitecturalImageFeature />
       <HeaderSection />
       <div className="-translate-y-1/2 absolute flex flex-col font-['Manrope:Medium',sans-serif] font-medium justify-center leading-[0] left-[24px] text-[#4f443d] text-[16px] top-[718px] tracking-[-0.4px] whitespace-nowrap">
-        <p className="leading-[24px]">Observation Log</p>
+        <p className="leading-[24px]">{t("observationLog")}</p>
       </div>
       <StatsBento />
       <SectionArchitecturalImageFeature1 />
@@ -566,6 +682,8 @@ function MainContentArea() {
 }
 
 function Container30() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="absolute h-[18px] left-[40.75px] top-[13px] w-[16px]" data-name="Container">
       <svg className="absolute block inset-0 size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 16 18">
@@ -578,16 +696,20 @@ function Container30() {
 }
 
 function Margin1() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="absolute h-[19px] left-[32.18px] top-[31px] w-[33.13px]" data-name="Margin">
       <div className="-translate-y-1/2 absolute flex flex-col font-['Manrope:SemiBold',sans-serif] font-semibold justify-center leading-[0] left-0 text-[#564239] text-[10px] top-[11.5px] tracking-[1px] uppercase whitespace-nowrap">
-        <p className="leading-[15px]">HOME</p>
+        <p className="leading-[15px]">{t("hOME")}</p>
       </div>
     </div>
   );
 }
 
 function LinkHomeActive() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="absolute h-[63px] left-0 top-px w-[97.5px]" data-name="Link - Home Active">
       <Container30 />
@@ -597,16 +719,20 @@ function LinkHomeActive() {
 }
 
 function Container31() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="absolute h-[15px] left-[30.4px] top-[34px] w-[36.7px]" data-name="Container">
       <div className="-translate-y-1/2 absolute flex flex-col font-['Manrope:SemiBold',sans-serif] font-semibold justify-center leading-[0] left-0 text-[#564239] text-[10px] top-[7.5px] tracking-[1px] uppercase whitespace-nowrap">
-        <p className="leading-[15px]">TASKS</p>
+        <p className="leading-[15px]">{t("tASKS")}</p>
       </div>
     </div>
   );
 }
 
 function LinkDecisions() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="absolute h-[63px] left-[97.5px] top-px w-[97.5px]" data-name="Link - Decisions">
       <div className="absolute h-[20px] left-[39.75px] top-[14px] w-[18px]" data-name="Icon">
@@ -620,6 +746,8 @@ function LinkDecisions() {
 }
 
 function Container32() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="absolute h-[19px] left-[37.75px] top-[12.5px] w-[22px]" data-name="Container">
       <svg className="absolute block inset-0 size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 22 19">
@@ -632,16 +760,20 @@ function Container32() {
 }
 
 function Margin2() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="absolute h-[19px] left-[27.92px] top-[31.5px] w-[41.67px]" data-name="Margin">
       <div className="-translate-y-1/2 absolute flex flex-col font-['Manrope:SemiBold',sans-serif] font-semibold justify-center leading-[0] left-0 text-[10px] text-white top-[11.5px] tracking-[1px] uppercase whitespace-nowrap">
-        <p className="leading-[15px]">ISSUES</p>
+        <p className="leading-[15px]">{t("iSSUES")}</p>
       </div>
     </div>
   );
 }
 
 function LinkIssues() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="absolute bg-[#7a3100] h-[63px] left-[195px] top-px w-[97.5px]" data-name="Link - Issues">
       <Container32 />
@@ -651,6 +783,8 @@ function LinkIssues() {
 }
 
 function Container33() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="absolute h-[12px] left-[37.75px] top-[16px] w-[22px]" data-name="Container">
       <svg className="absolute block inset-0 size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 22 12">
@@ -663,16 +797,20 @@ function Container33() {
 }
 
 function Margin3() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="absolute h-[19px] left-[22.52px] top-[28px] w-[52.45px]" data-name="Margin">
       <div className="-translate-y-1/2 absolute flex flex-col font-['Manrope:SemiBold',sans-serif] font-semibold justify-center leading-[0] left-0 text-[#564239] text-[10px] top-[11.5px] tracking-[1px] uppercase whitespace-nowrap">
-        <p className="leading-[15px]">TIMELINE</p>
+        <p className="leading-[15px]">{t("tIMELINE")}</p>
       </div>
     </div>
   );
 }
 
 function LinkTimeline() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="absolute h-[63px] left-[292.5px] top-px w-[97.5px]" data-name="Link - Timeline">
       <Container33 />
@@ -682,6 +820,8 @@ function LinkTimeline() {
 }
 
 function Group1() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="absolute contents left-0 top-0">
       <LinkHomeActive />
@@ -693,6 +833,8 @@ function Group1() {
 }
 
 function BottomNavBarShell() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="absolute bg-[#fbf9f8] border-[#8a7267] border-solid border-t h-[64px] left-0 top-[1521px] w-[390px]" data-name="BottomNavBar Shell">
       <Group1 />
@@ -701,16 +843,20 @@ function BottomNavBarShell() {
 }
 
 function Group4() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="absolute contents left-[337.68px] top-[19px]">
       <div className="-translate-y-1/2 absolute capitalize flex flex-col font-['Outfit:Regular','Noto_Sans_Kannada:Regular',sans-serif] font-normal justify-center leading-[0] left-[337.68px] text-[15.296px] text-white top-[30.5px] tracking-[-0.1683px] whitespace-nowrap">
-        <p className="leading-[1.5]">ಕನ್ನ</p>
+        <p className="leading-[1.5]">{t("langPillLabel")}</p>
       </div>
     </div>
   );
 }
 
 function MdiExchange() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="absolute left-[311.85px] size-[25.833px] top-[19px]" data-name="mdi:exchange">
       <svg className="absolute block inset-0 size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 25.8333 25.8333">
@@ -728,6 +874,8 @@ function MdiExchange() {
 }
 
 function Group5() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="absolute contents left-[311.85px] top-[19px]">
       <Group4 />
@@ -737,6 +885,8 @@ function Group5() {
 }
 
 function LangChangeButton() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="absolute contents left-[298.85px] top-[16px]" data-name="Lang Change Button">
       <div className="absolute bg-[#7a3100] h-[31px] left-[298.85px] rounded-[28.615px] top-[16px] w-[71.538px]" />
@@ -746,10 +896,12 @@ function LangChangeButton() {
 }
 
 function Group() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="absolute contents left-[68px] top-[12px]">
       <div className="-translate-y-1/2 absolute flex flex-col font-['Inter:Black',sans-serif] font-black justify-center leading-[0] left-[68px] not-italic text-[26.757px] text-black top-[31.5px] tracking-[1.2664px] uppercase whitespace-nowrap">
-        <p className="leading-[38.224px]">s teFLOW</p>
+        <p className="leading-[38.224px]">{t("sTeFLOW")}</p>
       </div>
       <div className="absolute h-[19.542px] left-[83.84px] top-[21.44px] w-[15.106px]" data-name="Vector">
         <svg className="absolute block inset-0 size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 15.1061 19.5416">
@@ -761,6 +913,8 @@ function Group() {
 }
 
 function HeaderTopAppBar() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="absolute bg-[#fbf9f8] h-[64px] left-[0.15px] top-0 w-[390px]" data-name="Header - TopAppBar">
       <LangChangeButton />
@@ -777,13 +931,15 @@ function HeaderTopAppBar() {
 }
 
 export default function Component5IssuesListUrgentIssuesFinalColor() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="relative size-full" style={{ backgroundImage: "linear-gradient(90deg, rgb(253, 252, 251) 0%, rgb(253, 252, 251) 100%), linear-gradient(90deg, rgb(255, 255, 255) 0%, rgb(255, 255, 255) 100%)" }} data-name="5. ISSUES — List (Urgent Issues) (Final Color)">
       <MainContentArea />
       <BottomNavBarShell />
       <HeaderTopAppBar />
       <div className="-translate-y-1/2 absolute flex flex-col font-['Manrope:Regular',sans-serif] font-normal justify-center leading-[0] left-[25px] text-[#6b5e55] text-[16px] top-[129px] tracking-[-0.4px] whitespace-nowrap">
-        <p className="leading-[24px]">Problems on site needing review.</p>
+        <p className="leading-[24px]">{t("problemsOnSiteNeedingReview")}</p>
       </div>
     </div>
   );

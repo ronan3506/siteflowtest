@@ -30,6 +30,8 @@ function LangCard({
   selected: boolean;
   onClick: () => void;
 }) {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   const label = LANG_LABELS[langId];
   return (
     <button
@@ -98,7 +100,7 @@ export function Screen1({
       <div className="absolute top-0 left-0 right-0 h-[64px] bg-[#fbf9f8] flex items-center justify-center px-4 z-10">
         <div className="inline-grid grid-cols-[max-content] grid-rows-[max-content] leading-[0] place-items-start relative shrink-0">
           <div className="col-start-1 row-start-1 flex flex-col font-['Inter:Black',sans-serif] font-black justify-center leading-[0] not-italic text-[29.501px] text-black tracking-[1.3963px] uppercase w-[188px] whitespace-nowrap">
-            <p className="leading-[42.144px]">s teFLOW</p>
+            <p className="leading-[42.144px]">{t("sTeFLOW")}</p>
           </div>
           <div className="col-start-1 row-start-1 h-[21.546px] ml-[17.46px] mt-[10.41px] w-[16.655px] relative">
             <svg className="absolute inset-0 size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 16.6555 21.5459">

@@ -1,3 +1,5 @@
+import { useLanguage } from "../../i18n/LanguageContext";
+import { useTranslations } from "../../i18n/translations";
 import * as React from "react";
 import { Slot } from "@radix-ui/react-slot";
 import { ChevronRight, MoreHorizontal } from "lucide-react";
@@ -9,6 +11,8 @@ function Breadcrumb({ ...props }: React.ComponentProps<"nav">) {
 }
 
 function BreadcrumbList({ className, ...props }: React.ComponentProps<"ol">) {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <ol
       data-slot="breadcrumb-list"
@@ -22,6 +26,8 @@ function BreadcrumbList({ className, ...props }: React.ComponentProps<"ol">) {
 }
 
 function BreadcrumbItem({ className, ...props }: React.ComponentProps<"li">) {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <li
       data-slot="breadcrumb-item"
@@ -38,6 +44,8 @@ function BreadcrumbLink({
 }: React.ComponentProps<"a"> & {
   asChild?: boolean;
 }) {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   const Comp = asChild ? Slot : "a";
 
   return (
@@ -50,6 +58,8 @@ function BreadcrumbLink({
 }
 
 function BreadcrumbPage({ className, ...props }: React.ComponentProps<"span">) {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <span
       data-slot="breadcrumb-page"
@@ -67,6 +77,8 @@ function BreadcrumbSeparator({
   className,
   ...props
 }: React.ComponentProps<"li">) {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <li
       data-slot="breadcrumb-separator"
@@ -84,6 +96,8 @@ function BreadcrumbEllipsis({
   className,
   ...props
 }: React.ComponentProps<"span">) {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <span
       data-slot="breadcrumb-ellipsis"
@@ -93,7 +107,7 @@ function BreadcrumbEllipsis({
       {...props}
     >
       <MoreHorizontal className="size-4" />
-      <span className="sr-only">More</span>
+      <span className="sr-only">{t("more")}</span>
     </span>
   );
 }

@@ -1,11 +1,15 @@
+import { useLanguage } from "../../app/i18n/LanguageContext";
+import { useTranslations } from "../../app/i18n/translations";
 import svgPaths from "./svg-stlgi2ker8";
 
 function Container() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="relative shrink-0 w-full" data-name="Container">
       <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex flex-col items-start relative size-full">
         <div className="flex flex-col font-['Manrope:Regular',sans-serif] font-normal justify-center leading-[0] relative shrink-0 text-[#615e5b] text-[11px] tracking-[0.55px] uppercase w-full">
-          <p className="leading-[16.5px]">Change Order ID</p>
+          <p className="leading-[16.5px]">{t("changeOrderID")}</p>
         </div>
       </div>
     </div>
@@ -13,11 +17,13 @@ function Container() {
 }
 
 function Container1() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="relative shrink-0 w-full" data-name="Container">
       <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex flex-col items-start relative size-full">
         <div className="flex flex-col font-['Manrope:Medium',sans-serif] font-medium justify-center leading-[0] relative shrink-0 text-[#7a3100] text-[16px] w-full">
-          <p className="leading-[24px]">SF-2024-8891-X</p>
+          <p className="leading-[24px]">{t("sF20248891X")}</p>
         </div>
       </div>
     </div>
@@ -25,6 +31,8 @@ function Container1() {
 }
 
 function BackgroundBorder() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="bg-white relative rounded-[8px] shrink-0 w-full" data-name="Background+Border">
       <div aria-hidden="true" className="absolute border border-[#cbc3bd] border-solid inset-0 pointer-events-none rounded-[8px]" />
@@ -37,11 +45,13 @@ function BackgroundBorder() {
 }
 
 function Container2() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="relative shrink-0 w-full" data-name="Container">
       <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex flex-col items-start relative size-full">
         <div className="flex flex-col font-['Manrope:Regular',sans-serif] font-normal justify-center leading-[0] relative shrink-0 text-[#615e5b] text-[11px] tracking-[0.55px] uppercase w-full">
-          <p className="leading-[16.5px]">TIMESTAMP</p>
+          <p className="leading-[16.5px]">{t("tIMESTAMP")}</p>
         </div>
       </div>
     </div>
@@ -49,6 +59,8 @@ function Container2() {
 }
 
 function Container3() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="relative shrink-0 w-full" data-name="Container">
       <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex flex-col items-start relative size-full">
@@ -61,6 +73,8 @@ function Container3() {
 }
 
 function BackgroundBorder1() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="bg-white relative rounded-[8px] shrink-0 w-full" data-name="Background+Border">
       <div aria-hidden="true" className="absolute border border-[#cbc3bd] border-solid inset-0 pointer-events-none rounded-[8px]" />
@@ -73,6 +87,8 @@ function BackgroundBorder1() {
 }
 
 function InfoCards() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="content-stretch flex flex-col gap-[12px] items-start relative shrink-0 w-full" data-name="Info Cards">
       <BackgroundBorder />
@@ -82,6 +98,8 @@ function InfoCards() {
 }
 
 function InfoCardsMargin() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="absolute content-stretch flex flex-col items-start left-[16px] pb-[32px] right-[16px] top-[394px]" data-name="Info Cards:margin">
       <InfoCards />
@@ -90,27 +108,33 @@ function InfoCardsMargin() {
 }
 
 function Button() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="bg-[#7a3100] content-stretch drop-shadow-[0px_1px_1px_rgba(0,0,0,0.05)] flex flex-col items-center justify-center pl-[127.52px] pr-[127.51px] py-[16px] relative rounded-[8px] shrink-0" data-name="Button">
       <div className="flex flex-col font-['Manrope:Regular',sans-serif] font-normal h-[20px] justify-center leading-[0] relative shrink-0 text-[14px] text-center text-white tracking-[0.35px] w-[102.97px]">
-        <p className="leading-[20px]">BACK TO HOME</p>
+        <p className="leading-[20px]">{t("bACKTOHOME")}</p>
       </div>
     </div>
   );
 }
 
 function Button1() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="bg-white content-stretch flex flex-col items-center justify-center pl-[141.88px] pr-[141.87px] py-[17px] relative rounded-[8px] shrink-0" data-name="Button">
       <div aria-hidden="true" className="absolute border border-[#52311a] border-solid inset-0 pointer-events-none rounded-[8px]" />
       <div className="flex flex-col font-['Manrope:Medium',sans-serif] font-medium h-[20px] justify-center leading-[0] relative shrink-0 text-[#7a3100] text-[13.5px] text-center tracking-[0.35px] w-[74.25px]">
-        <p className="leading-[20px]">VIEW LOGS</p>
+        <p className="leading-[20px]">{t("vIEWLOGS")}</p>
       </div>
     </div>
   );
 }
 
 function ActionButtons() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="absolute content-stretch flex flex-col gap-[12px] items-start left-[16px] right-[16px] top-[611px]" data-name="Action Buttons">
       <Button />
@@ -120,6 +144,8 @@ function ActionButtons() {
 }
 
 function Container4() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="relative shrink-0 size-[40px]" data-name="Container">
       <svg className="absolute block inset-0 size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 40 40">
@@ -132,6 +158,8 @@ function Container4() {
 }
 
 function Overlay() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="bg-[rgba(16,185,129,0.1)] content-stretch flex items-center justify-center relative rounded-[9999px] shrink-0 size-[96px]" data-name="Overlay">
       <Container4 />
@@ -140,6 +168,8 @@ function Overlay() {
 }
 
 function Margin() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="content-stretch flex flex-col h-[120px] items-start pb-[24px] relative shrink-0 w-[96px]" data-name="Margin">
       <Overlay />
@@ -148,16 +178,20 @@ function Margin() {
 }
 
 function Heading() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="content-stretch flex flex-col items-center relative shrink-0 w-full" data-name="Heading 1">
       <div className="flex flex-col font-['Manrope:Bold',sans-serif] font-bold h-[38px] justify-center leading-[0] relative shrink-0 text-[#1a1a1a] text-[30px] text-center tracking-[-0.75px] w-[180.83px]">
-        <p className="leading-[37.5px]">Decision Sent</p>
+        <p className="leading-[37.5px]">{t("decisionSent")}</p>
       </div>
     </div>
   );
 }
 
 function Container5() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="content-stretch flex flex-col items-start relative shrink-0 w-[180.83px]" data-name="Container">
       <Heading />
@@ -166,6 +200,8 @@ function Container5() {
 }
 
 function SuccessAnimationIconArea() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="content-stretch flex flex-col items-center relative shrink-0 w-full" data-name="Success Animation/Icon Area">
       <Margin />
@@ -175,6 +211,8 @@ function SuccessAnimationIconArea() {
 }
 
 function SuccessAnimationIconAreaMargin() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="absolute content-stretch flex flex-col items-start left-[16px] pb-[32px] right-[16px] top-[128px]" data-name="Success Animation/Icon Area:margin">
       <SuccessAnimationIconArea />
@@ -183,16 +221,20 @@ function SuccessAnimationIconAreaMargin() {
 }
 
 function Container6() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="absolute content-stretch flex flex-col items-center left-[26px] top-[338px] w-[337.3px]" data-name="Container">
       <div className="flex flex-col font-['Manrope:Regular',sans-serif] font-normal h-[24px] justify-center leading-[0] relative shrink-0 text-[#615e5b] text-[16px] text-center w-[337.3px]">
-        <p className="leading-[24px]">Your decision has been shared with the team.</p>
+        <p className="leading-[24px]">{t("yourDecisionHasBeenSharedWithTheTeam")}</p>
       </div>
     </div>
   );
 }
 
 function MainContent() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="h-[844.5px] max-w-[390px] relative shrink-0 w-full" data-name="Main Content">
       <InfoCardsMargin />
@@ -204,6 +246,8 @@ function MainContent() {
 }
 
 function Component4DecisionSentCleaned() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="absolute content-stretch flex flex-col h-[884px] items-center left-0 min-h-[884px] pb-[39.5px] top-px w-[390px]" style={{ backgroundImage: "linear-gradient(90deg, rgb(251, 249, 248) 0%, rgb(251, 249, 248) 100%), linear-gradient(90deg, rgb(255, 255, 255) 0%, rgb(255, 255, 255) 100%)" }} data-name="4. Decision Sent (Cleaned)">
       <MainContent />
@@ -220,6 +264,8 @@ function Group() {
 }
 
 function Container8() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="h-[15px] relative shrink-0 w-[9.09px]" data-name="Container">
       <svg className="absolute block inset-0 size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 9.09005 15">
@@ -232,6 +278,8 @@ function Container8() {
 }
 
 function Button2() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="absolute content-stretch flex items-center justify-center left-0 rounded-[9999px] size-[40px] top-0" data-name="Button">
       <Container8 />
@@ -240,6 +288,8 @@ function Button2() {
 }
 
 function Container7() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="-translate-y-1/2 absolute h-[40px] left-[16px] top-1/2 w-[374px]" data-name="Container">
       <Button2 />
@@ -251,6 +301,8 @@ function Container7() {
 }
 
 function HeaderTopAppBar() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="-translate-x-1/2 absolute bg-[#fbf9f8] h-[64px] left-1/2 top-0 w-[390px]" data-name="Header - TopAppBar">
       <Container7 />
@@ -259,6 +311,8 @@ function HeaderTopAppBar() {
 }
 
 export default function Component4DecSent() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="bg-white relative size-full" data-name="4. dec sent">
       <Group />

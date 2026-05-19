@@ -1,9 +1,13 @@
+import { useLanguage } from "../i18n/LanguageContext";
+import { useTranslations } from "../i18n/translations";
 import imgHero from "../../imports/8ProjectTimelineDailyLog-1/f5c465596267617a9e58f5b0cb4aca345375b5e6.png";
 import imgPhoto1 from "../../imports/4ApprovalDetailMobile-1/bb7f40408c635757a14beb63beb0669d716b2388.png";
 import imgPhoto2 from "../../imports/4ApprovalDetailMobile-1/7145531c5ea9f6711eef9f9b12e4fcaf46e570d1.png";
 import imgPhoto3 from "../../imports/5IssuesListUrgentIssuesFinalColor/6a6304f351d8e9b12a162600ef85a762d67bfa15.png";
 
 function DetailHeader({ onBack }: { onBack: () => void }) {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div
       className="absolute left-0 top-0 w-full"
@@ -27,7 +31,7 @@ function DetailHeader({ onBack }: { onBack: () => void }) {
           className="font-['Manrope:Bold',sans-serif] font-bold uppercase whitespace-nowrap"
           style={{ fontSize: 16, letterSpacing: "0.8px", color: "#7a3100", marginLeft: 16 }}
         >
-          TIMELINE
+          {t("tIMELINE")}
         </span>
       </div>
     </div>
@@ -35,6 +39,8 @@ function DetailHeader({ onBack }: { onBack: () => void }) {
 }
 
 function ProgressBar({ pct }: { pct: number }) {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div>
       <div className="flex justify-between items-center" style={{ marginBottom: 8 }}>
@@ -42,7 +48,7 @@ function ProgressBar({ pct }: { pct: number }) {
           className="font-['Manrope:Regular',sans-serif] uppercase"
           style={{ fontSize: 10, letterSpacing: "0.8px", color: "#564239" }}
         >
-          OVERALL PROGRESS
+          {t("oVERALLPROGRESS")}
         </p>
         <p
           className="font-['Manrope:Bold',sans-serif] font-bold"
@@ -66,6 +72,8 @@ function ProgressBar({ pct }: { pct: number }) {
 }
 
 function StageRow({ label, status, done }: { label: string; status: string; done: boolean }) {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="flex items-center justify-between">
       <div className="flex items-center gap-[10px]">
@@ -107,6 +115,8 @@ function StageRow({ label, status, done }: { label: string; status: string; done
 }
 
 export default function TimelineSiteUpdateDetail({ onBack }: { onBack: () => void }) {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="relative bg-[#fbf9f8]" style={{ width: 412 }}>
       <DetailHeader onBack={onBack} />
@@ -119,7 +129,7 @@ export default function TimelineSiteUpdateDetail({ onBack }: { onBack: () => voi
           className="font-['Manrope:Regular',sans-serif] uppercase"
           style={{ fontSize: 10, letterSpacing: "1.1px", color: "#564239", marginBottom: 6 }}
         >
-          SITE UPDATE
+          {t("sITEUPDATE")}
         </p>
 
         {/* Title */}
@@ -127,7 +137,7 @@ export default function TimelineSiteUpdateDetail({ onBack }: { onBack: () => voi
           className="font-['Manrope:Bold',sans-serif] font-bold uppercase"
           style={{ fontSize: 24, letterSpacing: "-0.6px", color: "#1a1a1a", lineHeight: "28px", marginBottom: 4 }}
         >
-          FIRST FLOOR
+          {t("fIRSTFLOOR")}
         </p>
 
         {/* Timestamp */}
@@ -162,7 +172,7 @@ export default function TimelineSiteUpdateDetail({ onBack }: { onBack: () => voi
             className="font-['Manrope:Regular',sans-serif] uppercase"
             style={{ fontSize: 10, letterSpacing: "0.8px", color: "#564239", marginBottom: 12 }}
           >
-            CURRENT WORK STAGE
+            {t("cURRENTWORKSTAGE")}
           </p>
           <div className="flex flex-col gap-[12px]">
             <StageRow label="Foundation & Excavation"  status="Complete"     done={true} />
@@ -183,7 +193,7 @@ export default function TimelineSiteUpdateDetail({ onBack }: { onBack: () => voi
             className="font-['Manrope:Regular',sans-serif] uppercase"
             style={{ fontSize: 10, letterSpacing: "0.8px", color: "#564239", marginBottom: 8 }}
           >
-            UPDATE NOTES
+            {t("uPDATENOTES")}
           </p>
           <p
             className="font-['Manrope:Regular',sans-serif]"
@@ -199,7 +209,7 @@ export default function TimelineSiteUpdateDetail({ onBack }: { onBack: () => voi
             className="font-['Manrope:Regular',sans-serif] uppercase"
             style={{ fontSize: 10, letterSpacing: "0.8px", color: "#564239", marginBottom: 12 }}
           >
-            PHOTOS SUBMITTED THIS WEEK
+            {t("pHOTOSSUBMITTEDTHISWEEK")}
           </p>
           <div className="flex gap-[8px]">
             <div style={{ flex: 1, height: 90, borderRadius: 10, overflow: "hidden" }}>

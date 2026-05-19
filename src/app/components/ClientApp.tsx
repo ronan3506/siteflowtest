@@ -181,6 +181,8 @@ function PersistentHeader({ onMenuOpen }: { onMenuOpen: () => void }) {
 
 // ─── BackHeader ───────────────────────────────────────────────────────────────
 function BackHeader({ onBack, label }: { onBack: () => void; label: string }) {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div
       className="absolute top-0 left-0 right-0 bg-[#fbf9f8] z-40 flex items-center"
@@ -204,6 +206,8 @@ function BackHeader({ onBack, label }: { onBack: () => void; label: string }) {
 
 // ─── ClientBottomNav ──────────────────────────────────────────────────────────
 function ClientBottomNav({ active, onNav }: { active: TabScreen; onNav: (t: TabScreen) => void }) {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   const icons: Record<TabScreen, JSX.Element> = {
     home: (
       <svg viewBox="0 0 16 18" fill="none" className="w-[16px] h-[18px]">
@@ -275,6 +279,8 @@ function ClientScrollArea({
   reserveNav?: boolean;
   children: React.ReactNode;
 }) {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div
       className="no-scrollbar absolute inset-0 overflow-y-auto overflow-x-hidden"
@@ -299,6 +305,8 @@ function StageScrollArea({
   clipTop?: number;
   children: React.ReactNode;
 }) {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   const visibleH = (contentHeight - clipTop) * SCALE;
   return (
     <div
@@ -331,6 +339,8 @@ function Overlay({
   top: number; left?: number; width: number; height: number;
   onClick: () => void; label: string; zIndex?: number;
 }) {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <button
       onClick={onClick}
@@ -343,6 +353,8 @@ function Overlay({
 
 // ─── Animated Project Status Card ─────────────────────────────────────────────
 function AnimatedProjectStatusCard({ visitKey }: { visitKey: number }) {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   const [count, setCount] = useState(0);
   const [barWidth, setBarWidth] = useState(0);
 
@@ -388,7 +400,7 @@ function AnimatedProjectStatusCard({ visitKey }: { visitKey: number }) {
           color: "#7a3100",
         }}
       >
-        PROJECT<br />STATUS
+        {t("pROJECT")}<br />{t("sTATUS")}
       </div>
 
       {/* 78% counter — positioned wrapper shares exact left/width with ON TRACK pill so centers align */}
@@ -421,7 +433,7 @@ function AnimatedProjectStatusCard({ visitKey }: { visitKey: number }) {
         }}
       >
         <span className="font-['Manrope:ExtraBold',sans-serif] font-extrabold text-[11px] tracking-[0.55px] uppercase" style={{ color: "#2e7d32" }}>
-          ON TRACK
+          {t("oNTRACK")}
         </span>
       </motion.div>
 
@@ -494,6 +506,8 @@ function ClientHomeTab({
   onOpenDecisions: () => void;
   onOpenIssues: () => void;
 }) {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <ClientScrollArea contentHeight={1120}>
       {/* Project Status card section */}
@@ -514,7 +528,7 @@ function ClientHomeTab({
           className="font-['Manrope:Bold',sans-serif] font-bold uppercase"
           style={{ fontSize: 14, letterSpacing: "1.4px", color: "#564239", paddingLeft: 4, marginBottom: 16 }}
         >
-          ACTION REQUIRED
+          {t("aCTIONREQUIRED")}
         </div>
         {/* Decision card — entire card is one tap target for Review Decision */}
         <button
@@ -542,11 +556,11 @@ function ClientHomeTab({
               style={{ background: "#fff3e0", padding: "5px 8px" }}
             >
               <span className="font-['Manrope:Bold',sans-serif] font-bold uppercase" style={{ fontSize: 9, color: "#f5a623", letterSpacing: "0.37px" }}>
-                APPROVAL NEEDED
+                {t("aPPROVALNEEDED")}
               </span>
             </div>
             <div className="font-['Manrope:ExtraBold',sans-serif] font-extrabold" style={{ fontSize: 18, color: "#1b1c1c", marginBottom: 4 }}>
-              AC Layout Revision
+              {t("aCLayoutRevision")}
             </div>
             <div className="font-['Manrope:SemiBold',sans-serif] font-semibold" style={{ fontSize: 13, color: "#564239", marginBottom: 16 }}>
               +₹12,450 increase • +4 day delay
@@ -557,7 +571,7 @@ function ClientHomeTab({
               style={{ height: 45, background: "#7a3100", pointerEvents: "none" }}
             >
               <span className="font-['Manrope:Bold',sans-serif] font-bold" style={{ fontSize: 14, color: "#fff" }}>
-                Review Decision
+                {t("reviewDecision")}
               </span>
             </div>
           </div>
@@ -568,10 +582,10 @@ function ClientHomeTab({
       <div className="absolute" style={{ left: 16, top: 700, width: 358 }}>
         <div className="flex items-center justify-between mb-[16px]">
           <span className="font-['Manrope:Bold',sans-serif] font-bold uppercase" style={{ fontSize: 14, letterSpacing: "1.4px", color: "#564239", paddingLeft: 4 }}>
-            SITE ISSUES
+            {t("sITEISSUES")}
           </span>
           <span className="font-['Manrope:SemiBold',sans-serif] font-semibold" style={{ fontSize: 12, color: "#8a7267" }}>
-            2 ACTIVE
+            {t("2ACTIVE")}
           </span>
         </div>
 
@@ -589,17 +603,17 @@ function ClientHomeTab({
           {/* Text content */}
           <div className="absolute" style={{ left: 92, top: 12 }}>
             <div className="font-['Manrope:Bold',sans-serif] font-bold" style={{ fontSize: 15, color: "#1b1c1c", marginBottom: 4 }}>
-              Column Misaligned
+              {t("columnMisaligned")}
             </div>
             <div className="font-['Manrope:Medium',sans-serif] font-medium" style={{ fontSize: 12, color: "#564239", marginBottom: 8 }}>
-              Ground floor • Corrective measures needed
+              {t("groundFloorCorrectiveMeasuresNeeded")}
             </div>
             <button
               onClick={onOpenIssues}
               className="font-['Manrope:Bold',sans-serif] font-bold cursor-pointer active:opacity-60 transition-opacity"
               style={{ fontSize: 12, color: "#7a3100", background: "none", border: "none", padding: 0 }}
             >
-              View Details
+              {t("viewDetails")}
             </button>
           </div>
         </div>
@@ -617,17 +631,17 @@ function ClientHomeTab({
           </div>
           <div className="absolute" style={{ left: 92, top: 12 }}>
             <div className="font-['Manrope:Bold',sans-serif] font-bold" style={{ fontSize: 15, color: "#1b1c1c", marginBottom: 4 }}>
-              Material Shortage
+              {t("materialShortage")}
             </div>
             <div className="font-['Manrope:Medium',sans-serif] font-medium" style={{ fontSize: 12, color: "#564239", marginBottom: 8 }}>
-              Scaffolding • Re-ordering in progress
+              {t("scaffoldingReOrderingInProgress")}
             </div>
             <button
               onClick={onOpenIssues}
               className="font-['Manrope:Bold',sans-serif] font-bold cursor-pointer active:opacity-60 transition-opacity"
               style={{ fontSize: 12, color: "#7a3100", background: "none", border: "none", padding: 0 }}
             >
-              View Details
+              {t("viewDetails")}
             </button>
           </div>
         </div>
@@ -639,7 +653,7 @@ function ClientHomeTab({
       {/* RECENT UPDATES section */}
       <div className="absolute" style={{ left: 16, top: 969, width: 358 }}>
         <div className="font-['Manrope:Bold',sans-serif] font-bold uppercase mb-[16px]" style={{ fontSize: 14, letterSpacing: "1.4px", color: "#564239", paddingLeft: 4 }}>
-          RECENT UPDATES
+          {t("rECENTUPDATES")}
         </div>
         {/* Activity card */}
         <div
@@ -653,10 +667,10 @@ function ClientHomeTab({
           {/* Text */}
           <div className="absolute" style={{ left: 92, top: 12 }}>
             <div className="font-['Manrope:SemiBold',sans-serif] font-semibold" style={{ fontSize: 14, color: "#1b1c1c", lineHeight: "17.5px", marginBottom: 8 }}>
-              Concrete pour completed<br />in 2nd floor
+              {t("concretePourCompleted")}<br />{t("in2ndFloor")}
             </div>
             <div className="font-['Manrope:Regular',sans-serif]" style={{ fontSize: 12, color: "#564239" }}>
-              2 hours ago
+              {t("2HoursAgo")}
             </div>
           </div>
           {/* Chevron */}
@@ -673,6 +687,8 @@ function ClientHomeTab({
 
 // ─── Decisions Tab ────────────────────────────────────────────────────────────
 function DecisionsTab({ onReview }: { onReview: () => void }) {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   const FIGMA_HEADER = 64;
   const CARD_TOP = 154 - FIGMA_HEADER; // 90
   const CARD_H = 148;
@@ -710,6 +726,8 @@ function DecisionsTab({ onReview }: { onReview: () => void }) {
 
 // ─── Issues Tab ───────────────────────────────────────────────────────────────
 function IssuesTab({ onViewIssue }: { onViewIssue: () => void }) {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   const FIGMA_HEADER = 64;
 
   return (
@@ -737,6 +755,8 @@ function TimelineTab({
   onOpenSiteUpdate: () => void;
   onOpenIssue: () => void;
 }) {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   const [tf, setTf] = useState<TFilter>("today");
   const [af, setAf] = useState<AFilter>("all");
 
@@ -755,6 +775,8 @@ function TimelineTab({
 
 // ─── ScreenFrame ──────────────────────────────────────────────────────────────
 function ScreenFrame({ children }: { children: React.ReactNode }) {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <motion.div
       className="absolute inset-0"
@@ -779,6 +801,8 @@ function AskForChangeSheet({
   onClose: () => void;
   onSubmit: (text: string) => void;
 }) {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   const [text, setText] = useState("");
 
   const handleSubmit = () => {
@@ -834,13 +858,13 @@ function AskForChangeSheet({
                     className="font-['Manrope:Bold',sans-serif] font-bold text-[#1a1a1a]"
                     style={{ fontSize: 22, letterSpacing: "-0.5px", lineHeight: "30px" }}
                   >
-                    Request Changes
+                    {t("requestChanges")}
                   </div>
                   <div
                     className="font-['Manrope:Regular',sans-serif] text-[#6b5c54]"
                     style={{ fontSize: 13, lineHeight: "18px" }}
                   >
-                    Describe what you'd like updated.
+                    {t("describeWhatYouDLikeUpdated")}
                   </div>
                 </div>
 
@@ -890,7 +914,7 @@ function AskForChangeSheet({
                     className="font-['Manrope:SemiBold',sans-serif] font-semibold uppercase tracking-[1.2px] text-white"
                     style={{ fontSize: 12 }}
                   >
-                    SEND REQUEST
+                    {t("sENDREQUEST")}
                   </span>
                 </button>
               </div>
@@ -911,6 +935,8 @@ function ReviewDecisionDetail({
   onApprove: () => void;
   onAskForChangeDone: () => void;
 }) {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   const [sheetOpen, setSheetOpen] = useState(false);
 
   const handleSubmitChange = (_text: string) => {
@@ -939,7 +965,7 @@ function ReviewDecisionDetail({
               style={{ background: "#7a3100" }}
             >
               <span className="font-['Manrope:Regular',sans-serif] font-normal tracking-[1.1px] uppercase" style={{ fontSize: 11, color: "#fff" }}>
-                APPROVE
+                {t("aPPROVE")}
               </span>
             </button>
             <button
@@ -948,7 +974,7 @@ function ReviewDecisionDetail({
               style={{ background: "#e9e8e7" }}
             >
               <span className="font-['Manrope:Regular',sans-serif] font-normal tracking-[1.1px] uppercase" style={{ fontSize: 11, color: "#1b1c1c" }}>
-                ASK FOR CHANGE
+                {t("aSKFORCHANGE")}
               </span>
             </button>
           </div>
@@ -974,6 +1000,8 @@ function DecisionSentDetail({
   animKey: number;
   onBackToHome: () => void;
 }) {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   // Figma frame is 390×885px with a 64px baked-in header we hide via marginTop.
   // Button positions in Figma coordinates (before the 64px header shift):
   //   BACK TO HOME: top=612, height=52
@@ -1064,6 +1092,8 @@ function RequestInfoSheet({
   onClose: () => void;
   onSubmit: (text: string) => void;
 }) {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   const [text, setText] = useState("");
 
   const handleSubmit = () => {
@@ -1111,13 +1141,13 @@ function RequestInfoSheet({
                     className="font-['Manrope:Bold',sans-serif] font-bold text-[#1a1a1a]"
                     style={{ fontSize: 22, letterSpacing: "-0.5px", lineHeight: "30px" }}
                   >
-                    Request Information
+                    {t("requestInformation")}
                   </div>
                   <div
                     className="font-['Manrope:Regular',sans-serif] text-[#6b5c54]"
                     style={{ fontSize: 13, lineHeight: "18px" }}
                   >
-                    What would you like to know from the site team?
+                    {t("whatWouldYouLikeToKnowFromTheSiteTeam")}
                   </div>
                 </div>
                 <div className="relative w-full">
@@ -1162,7 +1192,7 @@ function RequestInfoSheet({
                     className="font-['Manrope:SemiBold',sans-serif] font-semibold uppercase tracking-[1.2px] text-white"
                     style={{ fontSize: 12 }}
                   >
-                    SEND REQUEST
+                    {t("sENDREQUEST")}
                   </span>
                 </button>
               </div>
@@ -1179,6 +1209,8 @@ const C7_HEADER_NATIVE = 64;
 const C7_CONTENT_NATIVE = 1050;
 
 function IssueDetailScreen({ onRequestInfoDone }: { onRequestInfoDone: () => void }) {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   const [sheetOpen, setSheetOpen] = useState(false);
   const visibleH = (C7_CONTENT_NATIVE - C7_HEADER_NATIVE) * SCALE;
 
@@ -1216,6 +1248,8 @@ function IssueDetailScreen({ onRequestInfoDone }: { onRequestInfoDone: () => voi
 
 // ─── Timeline Detail Screens ──────────────────────────────────────────────────
 function TimelineTaskDetailScreen({ taskId, onBack }: { taskId: TimelineTaskId; onBack: () => void }) {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <ScreenFrame>
       <div className="no-scrollbar absolute inset-0 overflow-y-auto overflow-x-hidden bg-[#fbf9f8]">
@@ -1228,6 +1262,8 @@ function TimelineTaskDetailScreen({ taskId, onBack }: { taskId: TimelineTaskId; 
 }
 
 function TimelineDecisionDetailScreen({ onBack }: { onBack: () => void }) {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <ScreenFrame>
       <div className="no-scrollbar absolute inset-0 overflow-y-auto overflow-x-hidden bg-[#fbf9f8]">
@@ -1240,6 +1276,8 @@ function TimelineDecisionDetailScreen({ onBack }: { onBack: () => void }) {
 }
 
 function TimelineSiteUpdateScreen({ onBack }: { onBack: () => void }) {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <ScreenFrame>
       <div className="no-scrollbar absolute inset-0 overflow-y-auto overflow-x-hidden bg-[#fbf9f8]">
@@ -1282,6 +1320,8 @@ const FIGMA_HIDE_CSS = `
 
 // ─── ClientApp Root ───────────────────────────────────────────────────────────
 export function ClientApp({ onSwitchProfile }: { onSwitchProfile?: (role: string) => void } = {}) {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   const [activeTab, setActiveTab] = useState<TabScreen>("home");
   const [activeDetail, setActiveDetail] = useState<DetailScreen | null>(null);
   const [homeVisitKey, setHomeVisitKey] = useState(0);

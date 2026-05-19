@@ -1,3 +1,5 @@
+import { useLanguage } from "../i18n/LanguageContext";
+import { useTranslations } from "../i18n/translations";
 import imgBlueprintHero from "../../imports/3ReviewDetailFinalColor/9e03cc0fe5d2dd05269808484174846a4ae64867.png";
 import imgHvacRef from "../../imports/2Tasks-1/d57fc7764a294dadd06d3cb669552a9de986742d.png";
 
@@ -26,6 +28,8 @@ const STATUS_COLORS = {
 const STATUS_LABELS = { current: "CURRENT", draft: "DRAFT", superseded: "SUPERSEDED" };
 
 function MenuScreenHeader({ onBack, label }: { onBack: () => void; label: string }) {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div
       className="sticky top-0 left-0 right-0 z-10 flex items-center"
@@ -51,6 +55,8 @@ function MenuScreenHeader({ onBack, label }: { onBack: () => void; label: string
 }
 
 function FileTypeTag({ type }: { type: "PDF" | "DWG" }) {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   const isPdf = type === "PDF";
   return (
     <div
@@ -76,6 +82,8 @@ function FileTypeTag({ type }: { type: "PDF" | "DWG" }) {
 }
 
 function DocumentRow({ doc }: { doc: Document }) {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   const statusStyle = STATUS_COLORS[doc.status];
   return (
     <div
@@ -162,6 +170,8 @@ function DocumentRow({ doc }: { doc: Document }) {
 }
 
 export function BlueprintsPanel({ onBack }: { onBack: () => void }) {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="flex flex-col min-h-full bg-[#fbf9f8]">
       <MenuScreenHeader onBack={onBack} label="MENU" />
@@ -172,7 +182,7 @@ export function BlueprintsPanel({ onBack }: { onBack: () => void }) {
           className="font-['Manrope:Regular',sans-serif] uppercase"
           style={{ fontSize: 10, letterSpacing: "1.1px", color: "#564239", marginBottom: 4 }}
         >
-          ARCHITECT VIEW
+          {t("aRCHITECTVIEW")}
         </p>
         <p
           className="font-['Manrope:Bold',sans-serif] font-bold uppercase"
@@ -223,7 +233,7 @@ export function BlueprintsPanel({ onBack }: { onBack: () => void }) {
                 className="font-['Manrope:SemiBold',sans-serif] font-semibold uppercase"
                 style={{ fontSize: 9, letterSpacing: "0.5px", color: "#fff" }}
               >
-                ACTIVE DRAWING
+                {t("aCTIVEDRAWING")}
               </span>
             </div>
             {/* Drawing title overlay */}
@@ -232,13 +242,13 @@ export function BlueprintsPanel({ onBack }: { onBack: () => void }) {
                 className="font-['Manrope:Bold',sans-serif] font-bold uppercase"
                 style={{ fontSize: 13, color: "#ffffff", letterSpacing: "0.3px", lineHeight: "18px" }}
               >
-                AC LAYOUT — DRG-MEP-03-112
+                {t("aCLAYOUTDRGMEP3112")}
               </p>
               <p
                 className="font-['Manrope:Regular',sans-serif]"
                 style={{ fontSize: 10, color: "rgba(255,255,255,0.75)", marginTop: 2 }}
               >
-                MEP Engineering Team · Rev 2.4
+                {t("mEPEngineeringTeamRev24")}
               </p>
             </div>
           </div>
@@ -271,13 +281,13 @@ export function BlueprintsPanel({ onBack }: { onBack: () => void }) {
                 className="font-['Manrope:Bold',sans-serif] font-bold uppercase"
                 style={{ fontSize: 10, color: "#1a1a1a", letterSpacing: "0.3px", marginBottom: 3 }}
               >
-                HVAC REVISION REFERENCE
+                {t("hVACREVISIONREFERENCE")}
               </p>
               <p
                 className="font-['Manrope:Regular',sans-serif]"
                 style={{ fontSize: 10, color: "#6b5e55" }}
               >
-                DRG-MEP-03-112 · Clash Report #09
+                {t("dRGMEP3112ClashReport9")}
               </p>
             </div>
           </div>
@@ -288,7 +298,7 @@ export function BlueprintsPanel({ onBack }: { onBack: () => void }) {
           className="font-['Manrope:Regular',sans-serif] uppercase"
           style={{ fontSize: 9, letterSpacing: "1.2px", color: "#564239", marginBottom: 12 }}
         >
-          KEY DOCUMENTS
+          {t("kEYDOCUMENTS")}
         </p>
 
         {/* Document rows */}

@@ -1,3 +1,5 @@
+import { useLanguage } from "../i18n/LanguageContext";
+import { useTranslations } from "../i18n/translations";
 import { motion, AnimatePresence } from "motion/react";
 import imgAvatar from "../../imports/3TaskAssignmentMobile-1/181963f2d49061eccafc8eb373f52a6dd6870927.png";
 
@@ -26,6 +28,8 @@ const ROLE_LABELS: Record<string, string> = {
 };
 
 function ChevronRight() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <svg width="6" height="11" viewBox="0 0 6 11" fill="none">
       <path d="M1 1l4 4.5L1 10" stroke="#b8afa9" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
@@ -48,6 +52,8 @@ export function ArchitectHamburgerDrawer({
   onClose,
   onAction,
 }: ArchitectHamburgerDrawerProps) {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   const roleLabel = ROLE_LABELS[role] ?? role.toUpperCase();
 
   const handleItem = (key: ArchMenuAction) => {
@@ -214,7 +220,7 @@ export function ArchitectHamburgerDrawer({
                 className="font-['Manrope:Regular',sans-serif]"
                 style={{ fontSize: 10, color: "#b8afa9", letterSpacing: "0.2px" }}
               >
-                SITEFLOW v1.0 · Architect Build
+                {t("sITEFLOWV1ArchitectBuild")}
               </p>
             </div>
           </motion.div>

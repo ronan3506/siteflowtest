@@ -164,6 +164,8 @@ function Stage({
   height: number;
   children: React.ReactNode;
 }) {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div
       style={{
@@ -201,6 +203,8 @@ function BottomNav({
   active: Screen;
   onNav: (s: Screen) => void;
 }) {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   const icons: Record<Screen, JSX.Element> = {
     home: (
       <svg viewBox="0 0 16 18" fill="none" className="w-[16px] h-[18px]">
@@ -295,6 +299,8 @@ function ScrollArea({
   reserveNav: boolean;
   children: React.ReactNode;
 }) {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div
       className="no-scrollbar absolute inset-0 overflow-y-auto overflow-x-hidden"
@@ -342,6 +348,8 @@ function ScreenFrame({
   kind: "tab" | "detail";
   children: React.ReactNode;
 }) {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   const variants = kind === "tab" ? tabVariants : detailEnterVariants;
   // Detail screens use a slightly longer duration with a more deliberate
   // ease curve to reinforce the "entering a deeper layer" feeling.
@@ -381,6 +389,8 @@ function HomeScreen({
   onOpenZone: (z: ZoneId) => void;
   onOpenAction: (id: ActionCardId) => void;
 }) {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   // Zone card overlay positions in native 412px Stage coordinates.
   // Main starts at top:64 (header), pt:8, gap:25 between sections.
   // ActionSectionHorizontalScroll = Heading(40) + gap(16) + Container(269) = 325px.
@@ -448,6 +458,8 @@ function TasksScreen({
   onAddTask: () => void;
   onApproval: () => void;
 }) {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   const ADD_BTN_H = 54;
   const ADD_BTN_GAP = 10;
   return (
@@ -488,7 +500,7 @@ function TasksScreen({
             <path d="M12 5v14M5 12h14" stroke="white" strokeWidth="2" strokeLinecap="round" />
           </svg>
           <span className="font-['Manrope:Bold',sans-serif] font-bold text-white text-[16px] tracking-[0.5px] uppercase">
-            ADD TASK
+            {t("aDDTASK")}
           </span>
         </button>
       </motion.div>
@@ -497,6 +509,8 @@ function TasksScreen({
 }
 
 function TaskAssignScreen({ onBack, onAssign }: { onBack: () => void; onAssign: () => void }) {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <ScreenFrame kind="detail">
       <ScrollArea contentHeight={1140} reserveNav={false}>
@@ -527,6 +541,8 @@ function ApprovalScreen({
   onApprove: () => void;
   onReject: () => void;
 }) {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <ScreenFrame kind="detail">
       <ScrollArea contentHeight={1320} reserveNav={false}>
@@ -555,6 +571,8 @@ function ApprovalScreen({
 }
 
 function IssuesListScreen({ onViewIssue }: { onViewIssue: () => void }) {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <ScrollArea contentHeight={1521} reserveNav>
       <IssuesListRich onViewColumnIssue={onViewIssue} />
@@ -563,6 +581,8 @@ function IssuesListScreen({ onViewIssue }: { onViewIssue: () => void }) {
 }
 
 function IssueDetailScreen({ onBack }: { onBack: () => void }) {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <ScreenFrame kind="detail">
       <ScrollArea contentHeight={1180} reserveNav={false}>
@@ -579,6 +599,8 @@ function IssueDetailScreen({ onBack }: { onBack: () => void }) {
 }
 
 function TimelineIssueDetailScreen({ onBack }: { onBack: () => void }) {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <ScreenFrame kind="detail">
       <ScrollArea contentHeight={1180} reserveNav={false}>
@@ -597,6 +619,8 @@ function TimelineIssueDetailScreen({ onBack }: { onBack: () => void }) {
 // ── Menu sub-screens (flow layout, 390px space, no Stage scaling) ─────────────
 
 function MenuDetailScreen({ children }: { children: React.ReactNode }) {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <ScreenFrame kind="detail">
       <div className="absolute inset-0 overflow-y-auto overflow-x-hidden no-scrollbar bg-[#fbf9f8]">
@@ -607,6 +631,8 @@ function MenuDetailScreen({ children }: { children: React.ReactNode }) {
 }
 
 function WorkerDashboardScreen({ onBack }: { onBack: () => void }) {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <MenuDetailScreen>
       <WorkerDashboardPanel onBack={onBack} />
@@ -621,6 +647,8 @@ function CompletedTasksScreen({
   onBack: () => void;
   onOpenTask: (id: TimelineTaskId) => void;
 }) {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <MenuDetailScreen>
       <CompletedTasksPanel onBack={onBack} onOpenTask={onOpenTask} />
@@ -635,6 +663,8 @@ function InviteScreen({
   onBack: () => void;
   onShowToast: (msg: string) => void;
 }) {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <MenuDetailScreen>
       <InvitePanel onBack={onBack} onShowToast={onShowToast} />
@@ -643,6 +673,8 @@ function InviteScreen({
 }
 
 function SettingsScreen({ onBack }: { onBack: () => void }) {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <MenuDetailScreen>
       <SettingsPanel onBack={onBack} />
@@ -651,6 +683,8 @@ function SettingsScreen({ onBack }: { onBack: () => void }) {
 }
 
 function TimelineTaskDetailScreen({ taskId, onBack }: { taskId: TimelineTaskId; onBack: () => void }) {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <ScreenFrame kind="detail">
       <ScrollArea contentHeight={1300} reserveNav={false}>
@@ -661,6 +695,8 @@ function TimelineTaskDetailScreen({ taskId, onBack }: { taskId: TimelineTaskId; 
 }
 
 function TimelineDecisionDetailScreen({ onBack }: { onBack: () => void }) {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <ScreenFrame kind="detail">
       <ScrollArea contentHeight={1200} reserveNav={false}>
@@ -671,6 +707,8 @@ function TimelineDecisionDetailScreen({ onBack }: { onBack: () => void }) {
 }
 
 function TimelineSiteUpdateScreen({ onBack }: { onBack: () => void }) {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <ScreenFrame kind="detail">
       <ScrollArea contentHeight={1200} reserveNav={false}>
@@ -691,6 +729,8 @@ function TimelineScreen({
   onOpenDecisionDetail: () => void;
   onOpenSiteUpdate: () => void;
 }) {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <ScrollArea contentHeight={1420} reserveNav>
       <InteractiveTimeline
@@ -757,6 +797,8 @@ function ReasonCard({
   active: boolean;
   onSelect: () => void;
 }) {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   const bg = active ? "#7a3100" : "#fbf9f8";
   const border = active ? "1px solid transparent" : "1px solid #e4e2e2";
   const fg = active ? "#ffffff" : "#1b1c1c";
@@ -822,6 +864,8 @@ function RejectionSheet({
   onSubmit: () => void;
   onCancel: () => void;
 }) {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   const FORM_OFFSET = 172;
   const SHEET_NATIVE_H = 745;
   const SHEET_H = SHEET_NATIVE_H * SCALE;
@@ -931,6 +975,8 @@ function RejectionSheet({
 // screen (e.g. tapping a task card from TASKS keeps TASKS highlighted).
 // ────────────────────────────────────────────────────────────────────────────
 export function ContractorApp({ initialRole = "contractor", onSwitchProfile }: { initialRole?: string; onSwitchProfile?: (role: string) => void }) {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   const [screen, setScreen] = useState<Screen>("home");
   const [lastTab, setLastTab] = useState<Screen>("home");
   const [showRejection, setShowRejection] = useState(false);

@@ -1,3 +1,5 @@
+import { useLanguage } from "../../app/i18n/LanguageContext";
+import { useTranslations } from "../../app/i18n/translations";
 import svgPaths from "./svg-hhu76gpd1b";
 import imgConcretePillar from "./aabfa83c923ffd68380d02464f92ddd44acdace8.png";
 import imgImage2 from "./f068387a9ecb0831125f5b8205e70bd6b4c10d22.png";
@@ -5,27 +7,33 @@ import imgSteelFrame from "./1e0de31a9eb5beccaa81f77ec28b80afd6b3f94d.png";
 import imgElectricalConduits from "./3530b505514269fd86b8ec8fc25cd0a3e4b0573d.png";
 
 function Heading() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="content-stretch flex flex-col items-start relative shrink-0 w-full" data-name="Heading 1">
       <div className="flex flex-col font-['Manrope:ExtraBold',sans-serif] font-extrabold justify-center leading-[0] relative shrink-0 text-[#3e2723] text-[36px] tracking-[-0.9px] w-full">
-        <p className="leading-[45px]">Active Tasks</p>
+        <p className="leading-[45px]">{t("activeTasks")}</p>
       </div>
     </div>
   );
 }
 
 function Container() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="content-stretch flex flex-col items-start pb-[0.625px] relative shrink-0 w-full" data-name="Container">
       <div className="flex flex-col font-['Manrope:Medium',sans-serif] font-medium justify-center leading-[0] relative shrink-0 text-[#6d4c41] text-[14px] w-full">
-        <p className="leading-[22.75px] mb-0">Manage your daily operations and site inspections.</p>
-        <p className="leading-[22.75px]">Ensure all structural standards are met.</p>
+        <p className="leading-[22.75px] mb-0">{t("manageYourDailyOperationsAndSiteInspections")}</p>
+        <p className="leading-[22.75px]">{t("ensureAllStructuralStandardsAreMet")}</p>
       </div>
     </div>
   );
 }
 
 function HeroSection() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="content-stretch flex flex-col gap-[10.875px] items-start relative shrink-0 w-full" data-name="Hero Section">
       <Heading />
@@ -35,6 +43,8 @@ function HeroSection() {
 }
 
 function ConcretePillar() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="absolute inset-0 overflow-clip rounded-[12px]" data-name="Concrete pillar">
       <div className="absolute inset-0 overflow-hidden pointer-events-none rounded-[12px]">
@@ -48,16 +58,20 @@ function ConcretePillar() {
 }
 
 function Background1() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="absolute bg-[#7a3100] h-[23px] left-[12px] rounded-[8px] top-[12px] w-[78px]" data-name="Background">
       <div className="-translate-y-1/2 absolute flex flex-col font-['Manrope:Bold',sans-serif] font-bold h-[15px] justify-center leading-[0] left-[10px] text-[10px] text-white top-[11px] tracking-[0.5px] uppercase w-[58px]">
-        <p className="leading-[15px]">1st FLOOR</p>
+        <p className="leading-[15px]">{t("1stFLOOR")}</p>
       </div>
     </div>
   );
 }
 
 function Background() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="bg-[#d7ccc8] h-[160px] relative rounded-[12px] shrink-0 w-full z-[2]" data-name="Background">
       <div className="bg-clip-padding border-0 border-[transparent] border-solid relative size-full">
@@ -69,25 +83,31 @@ function Background() {
 }
 
 function Heading1() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="content-stretch flex flex-col items-start relative rounded-[12px] shrink-0" data-name="Heading 2">
       <div className="flex flex-col font-['Manrope:SemiBold',sans-serif] font-semibold h-[28px] justify-center leading-[0] relative shrink-0 text-[#3e2723] text-[20px] w-[237.73px]">
-        <p className="leading-[28px]">Install Floor Tiles</p>
+        <p className="leading-[28px]">{t("installFloorTiles")}</p>
       </div>
     </div>
   );
 }
 
 function Group5() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="absolute contents left-[253.47px] top-[4.49px]">
       <div className="absolute bg-[#fff3e0] h-[19.021px] left-[253.47px] rounded-[4.684px] top-[4.49px] w-[53.867px]" data-name="Rectangle" />
-      <p className="absolute font-['Manrope:Bold',sans-serif] font-bold leading-[normal] left-[261.28px] text-[#f5a623] text-[8.587px] top-[7.9px] tracking-[0.3435px] whitespace-nowrap">PENDING</p>
+      <p className="absolute font-['Manrope:Bold',sans-serif] font-bold leading-[normal] left-[261.28px] text-[#f5a623] text-[8.587px] top-[7.9px] tracking-[0.3435px] whitespace-nowrap">{t("pENDING")}</p>
     </div>
   );
 }
 
 function Container2() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="content-stretch flex items-center justify-between relative rounded-[12px] shrink-0 w-full" data-name="Container">
       <Heading1 />
@@ -97,26 +117,32 @@ function Container2() {
 }
 
 function Container3() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="content-stretch flex flex-col items-start pb-[8px] relative rounded-[12px] shrink-0 w-full" data-name="Container">
       <div className="flex flex-col font-['Manrope:Medium',sans-serif] font-medium justify-center leading-[0] relative shrink-0 text-[#6d4c41] text-[12px] w-full">
-        <p className="leading-[19.5px]">Install ceramic floor tiles evenly across the marked area before final finishing work begins.</p>
+        <p className="leading-[19.5px]">{t("installCeramicFloorTilesEvenlyAcrossTheMarkedAreaBeforeFinalFinishingWorkBegins")}</p>
       </div>
     </div>
   );
 }
 
 function Button() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="bg-[#7a3100] content-stretch drop-shadow-[0px_1px_1px_rgba(0,0,0,0.05)] flex items-center justify-center py-[12px] relative rounded-[12px] shrink-0 w-full" data-name="Button">
       <div className="flex flex-col font-['Manrope:Bold',sans-serif] font-bold h-[20px] justify-center leading-[0] relative shrink-0 text-[14px] text-center text-white tracking-[0.35px] uppercase w-[94.41px]">
-        <p className="leading-[20px]">REVIEW TASK</p>
+        <p className="leading-[20px]">{t("rEVIEWTASK")}</p>
       </div>
     </div>
   );
 }
 
 function Container1() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="relative rounded-[12px] shrink-0 w-full z-[1]" data-name="Container">
       <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex flex-col gap-[8px] items-start p-[20px] relative size-full">
@@ -129,6 +155,8 @@ function Container1() {
 }
 
 function TaskCard() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="bg-[#ede8e2] relative rounded-[12px] shrink-0 w-full" data-name="Task Card 1">
       <div className="content-stretch flex flex-col isolate items-start overflow-clip p-px relative rounded-[inherit] size-full">
@@ -141,6 +169,8 @@ function TaskCard() {
 }
 
 function Group() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="absolute inset-[8.86%_5.78%_79.26%_88.76%]" data-name="Group">
       <svg className="absolute block inset-0 size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 19 19">
@@ -154,6 +184,8 @@ function Group() {
 }
 
 function SteelFrame() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="absolute inset-0 overflow-clip rounded-[12px]" data-name="Steel frame">
       <div className="absolute inset-0 overflow-hidden pointer-events-none rounded-[12px]">
@@ -165,16 +197,20 @@ function SteelFrame() {
 }
 
 function Background3() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="absolute bg-[#7a3100] h-[23px] left-[12px] rounded-[8px] top-[12px] w-[78px]" data-name="Background">
       <div className="-translate-y-1/2 absolute flex flex-col font-['Manrope:Bold',sans-serif] font-bold h-[15px] justify-center leading-[0] left-[10px] text-[10px] text-white top-[11px] tracking-[0.5px] uppercase w-[58px]">
-        <p className="leading-[15px]">1st FLOOR</p>
+        <p className="leading-[15px]">{t("1stFLOOR")}</p>
       </div>
     </div>
   );
 }
 
 function Background2() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="bg-[#d7ccc8] h-[160px] relative rounded-[12px] shrink-0 w-full z-[2]" data-name="Background">
       <div className="bg-clip-padding border-0 border-[transparent] border-solid relative size-full">
@@ -186,25 +222,31 @@ function Background2() {
 }
 
 function Heading2() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="content-stretch flex flex-col items-start pr-[90.5px] relative rounded-[12px] shrink-0" data-name="Heading 2">
       <div className="flex flex-col font-['Manrope:SemiBold',sans-serif] font-semibold h-[28px] justify-center leading-[0] relative shrink-0 text-[#3e2723] text-[20px] w-[237.73px]">
-        <p className="leading-[28px]">Assemble Steel Frame</p>
+        <p className="leading-[28px]">{t("assembleSteelFrame")}</p>
       </div>
     </div>
   );
 }
 
 function Group6() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="absolute contents left-[252.47px] top-[18.49px]">
       <div className="absolute bg-[#fff3e0] h-[19.021px] left-[252.47px] rounded-[4.684px] top-[18.49px] w-[53.867px]" data-name="Rectangle" />
-      <p className="absolute font-['Manrope:Bold',sans-serif] font-bold leading-[normal] left-[260.28px] text-[#f5a623] text-[8.587px] top-[21.9px] tracking-[0.3435px] whitespace-nowrap">PENDING</p>
+      <p className="absolute font-['Manrope:Bold',sans-serif] font-bold leading-[normal] left-[260.28px] text-[#f5a623] text-[8.587px] top-[21.9px] tracking-[0.3435px] whitespace-nowrap">{t("pENDING")}</p>
     </div>
   );
 }
 
 function Container5() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="content-stretch flex items-center relative rounded-[12px] shrink-0 w-full" data-name="Container">
       <Heading2 />
@@ -214,27 +256,33 @@ function Container5() {
 }
 
 function Container6() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="content-stretch flex flex-col items-start pb-[8px] relative rounded-[12px] shrink-0 w-full" data-name="Container">
       <div className="flex flex-col font-['Manrope:Medium',sans-serif] font-medium justify-center leading-[0] relative shrink-0 text-[#6d4c41] text-[12px] w-full">
-        <p className="leading-[19.5px] mb-0">Check torque specifications on all primary load-</p>
-        <p className="leading-[19.5px]">bearing connections on level 3 sector north.</p>
+        <p className="leading-[19.5px] mb-0">{t("checkTorqueSpecificationsOnAllPrimaryLoad")}</p>
+        <p className="leading-[19.5px]">{t("bearingConnectionsOnLevel3SectorNorth")}</p>
       </div>
     </div>
   );
 }
 
 function Button1() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="bg-[#7a3100] content-stretch drop-shadow-[0px_1px_1px_rgba(0,0,0,0.05)] flex items-center justify-center py-[12px] relative rounded-[12px] shrink-0 w-full" data-name="Button">
       <div className="flex flex-col font-['Manrope:Bold',sans-serif] font-bold h-[20px] justify-center leading-[0] relative shrink-0 text-[14px] text-center text-white tracking-[0.35px] uppercase w-[94.41px]">
-        <p className="leading-[20px]">REVIEW TASK</p>
+        <p className="leading-[20px]">{t("rEVIEWTASK")}</p>
       </div>
     </div>
   );
 }
 
 function Container4() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="relative rounded-[12px] shrink-0 w-full z-[1]" data-name="Container">
       <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex flex-col gap-[8px] items-start p-[20px] relative size-full">
@@ -247,6 +295,8 @@ function Container4() {
 }
 
 function TaskCard1() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="bg-[#ede8e2] relative rounded-[12px] shrink-0 w-full" data-name="Task Card 2">
       <div className="content-stretch flex flex-col isolate items-start overflow-clip p-px relative rounded-[inherit] size-full">
@@ -259,6 +309,8 @@ function TaskCard1() {
 }
 
 function TaskCard2Margin() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="content-stretch flex flex-col items-start pt-[16px] relative shrink-0 w-full" data-name="Task Card 2:margin">
       <TaskCard1 />
@@ -267,6 +319,8 @@ function TaskCard2Margin() {
 }
 
 function Group1() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="absolute inset-[9.05%_5.92%_79.07%_88.62%]" data-name="Group">
       <svg className="absolute block inset-0 size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 19 19">
@@ -280,6 +334,8 @@ function Group1() {
 }
 
 function ElectricalConduits() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="absolute inset-0 overflow-clip rounded-[12px]" data-name="Electrical conduits">
       <div className="absolute inset-0 overflow-hidden pointer-events-none rounded-[12px]">
@@ -291,16 +347,20 @@ function ElectricalConduits() {
 }
 
 function Background5() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="absolute bg-[#7a3100] h-[23px] left-[12px] rounded-[8px] top-[12px] w-[82px]" data-name="Background">
       <div className="-translate-y-1/2 absolute flex flex-col font-['Manrope:Bold',sans-serif] font-bold h-[15px] justify-center leading-[0] left-[10px] text-[10px] text-white top-[11px] tracking-[0.5px] uppercase w-[62px]">
-        <p className="leading-[15px]">2nd FLOOR</p>
+        <p className="leading-[15px]">{t("2ndFLOOR")}</p>
       </div>
     </div>
   );
 }
 
 function Background4() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="bg-[#d7ccc8] h-[160px] relative rounded-[12px] shrink-0 w-full z-[2]" data-name="Background">
       <div className="bg-clip-padding border-0 border-[transparent] border-solid relative size-full">
@@ -312,25 +372,31 @@ function Background4() {
 }
 
 function Heading3() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="content-stretch flex flex-col items-start relative rounded-[12px] shrink-0" data-name="Heading 2">
       <div className="flex flex-col font-['Manrope:SemiBold',sans-serif] font-semibold h-[28px] justify-center leading-[0] relative shrink-0 text-[#3e2723] text-[20px] w-[244.53px]">
-        <p className="leading-[28px]">Install electric cables</p>
+        <p className="leading-[28px]">{t("installElectricCables")}</p>
       </div>
     </div>
   );
 }
 
 function Group4() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="grid-cols-[max-content] grid-rows-[max-content] inline-grid leading-[0] place-items-start relative shrink-0">
       <div className="bg-[#fff3e0] col-1 h-[19.021px] ml-0 mt-0 relative rounded-[4.684px] row-1 w-[53.867px]" data-name="Rectangle" />
-      <p className="col-1 font-['Manrope:Bold',sans-serif] font-bold leading-[normal] ml-[7.81px] mt-[3.41px] relative row-1 text-[#f5a623] text-[8.587px] tracking-[0.3435px] whitespace-nowrap">PENDING</p>
+      <p className="col-1 font-['Manrope:Bold',sans-serif] font-bold leading-[normal] ml-[7.81px] mt-[3.41px] relative row-1 text-[#f5a623] text-[8.587px] tracking-[0.3435px] whitespace-nowrap">{t("pENDING")}</p>
     </div>
   );
 }
 
 function Container8() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="content-stretch flex items-center justify-between relative rounded-[12px] shrink-0 w-full" data-name="Container">
       <Heading3 />
@@ -340,27 +406,33 @@ function Container8() {
 }
 
 function Container9() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="content-stretch flex flex-col items-start pb-[8px] relative rounded-[12px] shrink-0 w-full" data-name="Container">
       <div className="flex flex-col font-['Manrope:Medium',sans-serif] font-medium justify-center leading-[0] relative shrink-0 text-[#6d4c41] text-[12px] w-full">
-        <p className="leading-[19.5px] mb-0">Review main electrical trunk lines for conflict with</p>
-        <p className="leading-[19.5px]">upcoming HVAC duct installation paths.</p>
+        <p className="leading-[19.5px] mb-0">{t("reviewMainElectricalTrunkLinesForConflictWith")}</p>
+        <p className="leading-[19.5px]">{t("upcomingHVACDuctInstallationPaths")}</p>
       </div>
     </div>
   );
 }
 
 function Button2() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="bg-[#7a3100] content-stretch drop-shadow-[0px_1px_1px_rgba(0,0,0,0.05)] flex items-center justify-center py-[12px] relative rounded-[12px] shrink-0 w-full" data-name="Button">
       <div className="flex flex-col font-['Manrope:Bold',sans-serif] font-bold h-[20px] justify-center leading-[0] relative shrink-0 text-[14px] text-center text-white tracking-[0.35px] uppercase w-[94.41px]">
-        <p className="leading-[20px]">REVIEW TASK</p>
+        <p className="leading-[20px]">{t("rEVIEWTASK")}</p>
       </div>
     </div>
   );
 }
 
 function Container7() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="relative rounded-[12px] shrink-0 w-full z-[1]" data-name="Container">
       <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex flex-col gap-[8px] items-start p-[20px] relative size-full">
@@ -373,6 +445,8 @@ function Container7() {
 }
 
 function TaskCard2() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="bg-[#ede8e2] relative rounded-[12px] shrink-0 w-full" data-name="Task Card 3">
       <div className="content-stretch flex flex-col isolate items-start overflow-clip p-px relative rounded-[inherit] size-full">
@@ -385,6 +459,8 @@ function TaskCard2() {
 }
 
 function TaskCard3Margin() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="content-stretch flex flex-col items-start pt-[16px] relative shrink-0 w-full" data-name="Task Card 3:margin">
       <TaskCard2 />
@@ -393,6 +469,8 @@ function TaskCard3Margin() {
 }
 
 function TaskList() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="content-stretch flex flex-col items-start relative shrink-0 w-full" data-name="Task List">
       <TaskCard />
@@ -403,6 +481,8 @@ function TaskList() {
 }
 
 function MainContentCanvas() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="absolute content-stretch flex flex-col gap-[40px] h-[1234px] items-start left-0 max-w-[448px] px-[20px] right-0 top-[69px]" data-name="Main Content Canvas">
       <HeroSection />
@@ -412,6 +492,8 @@ function MainContentCanvas() {
 }
 
 function Group2() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="absolute inset-[15.79%_10.51%_82.88%_84.62%]" data-name="Group">
       <svg className="absolute block inset-0 size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 19 19">
@@ -425,6 +507,8 @@ function Group2() {
 }
 
 function MdiExchange() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="absolute left-[308.94px] size-[25.833px] top-[18.58px]" data-name="mdi:exchange">
       <svg className="absolute block inset-0 size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 25.8333 25.8333">
@@ -442,11 +526,13 @@ function MdiExchange() {
 }
 
 function LangChangeButton() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="absolute contents left-[299px] top-[16px]" data-name="Lang Change Button">
       <div className="absolute bg-[#7a3100] h-[31px] left-[299px] rounded-[28.615px] top-[16px] w-[71.538px]" />
       <div className="-translate-y-1/2 absolute capitalize flex flex-col font-['Outfit:Regular','Noto_Sans_Kannada:Regular',sans-serif] justify-center leading-[0] left-[334.77px] text-[15.296px] text-white top-[30.08px] tracking-[-0.1683px] whitespace-nowrap" style={{ fontVariationSettings: "'wdth' 100, 'wght' 400" }}>
-        <p className="leading-[1.5]">ಕನ್ನ</p>
+        <p className="leading-[1.5]">{t("langPillLabel")}</p>
       </div>
       <MdiExchange />
     </div>
@@ -454,10 +540,12 @@ function LangChangeButton() {
 }
 
 function Group3() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="absolute contents left-[68px] top-[12px]">
       <div className="-translate-y-1/2 absolute flex flex-col font-['Inter:Black',sans-serif] font-black h-[39px] justify-center leading-[0] left-[68px] not-italic text-[26.757px] text-black top-[31.5px] tracking-[1.2664px] uppercase w-[147.837px]">
-        <p className="leading-[38.224px]">s teFLOW</p>
+        <p className="leading-[38.224px]">{t("sTeFLOW")}</p>
       </div>
       <div className="absolute inset-[33.5%_74.63%_35.96%_21.5%]" data-name="Vector">
         <svg className="absolute block inset-0 size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 15.1061 19.5416">
@@ -469,6 +557,8 @@ function Group3() {
 }
 
 function HeaderTopAppBar() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="absolute bg-[#fbf9f8] h-[64px] left-0 top-0 w-[390px]" data-name="Header - TopAppBar">
       <LangChangeButton />
@@ -485,6 +575,8 @@ function HeaderTopAppBar() {
 }
 
 export default function Component1TaskListHomeFinalColor() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="relative size-full" style={{ backgroundImage: "linear-gradient(90deg, rgb(253, 251, 247) 0%, rgb(253, 251, 247) 100%), linear-gradient(90deg, rgb(255, 255, 255) 0%, rgb(255, 255, 255) 100%)" }} data-name="1. Task List (Home) - Final Color">
       <MainContentCanvas />

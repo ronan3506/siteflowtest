@@ -1,6 +1,10 @@
+import { useLanguage } from "../i18n/LanguageContext";
+import { useTranslations } from "../i18n/translations";
 import { useState } from "react";
 
 function MenuScreenHeader({ onBack, label }: { onBack: () => void; label: string }) {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div
       className="sticky top-0 left-0 right-0 z-10 flex items-center"
@@ -68,6 +72,8 @@ function generateLink(suffix: string): string {
 }
 
 function CopyIcon({ copied }: { copied: boolean }) {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   if (copied) {
     return (
       <svg width="15" height="15" viewBox="0 0 24 24" fill="none">
@@ -90,6 +96,8 @@ function InviteCard({
   option: InviteOption;
   onCopy: () => void;
 }) {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   const [expanded, setExpanded] = useState(false);
   const [copied, setCopied] = useState(false);
 
@@ -176,7 +184,7 @@ function InviteCard({
               className="font-['Manrope:Regular',sans-serif] uppercase"
               style={{ fontSize: 8.5, letterSpacing: "0.7px", color: "#b8afa9", marginBottom: 4 }}
             >
-              INVITE LINK
+              {t("iNVITELINK")}
             </p>
             <p
               className="font-['Manrope:Medium',sans-serif] font-medium"
@@ -218,6 +226,8 @@ export function InvitePanel({
   onBack: () => void;
   onShowToast: (msg: string) => void;
 }) {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="flex flex-col min-h-full bg-[#fbf9f8]">
       <MenuScreenHeader onBack={onBack} label="MENU" />
@@ -228,19 +238,19 @@ export function InvitePanel({
           className="font-['Manrope:Regular',sans-serif] uppercase"
           style={{ fontSize: 10, letterSpacing: "1.1px", color: "#564239", marginBottom: 4 }}
         >
-          COLLABORATION
+          {t("cOLLABORATION")}
         </p>
         <p
           className="font-['Manrope:Bold',sans-serif] font-bold uppercase"
           style={{ fontSize: 22, letterSpacing: "-0.5px", color: "#1a1a1a", lineHeight: "26px", marginBottom: 4 }}
         >
-          INVITE TEAM
+          {t("iNVITETEAM")}
         </p>
         <p
           className="font-['Manrope:Regular',sans-serif]"
           style={{ fontSize: 13, color: "#6b5e55", marginBottom: 24 }}
         >
-          Share project access with your team members
+          {t("shareProjectAccessWithYourTeamMembers")}
         </p>
 
         {/* Info note */}
@@ -263,7 +273,7 @@ export function InvitePanel({
             className="font-['Manrope:Regular',sans-serif]"
             style={{ fontSize: 12, color: "#564239", lineHeight: "17px" }}
           >
-            Links are valid for 7 days. Each role has customised access to project data.
+            {t("linksAreValidFor7DaysEachRoleHasCustomisedAccessToProjectData")}
           </p>
         </div>
 

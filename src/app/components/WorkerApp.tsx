@@ -100,6 +100,8 @@ const NAV_H = 64;                            // standalone back-header on detail
 
 // ─── Shared icons ─────────────────────────────────────────────────────────────
 function BackChevron() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <svg width="9" height="15" viewBox="0 0 9 15" fill="none">
       <path
@@ -183,6 +185,8 @@ function SiteflowHeader({ onHamburger }: { onHamburger: () => void }) {
 
 // ─── Standalone back-header (all non-home screens) ────────────────────────────
 function ScreenHeader({ title, onBack }: { title: string; onBack: () => void }) {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div
       className="absolute left-0 right-0 flex items-center"
@@ -219,6 +223,8 @@ const WORKER_MENU: { key: WorkerMenuAction; label: string }[] = [
 ];
 
 function DrawerChevron() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <svg width="6" height="11" viewBox="0 0 6 11" fill="none">
       <path d="M1 1l4 4.5L1 10" stroke="#b8afa9" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
@@ -235,6 +241,8 @@ function WorkerProfileDrawer({
   onClose: () => void;
   onAction: (action: WorkerMenuAction) => void;
 }) {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   const W = 280;
 
   const handleItem = (key: WorkerMenuAction) => {
@@ -289,13 +297,13 @@ function WorkerProfileDrawer({
                   boxShadow: "0 2px 10px rgba(122,49,0,0.15)",
                 }}
               >
-                <span className="font-['Manrope:Bold',sans-serif] font-bold" style={{ fontSize: 20, color: "#7a3100" }}>RK</span>
+                <span className="font-['Manrope:Bold',sans-serif] font-bold" style={{ fontSize: 20, color: "#7a3100" }}>{t("rK")}</span>
               </div>
               <p className="font-['Manrope:Bold',sans-serif] font-bold" style={{ fontSize: 16, color: "#1a1a1a", lineHeight: "20px", marginBottom: 8 }}>
-                Ramu Kinavar
+                {t("ramuKinavar")}
               </p>
               <div style={{ display: "inline-flex", alignItems: "center", backgroundColor: "#7a3100", borderRadius: 20, paddingLeft: 10, paddingRight: 10, paddingTop: 4, paddingBottom: 4 }}>
-                <span className="font-['Manrope:Bold',sans-serif] font-bold uppercase" style={{ fontSize: 9, letterSpacing: "0.9px", color: "#fff" }}>WORKER</span>
+                <span className="font-['Manrope:Bold',sans-serif] font-bold uppercase" style={{ fontSize: 9, letterSpacing: "0.9px", color: "#fff" }}>{t("wORKER")}</span>
               </div>
             </div>
             <div style={{ height: 1, backgroundColor: "#e6e1dc", flexShrink: 0 }} />
@@ -334,7 +342,7 @@ function WorkerProfileDrawer({
 
             <div style={{ borderTop: "1px solid #e6e1dc", padding: "13px 24px" }}>
               <p className="font-['Manrope:Regular',sans-serif]" style={{ fontSize: 10, color: "#b8afa9", letterSpacing: "0.2px" }}>
-                SITEFLOW v1.0 · Worker Build
+                {t("sITEFLOWV1WorkerBuild")}
               </p>
             </div>
           </motion.div>
@@ -354,6 +362,8 @@ function ScrollArea({
   bottom?: number;
   children: React.ReactNode;
 }) {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div
       className="absolute left-0 right-0 worker-scroll"
@@ -383,6 +393,8 @@ function ActiveTasksScreen({
   onReviewTask: (id: string) => void;
   onHamburger: () => void;
 }) {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="absolute inset-0" style={{ backgroundColor: "#fdfbf7" }}>
       <SiteflowHeader onHamburger={onHamburger} />
@@ -392,14 +404,14 @@ function ActiveTasksScreen({
             <h1
               className="font-['Manrope:ExtraBold',sans-serif] font-extrabold"
               style={{ fontSize: 36, color: "#3e2723", lineHeight: "45px", letterSpacing: "-0.9px", marginBottom: 8 }}
-            >ACTIVE TASKS</h1>
+            >{t("aCTIVETASKS")}</h1>
             <p
               className="font-['Manrope:Medium',sans-serif] font-medium"
               style={{ fontSize: 14, color: "#6d4c41", lineHeight: "22.75px" }}
             >
-              Manage your daily operations and site inspections.
+              {t("manageYourDailyOperationsAndSiteInspections")}
               <br />
-              Ensure all structural standards are met.
+              {t("ensureAllStructuralStandardsAreMet")}
             </p>
           </div>
           <div style={{ display: "flex", flexDirection: "column", gap: 16 }}>
@@ -414,6 +426,8 @@ function ActiveTasksScreen({
 }
 
 function TaskCard({ task, onReview }: { task: WorkerTask; onReview: () => void }) {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div
       style={{
@@ -459,7 +473,7 @@ function TaskCard({ task, onReview }: { task: WorkerTask; onReview: () => void }
           </span>
           <div style={{ backgroundColor: "#fff3e0", borderRadius: 4, paddingLeft: 8, paddingRight: 8, paddingTop: 3, paddingBottom: 3, flexShrink: 0, marginTop: 4 }}>
             <span className="font-['Manrope:Bold',sans-serif] font-bold" style={{ fontSize: 8.5, color: "#f5a623", letterSpacing: "0.34px" }}>
-              PENDING
+              {t("pENDING")}
             </span>
           </div>
         </div>
@@ -477,7 +491,7 @@ function TaskCard({ task, onReview }: { task: WorkerTask; onReview: () => void }
           }}
         >
           <span className="font-['Manrope:Bold',sans-serif] font-bold uppercase" style={{ fontSize: 14, letterSpacing: "0.35px", color: "#fff" }}>
-            REVIEW TASK
+            {t("rEVIEWTASK")}
           </span>
         </button>
       </div>
@@ -495,6 +509,8 @@ function ReviewTaskScreen({
   onStartTask: () => void;
   onBack: () => void;
 }) {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="absolute inset-0" style={{ backgroundColor: "#faf8f6" }}>
       <ScreenHeader title="REVIEW TASK" onBack={onBack} />
@@ -516,7 +532,7 @@ function ReviewTaskScreen({
             </h2>
             <div style={{ display: "flex", alignItems: "center", gap: 10, flexWrap: "wrap" }}>
               <div style={{ backgroundColor: "rgba(77,59,44,0.1)", borderRadius: 6, paddingLeft: 10, paddingRight: 10, paddingTop: 4, paddingBottom: 4 }}>
-                <span className="font-['Manrope:Bold',sans-serif] font-bold uppercase" style={{ fontSize: 10, letterSpacing: "0.5px", color: "#1a1a1a" }}>PENDING</span>
+                <span className="font-['Manrope:Bold',sans-serif] font-bold uppercase" style={{ fontSize: 10, letterSpacing: "0.5px", color: "#1a1a1a" }}>{t("pENDING")}</span>
               </div>
               <div style={{ display: "flex", alignItems: "center", gap: 5 }}>
                 <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
@@ -549,7 +565,7 @@ function ReviewTaskScreen({
                 <path d="M10 1H2a1 1 0 00-1 1v8a1 1 0 001 1h8a1 1 0 001-1V2a1 1 0 00-1-1zm-8 1.5h8v.6L6 7 2 3.1V2.5zm0 6.5V5l4 3 4-3v4H2z" fill="#faf8f6" />
               </svg>
               <span className="font-['Manrope:Bold',sans-serif] font-bold uppercase" style={{ fontSize: 10, letterSpacing: "0.5px", color: "#faf8f6" }}>
-                VIEW BLUEPRINT
+                {t("vIEWBLUEPRINT")}
               </span>
             </div>
           </div>
@@ -564,7 +580,7 @@ function ReviewTaskScreen({
           >
             <div style={{ borderBottom: "1px solid rgba(230,222,215,0.5)", paddingBottom: 12, display: "flex", alignItems: "center", justifyContent: "space-between" }}>
               <span className="font-['Manrope:Bold',sans-serif] font-bold uppercase" style={{ fontSize: 13, letterSpacing: "0.7px", color: "#1a1a1a" }}>
-                TECHNICAL DETAILS
+                {t("tECHNICALDETAILS")}
               </span>
               <svg width="19" height="19" viewBox="0 0 19 19" fill="none">
                 <path d="M11.075 0.600047C11.4046 0.352819 11.875 0.588008 11.875 1.00004V6.12461C11.875 6.30346 11.9721 6.46642 12.1194 6.56793C12.5532 6.86698 12.9162 7.2593 13.1812 7.7175C13.4944 8.25933 13.6593 8.87414 13.6593 9.5C13.6593 10.1259 13.4944 10.7407 13.1812 11.2825C12.9162 11.7407 12.5532 12.133 12.1194 12.4321C11.9721 12.5336 11.875 12.6965 11.875 12.8754V18C11.875 18.412 11.4046 18.6472 11.075 18.4L5.6754 14.35C5.58885 14.2851 5.48358 14.25 5.37539 14.25H0.499999C0.223857 14.25 0 14.0261 0 13.75V5.25C0 4.97386 0.223858 4.75 0.5 4.75H5.37539C5.48358 4.75 5.58885 4.71491 5.6754 4.64999L11.075 0.600047ZM9.5 5.74992C9.5 5.33792 9.02965 5.10272 8.70002 5.34991L6.46626 7.02502C6.37972 7.08992 6.27446 7.125 6.16629 7.125H2.875C2.59886 7.125 2.375 7.34886 2.375 7.625V11.375C2.375 11.6511 2.59886 11.875 2.875 11.875H6.16629C6.27446 11.875 6.37972 11.9101 6.46626 11.975L8.70002 13.6501C9.02965 13.8973 9.5 13.6621 9.5 13.2501V5.74992Z" fill="#6D5F54" />
@@ -573,15 +589,15 @@ function ReviewTaskScreen({
             </div>
             <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "16px 14px" }}>
               <div>
-                <div className="font-['Manrope:SemiBold',sans-serif] font-semibold uppercase" style={{ fontSize: 10, letterSpacing: "1px", color: "#7a3100", marginBottom: 4 }}>MATERIAL</div>
+                <div className="font-['Manrope:SemiBold',sans-serif] font-semibold uppercase" style={{ fontSize: 10, letterSpacing: "1px", color: "#7a3100", marginBottom: 4 }}>{t("mATERIAL")}</div>
                 <div className="font-['Manrope:SemiBold',sans-serif] font-semibold" style={{ fontSize: 14, color: "#1a1a1a" }}>{task.material}</div>
               </div>
               <div>
-                <div className="font-['Manrope:SemiBold',sans-serif] font-semibold uppercase" style={{ fontSize: 10, letterSpacing: "1px", color: "#7a3100", marginBottom: 4 }}>QUANTITY</div>
+                <div className="font-['Manrope:SemiBold',sans-serif] font-semibold uppercase" style={{ fontSize: 10, letterSpacing: "1px", color: "#7a3100", marginBottom: 4 }}>{t("qUANTITY")}</div>
                 <div className="font-['Manrope:SemiBold',sans-serif] font-semibold" style={{ fontSize: 14, color: "#1a1a1a" }}>{task.quantity}</div>
               </div>
               <div style={{ gridColumn: "1 / -1" }}>
-                <div className="font-['Manrope:SemiBold',sans-serif] font-semibold uppercase" style={{ fontSize: 10, letterSpacing: "1px", color: "#7a3100", marginBottom: 4 }}>REQUIRED TOOLS</div>
+                <div className="font-['Manrope:SemiBold',sans-serif] font-semibold uppercase" style={{ fontSize: 10, letterSpacing: "1px", color: "#7a3100", marginBottom: 4 }}>{t("rEQUIREDTOOLS")}</div>
                 <div className="font-['Manrope:SemiBold',sans-serif] font-semibold" style={{ fontSize: 14, color: "#1a1a1a" }}>{task.tools}</div>
               </div>
             </div>
@@ -608,7 +624,7 @@ function ReviewTaskScreen({
                 <path d="M0 0v12l10-6z" fill="white" />
               </svg>
               <span className="font-['Manrope:Bold',sans-serif] font-bold uppercase" style={{ fontSize: 14, letterSpacing: "1.4px", color: "#fff" }}>
-                START TASK
+                {t("sTARTTASK")}
               </span>
             </button>
             <button
@@ -623,7 +639,7 @@ function ReviewTaskScreen({
                 <path d="M9 0L0 16h18L9 0zm0 13.5a1 1 0 110-2 1 1 0 010 2zm-1-3.5V6h2v4H8z" fill="#b3261e" />
               </svg>
               <span className="font-['Manrope:Bold',sans-serif] font-bold uppercase" style={{ fontSize: 14, letterSpacing: "1.4px", color: "#7a3100" }}>
-                REPORT ISSUE
+                {t("rEPORTISSUE")}
               </span>
             </button>
           </div>
@@ -637,6 +653,8 @@ function ReviewTaskScreen({
 const FOOTER_H = 120;
 
 function CaptureProofScreen({ onSubmit, onBack }: { onSubmit: () => void; onBack: () => void }) {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="absolute inset-0" style={{ backgroundColor: "#0a0a0a" }}>
       <ScreenHeader title="CAPTURE PROOF" onBack={onBack} />
@@ -679,7 +697,7 @@ function CaptureProofScreen({ onSubmit, onBack }: { onSubmit: () => void; onBack
           <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
             <path d="M7 1a6 6 0 100 12A6 6 0 007 1zm0 1.5a4.5 4.5 0 110 9 4.5 4.5 0 010-9zm-.5 2v3H4v1.5h2.5V11h1.5V8.5H10V7H7.5V4.5h-1z" fill="#2c1810" />
           </svg>
-          <span className="font-['Manrope:Bold',sans-serif] font-bold" style={{ fontSize: 16, color: "#2c1810" }}>Retake</span>
+          <span className="font-['Manrope:Bold',sans-serif] font-bold" style={{ fontSize: 16, color: "#2c1810" }}>{t("retake")}</span>
         </button>
         <button
           onClick={onSubmit}
@@ -693,7 +711,7 @@ function CaptureProofScreen({ onSubmit, onBack }: { onSubmit: () => void; onBack
           <svg width="14" height="11" viewBox="0 0 14 11" fill="none">
             <path d="M1 5.5L5 9.5L13 1" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
           </svg>
-          <span className="font-['Manrope:Bold',sans-serif] font-bold" style={{ fontSize: 14, color: "#fff" }}>Submit Proof</span>
+          <span className="font-['Manrope:Bold',sans-serif] font-bold" style={{ fontSize: 14, color: "#fff" }}>{t("submitProof")}</span>
         </button>
       </div>
     </div>
@@ -708,6 +726,8 @@ function WaitingApprovalScreen({
   onBackToTasks: () => void;
   onSimulateApproval: () => void;
 }) {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="absolute inset-0" style={{ backgroundColor: "#fbf9f8" }}>
       <ScreenHeader title="STATUS" onBack={onBackToTasks} />
@@ -736,12 +756,12 @@ function WaitingApprovalScreen({
                 }}
               >
                 <span className="font-['Manrope:Bold',sans-serif] font-bold" style={{ fontSize: 11, letterSpacing: "0.44px", color: "#2e7d32" }}>
-                  SUBMITTED
+                  {t("sUBMITTED")}
                 </span>
               </div>
             </div>
             <p className="font-['Manrope:Regular',sans-serif]" style={{ fontSize: 11, color: "#564239", marginTop: 10, paddingLeft: 4 }}>
-              Uploaded 2 mins ago
+              {t("uploaded2MinsAgo")}
             </p>
           </div>
 
@@ -760,12 +780,12 @@ function WaitingApprovalScreen({
                 <path d="M8.5 5v4.5M8.5 11.5v.5" stroke="#201a17" strokeWidth="1.5" strokeLinecap="round" />
               </svg>
               <span className="font-['Manrope:Bold',sans-serif] font-bold uppercase" style={{ fontSize: 12, letterSpacing: "1.8px", color: "#201a17", whiteSpace: "nowrap" }}>
-                WAITING FOR APPROVAL
+                {t("wAITINGFORAPPROVAL")}
               </span>
             </div>
             <div style={{ marginTop: 20, maxWidth: 260, textAlign: "center" }}>
               <p className="font-['Manrope:Regular',sans-serif]" style={{ fontSize: 14, color: "#564239", lineHeight: "22.75px" }}>
-                Your submission has been received and is currently under review by the site manager.
+                {t("yourSubmissionHasBeenReceivedAndIsCurrentlyUnderReviewByTheSiteManager")}
               </p>
             </div>
           </div>
@@ -785,7 +805,7 @@ function WaitingApprovalScreen({
                 <path d="M5.5 0L0 6h3.5v6h4V6H11z" fill="white" />
               </svg>
               <span className="font-['Manrope:Bold',sans-serif] font-bold uppercase" style={{ fontSize: 12, letterSpacing: "1.2px", color: "#fff", whiteSpace: "nowrap" }}>
-                BACK TO TASKS
+                {t("bACKTOTASKS")}
               </span>
             </button>
             <button
@@ -794,7 +814,7 @@ function WaitingApprovalScreen({
               style={{ backgroundColor: "#e9e8e7", borderRadius: 12, height: 50, display: "flex", alignItems: "center", justifyContent: "center", border: "none" }}
             >
               <span className="font-['Manrope:Bold',sans-serif] font-bold uppercase" style={{ fontSize: 12, letterSpacing: "1.2px", color: "#1b1c1c" }}>
-                CANCEL SUBMISSION
+                {t("cANCELSUBMISSION")}
               </span>
             </button>
           </div>
@@ -807,7 +827,7 @@ function WaitingApprovalScreen({
             }}
           >
             <p className="font-['Manrope:Regular',sans-serif] uppercase" style={{ fontSize: 9, color: "#b8afa9", letterSpacing: "0.8px" }}>
-              Demo Controls
+              {t("demoControls")}
             </p>
             <button
               onClick={onSimulateApproval}
@@ -818,7 +838,7 @@ function WaitingApprovalScreen({
               }}
             >
               <span className="font-['Manrope:SemiBold',sans-serif] font-semibold" style={{ fontSize: 11, color: "#2e7d32" }}>
-                ✓ Simulate Contractor Approval
+                {t("SimulateContractorApproval")}
               </span>
             </button>
           </div>
@@ -830,6 +850,8 @@ function WaitingApprovalScreen({
 
 // ─── Screen 5: Task Completed ─────────────────────────────────────────────────
 function TaskCompletedScreen({ task, onNextTask }: { task: WorkerTask; onNextTask: () => void }) {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="absolute inset-0" style={{ background: "#faf9f6" }}>
       <ScreenHeader title="STATUS" onBack={onNextTask} />
@@ -880,7 +902,7 @@ function TaskCompletedScreen({ task, onNextTask }: { task: WorkerTask; onNextTas
               className="font-['Manrope:ExtraBold',sans-serif] font-extrabold"
               style={{ fontSize: 30, color: "#3e2723", letterSpacing: "-0.75px", textAlign: "center", lineHeight: "36px" }}
             >
-              Task Completed
+              {t("taskCompleted")}
             </h2>
             <div
               style={{
@@ -892,7 +914,7 @@ function TaskCompletedScreen({ task, onNextTask }: { task: WorkerTask; onNextTas
               <svg width="14" height="13" viewBox="0 0 14 13" fill="none">
                 <path d="M5 9.5L1.5 6l1.3-1.3 2.2 2.2 5.2-5.2L11.5 3z" fill="#4CAF50" />
               </svg>
-              <span className="font-['Manrope:SemiBold',sans-serif] font-semibold" style={{ fontSize: 12, color: "#4CAF50" }}>Approved</span>
+              <span className="font-['Manrope:SemiBold',sans-serif] font-semibold" style={{ fontSize: 12, color: "#4CAF50" }}>{t("approved")}</span>
             </div>
           </motion.div>
 
@@ -907,7 +929,7 @@ function TaskCompletedScreen({ task, onNextTask }: { task: WorkerTask; onNextTas
               padding: 20, display: "flex", flexDirection: "column", gap: 14,
             }}
           >
-            <span className="font-['Manrope:SemiBold',sans-serif] font-semibold" style={{ fontSize: 16, color: "#3e2723" }}>Summary</span>
+            <span className="font-['Manrope:SemiBold',sans-serif] font-semibold" style={{ fontSize: 16, color: "#3e2723" }}>{t("summary")}</span>
             <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
               {[
                 { label: "TASK ID", value: task.taskId },
@@ -948,7 +970,7 @@ function TaskCompletedScreen({ task, onNextTask }: { task: WorkerTask; onNextTas
                 border: "none", boxShadow: "0 1px 1px rgba(0,0,0,0.05)",
               }}
             >
-              <span className="font-['Manrope:Bold',sans-serif] font-bold" style={{ fontSize: 16, color: "#fff" }}>Next Task</span>
+              <span className="font-['Manrope:Bold',sans-serif] font-bold" style={{ fontSize: 16, color: "#fff" }}>{t("nextTask")}</span>
               <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
                 <path d="M7 0L5.8 1.2l4.8 4.8H0v1.7h10.6L5.8 12.5 7 13.7l6.7-6.7z" fill="white" />
               </svg>
@@ -971,6 +993,8 @@ const COMPLETED_HISTORY = [
 
 // ─── Screen: Worker Completed Tasks History ───────────────────────────────────
 function WorkerCompletedTasksScreen({ onBack }: { onBack: () => void }) {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="absolute inset-0" style={{ backgroundColor: "#fdfbf7" }}>
       <ScreenHeader title="COMPLETED TASKS" onBack={onBack} />
@@ -982,13 +1006,13 @@ function WorkerCompletedTasksScreen({ onBack }: { onBack: () => void }) {
               className="font-['Manrope:ExtraBold',sans-serif] font-extrabold"
               style={{ fontSize: 28, color: "#3e2723", lineHeight: "36px", letterSpacing: "-0.7px", marginBottom: 6 }}
             >
-              Completed Tasks
+              {t("completedTasks")}
             </h1>
             <p
               className="font-['Manrope:Medium',sans-serif] font-medium"
               style={{ fontSize: 13, color: "#6d4c41", lineHeight: "20px" }}
             >
-              Your personal work history and completed assignments.
+              {t("yourPersonalWorkHistoryAndCompletedAssignments")}
             </p>
           </div>
 
@@ -1009,7 +1033,7 @@ function WorkerCompletedTasksScreen({ onBack }: { onBack: () => void }) {
               className="font-['Manrope:SemiBold',sans-serif] font-semibold uppercase"
               style={{ fontSize: 10, letterSpacing: "1px", color: "#7a3100" }}
             >
-              Total Completed
+              {t("totalCompleted")}
             </span>
             <span
               className="font-['Manrope:ExtraBold',sans-serif] font-extrabold"
@@ -1059,7 +1083,7 @@ function WorkerCompletedTasksScreen({ onBack }: { onBack: () => void }) {
                       className="font-['Manrope:Bold',sans-serif] font-bold uppercase"
                       style={{ fontSize: 8.5, letterSpacing: "0.5px", color: "#2e7d32" }}
                     >
-                      Completed
+                      {t("completed")}
                     </span>
                   </div>
                 </div>
@@ -1112,6 +1136,8 @@ function WorkerCompletedTasksScreen({ onBack }: { onBack: () => void }) {
 
 // ─── Screen: Worker Settings ──────────────────────────────────────────────────
 function WorkerSettingsScreen({ onBack }: { onBack: () => void }) {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   const rows: { label: string; value: string }[] = [
     { label: "Worker Name",     value: "Ramu Kinavar"       },
     { label: "Employee ID",     value: "WK-2024-084"        },
@@ -1130,7 +1156,7 @@ function WorkerSettingsScreen({ onBack }: { onBack: () => void }) {
             className="font-['Manrope:ExtraBold',sans-serif] font-extrabold"
             style={{ fontSize: 28, color: "#3e2723", letterSpacing: "-0.7px", marginBottom: 24 }}
           >
-            Settings
+            {t("settings")}
           </h1>
 
           {/* Profile card */}
@@ -1163,7 +1189,7 @@ function WorkerSettingsScreen({ onBack }: { onBack: () => void }) {
                 className="font-['Manrope:Bold',sans-serif] font-bold"
                 style={{ fontSize: 17, color: "#7a3100" }}
               >
-                RK
+                {t("rK")}
               </span>
             </div>
             <div>
@@ -1171,7 +1197,7 @@ function WorkerSettingsScreen({ onBack }: { onBack: () => void }) {
                 className="font-['Manrope:Bold',sans-serif] font-bold"
                 style={{ fontSize: 16, color: "#1a1a1a", lineHeight: "20px", marginBottom: 4 }}
               >
-                Ramu Kinavar
+                {t("ramuKinavar")}
               </p>
               <div
                 style={{
@@ -1189,7 +1215,7 @@ function WorkerSettingsScreen({ onBack }: { onBack: () => void }) {
                   className="font-['Manrope:Bold',sans-serif] font-bold uppercase"
                   style={{ fontSize: 9, letterSpacing: "0.9px", color: "#fff" }}
                 >
-                  WORKER
+                  {t("wORKER")}
                 </span>
               </div>
             </div>
@@ -1242,6 +1268,8 @@ function WorkerSettingsScreen({ onBack }: { onBack: () => void }) {
 
 // ─── Main WorkerApp ───────────────────────────────────────────────────────────
 export function WorkerApp({ onSwitchProfile }: { onSwitchProfile?: (role: string) => void }) {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   const [screen, setScreen] = useState<WorkerScreen>("activeTasks");
   const [activeTaskId, setActiveTaskId] = useState<string>("task-1");
   const [direction, setDirection] = useState(1);

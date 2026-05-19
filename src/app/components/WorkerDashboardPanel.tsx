@@ -1,3 +1,5 @@
+import { useLanguage } from "../i18n/LanguageContext";
+import { useTranslations } from "../i18n/translations";
 import imgWorkerA from "../../imports/3TaskAssignmentMobile-1/181963f2d49061eccafc8eb373f52a6dd6870927.png";
 import imgWorkerB from "../../imports/3TaskAssignmentMobile-1/f4775925dd8ae51fa91df8581e2ff018eeedf1fa.png";
 import imgWorkerC from "../../imports/3TaskAssignmentMobile-1/c79072b03053f8d4e1dfff5980541de18329d1f1.png";
@@ -39,6 +41,8 @@ const WORKERS: Worker[] = [
 ];
 
 function MenuScreenHeader({ onBack, label }: { onBack: () => void; label: string }) {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div
       className="sticky top-0 left-0 right-0 z-10 flex items-center"
@@ -64,6 +68,8 @@ function MenuScreenHeader({ onBack, label }: { onBack: () => void; label: string
 }
 
 function SkillPill({ label }: { label: string }) {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div
       style={{
@@ -89,6 +95,8 @@ function SkillPill({ label }: { label: string }) {
 }
 
 function WorkerCard({ worker }: { worker: Worker }) {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   const isActive = worker.status === "active";
   return (
     <div
@@ -168,7 +176,7 @@ function WorkerCard({ worker }: { worker: Worker }) {
           className="font-['Manrope:Regular',sans-serif] uppercase"
           style={{ fontSize: 9, letterSpacing: "0.8px", color: "#6b5e55", marginBottom: 8 }}
         >
-          SKILLS
+          {t("sKILLS")}
         </p>
         <div className="flex flex-wrap gap-[6px]">
           {worker.skills.map((s) => (
@@ -192,7 +200,7 @@ function WorkerCard({ worker }: { worker: Worker }) {
           className="font-['Manrope:Regular',sans-serif] uppercase"
           style={{ fontSize: 9, letterSpacing: "0.8px", color: "#6b5e55" }}
         >
-          TASKS COMPLETED
+          {t("tASKSCOMPLETED")}
         </p>
         <p
           className="font-['Manrope:Bold',sans-serif] font-bold"
@@ -206,6 +214,8 @@ function WorkerCard({ worker }: { worker: Worker }) {
 }
 
 export function WorkerDashboardPanel({ onBack }: { onBack: () => void }) {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="flex flex-col min-h-full bg-[#fbf9f8]">
       <MenuScreenHeader onBack={onBack} label="MENU" />
@@ -216,13 +226,13 @@ export function WorkerDashboardPanel({ onBack }: { onBack: () => void }) {
           className="font-['Manrope:Regular',sans-serif] uppercase"
           style={{ fontSize: 10, letterSpacing: "1.1px", color: "#564239", marginBottom: 4 }}
         >
-          CONTRACTOR VIEW
+          {t("cONTRACTORVIEW")}
         </p>
         <p
           className="font-['Manrope:Bold',sans-serif] font-bold uppercase"
           style={{ fontSize: 22, letterSpacing: "-0.5px", color: "#1a1a1a", lineHeight: "26px", marginBottom: 4 }}
         >
-          WORKER DASHBOARD
+          {t("wORKERDASHBOARD")}
         </p>
         <p
           className="font-['Manrope:Regular',sans-serif]"

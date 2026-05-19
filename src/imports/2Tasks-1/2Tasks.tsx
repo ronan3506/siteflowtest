@@ -1,29 +1,37 @@
+import { useLanguage } from "../../app/i18n/LanguageContext";
+import { useTranslations } from "../../app/i18n/translations";
 import svgPaths from "./svg-ignz5r43bb";
 import imgAb6AXuCcXnanCv6CgYfOnurdtfvk8B18RDxUnvTk0Ek1NwVxzPl1R76BtRlNNeTqwDHeDr15VbQ1Bf8E1JjsS9KciBdunAp3FJyk0VRf3QUptlM99AirbZGwODzqKtaNyKEzNop9AEUiwDCkqhNq3MrGwySa1DfYObMj1SuDkfgV4URokkp3LqMGx5TqXg9Z4WFzdjKaFbRoSkRfKoYzS4JlWbSxit7UUmnhalNxdV4Kym2Up6HRvSwPdlDxYHh2Z6BFg1JetNq from "./ca136f8c2e4dfdf09b12dbb1967f19f5ccdc5083.png";
 import imgAb6AXuCLdrDrVmQExTnmyqVto6Wwxdl6ECh3Y9CMscln7CwkKBpL9Tnh6BAvaJRsAgBypUsWjDy0M8R52Lu6RsKYipjWor5SstJqO6VyKW66JuCnydbXAlYpdtZevvH9MeXc4L8GKpReJdyeL6DtqI15Uh6VcwP3Fb2WHr7Muw0Og1XBfi0EfqgUor2QlsMk3Zu9LhjTTkGzPXm8XWp1ErFHyYHdkSJwmyXf749InLvPaW1YL6ZohQgaId3Q1YYnOne4ZrH3120 from "./d57fc7764a294dadd06d3cb669552a9de986742d.png";
 import imgAb6AXuBmigOggze07Ln1GjbC1JyocRnQpiQpO54G52AcItCcNEcQSaCyzuvVs7O4Hkf2L7AxTwuKroNGnS2AwFtmOGzQ2C1Cs2Jfh963Oh83BBVzptuAlhlugncpC9RSIsZsn6JKtrsfjwuLwWfcCXtvKfb6BTpJu3EPcZs8EChhaKLeWd6GwyKjtLeyEkBsNr8XxbfHr2XeciY5Urr1Q3PaPrg8CTEvvfpahRcnPBlLMhBvSxcg7HijiVcKDbTUlJaiNVuUlh0 from "./4ea645fc116eac63e2f3c66d66eb76f4d0a012b9.png";
 
 function Heading() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="content-stretch flex flex-col items-start relative shrink-0 w-full" data-name="Heading 2">
       <div className="flex flex-col font-['Manrope:Bold',sans-serif] font-bold justify-center leading-[0] relative shrink-0 text-[#1a1c1c] text-[36px] tracking-[-0.9px] w-full">
-        <p className="leading-[40px]">TASKS</p>
+        <p className="leading-[40px]">{t("tASKS")}</p>
       </div>
     </div>
   );
 }
 
 function Container1() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="content-stretch flex flex-col items-start relative shrink-0" data-name="Container">
       <div className="flex flex-col font-['Manrope:Regular',sans-serif] font-normal h-[16px] justify-center leading-[0] relative shrink-0 text-[#564239] text-[12px] tracking-[1.2px] uppercase w-[127.59px]">
-        <p className="leading-[16px]">7 PENDING REVIEW</p>
+        <p className="leading-[16px]">{t("7PENDINGREVIEW")}</p>
       </div>
     </div>
   );
 }
 
 function Container() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="content-stretch flex gap-[8px] items-center relative shrink-0 w-full" data-name="Container">
       <div className="bg-[#7a3100] relative rounded-[9999px] shrink-0 size-[8px]" data-name="Background" />
@@ -33,6 +41,8 @@ function Container() {
 }
 
 function SectionHeader() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="content-stretch flex flex-col gap-[8px] items-start relative shrink-0 w-full" data-name="Section Header">
       <Heading />
@@ -42,6 +52,8 @@ function SectionHeader() {
 }
 
 function Ab6AXuCcXnanCv6CgYfOnurdtfvk8B18RDxUnvTk0Ek1NwVxzPl1R76BtRlNNeTqwDHeDr15VbQ1Bf8E1JjsS9KciBdunAp3FJyk0VRf3QUptlM99AirbZGwODzqKtaNyKEzNop9AEUiwDCkqhNq3MrGwySa1DfYObMj1SuDkfgV4URokkp3LqMGx5TqXg9Z4WFzdjKaFbRoSkRfKoYzS4JlWbSxit7UUmnhalNxdV4Kym2Up6HRvSwPdlDxYHh2Z6BFg1JetNq() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="h-[195.75px] relative shrink-0 w-full" data-name="AB6AXuCCXnanCv6cgYFOnurdtfvk8b18rDxUnvTK0Ek1NwVxzPl1r76BTRlNNeTqwDHeDr15vbQ1Bf8E1JjsS9kciBdunAP3fJyk0vRF3_qUPTL--M99airbZGwODzqKTANyKEzNOP9A_EUiwDCkqhNq3MrGWYSa1DfYObMj1SU_dkfgV4URokkp3LqMGx5tqXg9Z4wFZDJKaFBRoSkRfKoYzS4_JlWBSxit7u_UMNHALNxdV4Kym2Up6hRVSw-PDLDxY_hh2Z6bFG1JetNq">
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
@@ -52,16 +64,20 @@ function Ab6AXuCcXnanCv6CgYfOnurdtfvk8B18RDxUnvTk0Ek1NwVxzPl1R76BtRlNNeTqwDHeDr1
 }
 
 function StatusBadge() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="absolute bg-[#ba1a1a] content-stretch flex items-center px-[12px] py-[6px] right-[16px] rounded-[8px] top-[16px]" data-name="Status Badge">
       <div className="flex flex-col font-['Manrope:Regular',sans-serif] font-normal h-[15px] justify-center leading-[0] relative shrink-0 text-[10px] text-white tracking-[1px] uppercase w-[86.16px]">
-        <p className="leading-[15px]">HIGH PRIORITY</p>
+        <p className="leading-[15px]">{t("hIGHPRIORITY")}</p>
       </div>
     </div>
   );
 }
 
 function Background() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="bg-[#fbf9f8] relative rounded-tl-[12px] rounded-tr-[12px] shrink-0 w-full z-[2]" data-name="Background">
       <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex flex-col items-start justify-center overflow-clip relative rounded-[inherit] size-full">
@@ -73,26 +89,32 @@ function Background() {
 }
 
 function Heading1() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="content-stretch flex flex-col items-start relative shrink-0 w-full" data-name="Heading 3">
       <div className="flex flex-col font-['Manrope:Regular',sans-serif] font-normal h-[25px] justify-center leading-[0] relative shrink-0 text-[#1b1c1c] text-[20px] tracking-[-0.5px] w-[254.53px]">
-        <p className="leading-[25px] font-bold">Structural Steel Inspection</p>
+        <p className="leading-[25px] font-bold">{t("structuralSteelInspection")}</p>
       </div>
     </div>
   );
 }
 
 function Container5() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="content-stretch flex flex-col items-start relative shrink-0 w-full" data-name="Container">
       <div className="flex flex-col font-['Manrope:Regular',sans-serif] font-normal h-[20px] justify-center leading-[0] relative shrink-0 text-[#564239] text-[14px] w-[128.19px]">
-        <p className="leading-[20px]">1st floor - Kitchen</p>
+        <p className="leading-[20px]">{t("1stFloorKitchen")}</p>
       </div>
     </div>
   );
 }
 
 function Container4() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="content-stretch flex flex-col gap-[4px] items-start relative shrink-0 w-[254.53px]" data-name="Container">
       <Heading1 />
@@ -102,6 +124,8 @@ function Container4() {
 }
 
 function Container6() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="h-[16px] relative shrink-0 w-[4px]" data-name="Container">
       <svg className="absolute block inset-0 size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 4 16">
@@ -114,6 +138,8 @@ function Container6() {
 }
 
 function Button() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="content-stretch flex items-center justify-center relative rounded-[12px] shrink-0 size-[32px]" data-name="Button">
       <Container6 />
@@ -122,6 +148,8 @@ function Button() {
 }
 
 function Container3() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="content-stretch flex items-start justify-between relative shrink-0 w-full" data-name="Container">
       <Container4 />
@@ -131,16 +159,20 @@ function Container3() {
 }
 
 function Container8() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="content-stretch flex flex-col items-start relative shrink-0 w-full" data-name="Container">
       <div className="flex flex-col font-['Manrope:Regular',sans-serif] font-normal justify-center leading-[0] relative shrink-0 text-[#564239] text-[10px] tracking-[1px] uppercase w-full">
-        <p className="leading-[15px]">DUE</p>
+        <p className="leading-[15px]">{t("dUE")}</p>
       </div>
     </div>
   );
 }
 
 function Margin() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="content-stretch flex flex-col items-start pb-[4px] relative shrink-0 w-full" data-name="Margin">
       <Container8 />
@@ -149,6 +181,8 @@ function Margin() {
 }
 
 function Container9() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="content-stretch flex flex-col items-start relative shrink-0 w-full" data-name="Container">
       <div className="flex flex-col font-['Manrope:Regular',sans-serif] font-normal justify-center leading-[0] relative shrink-0 text-[#7a3100] text-[14px] w-full">
@@ -159,6 +193,8 @@ function Container9() {
 }
 
 function Container7() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="col-1 justify-self-stretch relative row-1 self-start shrink-0" data-name="Container">
       <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex flex-col items-start relative size-full">
@@ -170,16 +206,20 @@ function Container7() {
 }
 
 function Container10() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="content-stretch flex flex-col items-start relative shrink-0 w-full" data-name="Container">
       <div className="flex flex-col font-['Manrope:Regular',sans-serif] font-normal justify-center leading-[0] relative shrink-0 text-[#564239] text-[10px] tracking-[1px] uppercase w-full">
-        <p className="leading-[15px]">ASSIGNED</p>
+        <p className="leading-[15px]">{t("aSSIGNED")}</p>
       </div>
     </div>
   );
 }
 
 function Margin1() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="relative shrink-0 w-full" data-name="Margin">
       <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex flex-col items-start pb-[4px] relative size-full">
@@ -190,11 +230,13 @@ function Margin1() {
 }
 
 function Container11() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="relative shrink-0 w-full" data-name="Container">
       <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex flex-col items-start relative size-full">
         <div className="flex flex-col font-['Manrope:Regular',sans-serif] font-normal justify-center leading-[0] relative shrink-0 text-[#7a3100] text-[14px] w-full">
-          <p className="leading-[20px]">Rakesh Singh</p>
+          <p className="leading-[20px]">{t("rakeshSingh")}</p>
         </div>
       </div>
     </div>
@@ -202,6 +244,8 @@ function Container11() {
 }
 
 function VerticalBorder() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="col-2 justify-self-stretch relative row-1 self-start shrink-0" data-name="VerticalBorder">
       <div aria-hidden="true" className="absolute border-[#ddc1b4] border-l border-solid inset-0 pointer-events-none" />
@@ -214,6 +258,8 @@ function VerticalBorder() {
 }
 
 function HorizontalBorder() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="grid grid-cols-[repeat(2,minmax(0,1fr))] grid-rows-[_39px] pt-[17px] relative shrink-0 w-full" data-name="HorizontalBorder">
       <div aria-hidden="true" className="absolute border-[#ddc1b4] border-solid border-t inset-0 pointer-events-none" />
@@ -224,6 +270,8 @@ function HorizontalBorder() {
 }
 
 function Container2() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="relative shrink-0 w-full z-[1]" data-name="Container">
       <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex flex-col gap-[16px] items-start p-[24px] relative size-full">
@@ -235,6 +283,8 @@ function Container2() {
 }
 
 function ApprovalCard() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="bg-[#fbf9f8] content-stretch flex flex-col isolate items-start p-px relative rounded-[12px] shrink-0 w-full" data-name="Approval Card 1">
       <div aria-hidden="true" className="absolute border border-[#ddc1b4] border-solid inset-0 pointer-events-none rounded-[12px]" />
@@ -245,6 +295,8 @@ function ApprovalCard() {
 }
 
 function Ab6AXuCLdrDrVmQExTnmyqVto6Wwxdl6ECh3Y9CMscln7CwkKBpL9Tnh6BAvaJRsAgBypUsWjDy0M8R52Lu6RsKYipjWor5SstJqO6VyKW66JuCnydbXAlYpdtZevvH9MeXc4L8GKpReJdyeL6DtqI15Uh6VcwP3Fb2WHr7Muw0Og1XBfi0EfqgUor2QlsMk3Zu9LhjTTkGzPXm8XWp1ErFHyYHdkSJwmyXf749InLvPaW1YL6ZohQgaId3Q1YYnOne4ZrH() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="h-[195.75px] relative shrink-0 w-full" data-name="AB6AXuCLdrDRVmQExTnmyqVto6wwxdl6eCh3Y9cMSCLN7cwkKBpL9tnh6bAva-JRsAgBYPUsWJDy0M8-r52Lu6rsKYipjWOR5SstJqO6vyK_W66JUCnydbXAlYpdtZevvH9MeXc4l8GKpREJdyeL6dtqI15UH6VcwP3fb2wHR7MUW0Og1xBfi0EFQGUor-2QlsMK3zu9LhjTTkGzPXm8XWp1ER-F-hyYHdkSJwmyXF-749inLvPa_W1yL6zohQgaID3Q1YYnOne4ZrH31-20">
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
@@ -255,16 +307,20 @@ function Ab6AXuCLdrDrVmQExTnmyqVto6Wwxdl6ECh3Y9CMscln7CwkKBpL9Tnh6BAvaJRsAgBypUs
 }
 
 function StatusBadge1() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="absolute bg-[#f9b74a] content-stretch flex flex-col items-start px-[12px] py-[6px] right-[16px] rounded-[8px] top-[16px]" data-name="Status Badge">
       <div className="flex flex-col font-['Manrope:Regular',sans-serif] font-normal h-[15px] justify-center leading-[0] relative shrink-0 text-[10px] text-white tracking-[1px] uppercase w-[109.2px]">
-        <p className="leading-[15px]">PENDING SIGN-OFF</p>
+        <p className="leading-[15px]">{t("pENDINGSIGNOFF")}</p>
       </div>
     </div>
   );
 }
 
 function Background1() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="bg-[#fbf9f8] relative rounded-tl-[12px] rounded-tr-[12px] shrink-0 w-full z-[2]" data-name="Background">
       <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex flex-col items-start justify-center overflow-clip relative rounded-[inherit] size-full">
@@ -276,26 +332,32 @@ function Background1() {
 }
 
 function Heading2() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="content-stretch flex flex-col items-start relative shrink-0 w-full" data-name="Heading 3">
       <div className="flex flex-col font-['Manrope:Bold',sans-serif] font-bold h-[25px] justify-center leading-[0] relative shrink-0 text-[#1b1c1c] text-[20px] tracking-[-0.5px] w-[246.89px]">
-        <p className="leading-[25px]">Column Casting</p>
+        <p className="leading-[25px]">{t("columnCasting")}</p>
       </div>
     </div>
   );
 }
 
 function Container15() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="content-stretch flex flex-col items-start relative shrink-0 w-full" data-name="Container">
       <div className="flex flex-col font-['Manrope:Regular',sans-serif] font-normal justify-center leading-[0] relative shrink-0 text-[#564239] text-[14px] whitespace-nowrap">
-        <p className="leading-[20px]">Ground floor - lobby</p>
+        <p className="leading-[20px]">{t("groundFloorLobby")}</p>
       </div>
     </div>
   );
 }
 
 function Container14() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="content-stretch flex flex-col gap-[4px] items-start relative shrink-0 w-[246.89px]" data-name="Container">
       <Heading2 />
@@ -305,6 +367,8 @@ function Container14() {
 }
 
 function Container16() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="h-[16px] relative shrink-0 w-[4px]" data-name="Container">
       <svg className="absolute block inset-0 size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 4 16">
@@ -317,6 +381,8 @@ function Container16() {
 }
 
 function Button1() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="content-stretch flex items-center justify-center relative rounded-[12px] shrink-0 size-[32px]" data-name="Button">
       <Container16 />
@@ -325,6 +391,8 @@ function Button1() {
 }
 
 function Container13() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="content-stretch flex items-start justify-between relative shrink-0 w-full" data-name="Container">
       <Container14 />
@@ -334,16 +402,20 @@ function Container13() {
 }
 
 function Container18() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="content-stretch flex flex-col items-start relative shrink-0 w-full" data-name="Container">
       <div className="flex flex-col font-['Manrope:Regular',sans-serif] font-normal justify-center leading-[0] relative shrink-0 text-[#564239] text-[10px] tracking-[1px] uppercase w-full">
-        <p className="leading-[15px]">DUE</p>
+        <p className="leading-[15px]">{t("dUE")}</p>
       </div>
     </div>
   );
 }
 
 function Margin2() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="content-stretch flex flex-col items-start pb-[4px] relative shrink-0 w-full" data-name="Margin">
       <Container18 />
@@ -352,6 +424,8 @@ function Margin2() {
 }
 
 function Container19() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="content-stretch flex flex-col items-start relative shrink-0 w-full" data-name="Container">
       <div className="flex flex-col font-['Manrope:Regular',sans-serif] font-normal justify-center leading-[0] relative shrink-0 text-[#7a3100] text-[14px] w-full">
@@ -362,6 +436,8 @@ function Container19() {
 }
 
 function Container17() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="col-1 justify-self-stretch relative row-1 self-start shrink-0" data-name="Container">
       <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex flex-col items-start relative size-full">
@@ -373,16 +449,20 @@ function Container17() {
 }
 
 function Container20() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="content-stretch flex flex-col items-start relative shrink-0 w-full" data-name="Container">
       <div className="flex flex-col font-['Manrope:Regular',sans-serif] font-normal justify-center leading-[0] relative shrink-0 text-[#564239] text-[10px] tracking-[1px] uppercase w-full">
-        <p className="leading-[15px]">ASSIGNED</p>
+        <p className="leading-[15px]">{t("aSSIGNED")}</p>
       </div>
     </div>
   );
 }
 
 function Margin3() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="relative shrink-0 w-full" data-name="Margin">
       <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex flex-col items-start pb-[4px] relative size-full">
@@ -393,11 +473,13 @@ function Margin3() {
 }
 
 function Container21() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="relative shrink-0 w-full" data-name="Container">
       <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex flex-col items-start relative size-full">
         <div className="flex flex-col font-['Manrope:Regular',sans-serif] font-normal justify-center leading-[0] relative shrink-0 text-[#7a3100] text-[14px] w-full">
-          <p className="leading-[20px]">Imran Khan</p>
+          <p className="leading-[20px]">{t("imranKhan")}</p>
         </div>
       </div>
     </div>
@@ -405,6 +487,8 @@ function Container21() {
 }
 
 function VerticalBorder1() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="col-2 justify-self-stretch relative row-1 self-start shrink-0" data-name="VerticalBorder">
       <div aria-hidden="true" className="absolute border-[#ddc1b4] border-l border-solid inset-0 pointer-events-none" />
@@ -417,6 +501,8 @@ function VerticalBorder1() {
 }
 
 function HorizontalBorder1() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="grid grid-cols-[repeat(2,minmax(0,1fr))] grid-rows-[_39px] pt-[17px] relative shrink-0 w-full" data-name="HorizontalBorder">
       <div aria-hidden="true" className="absolute border-[#ddc1b4] border-solid border-t inset-0 pointer-events-none" />
@@ -427,6 +513,8 @@ function HorizontalBorder1() {
 }
 
 function Container12() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="relative shrink-0 w-full z-[1]" data-name="Container">
       <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex flex-col gap-[16px] items-start p-[24px] relative size-full">
@@ -438,6 +526,8 @@ function Container12() {
 }
 
 function ApprovalCard1() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="bg-[#fbf9f8] content-stretch flex flex-col isolate items-start p-px relative rounded-[12px] shrink-0 w-full" data-name="Approval Card 2">
       <div aria-hidden="true" className="absolute border border-[#ddc1b4] border-solid inset-0 pointer-events-none rounded-[12px]" />
@@ -448,6 +538,8 @@ function ApprovalCard1() {
 }
 
 function Ab6AXuBmigOggze07Ln1GjbC1JyocRnQpiQpO54G52AcItCcNEcQSaCyzuvVs7O4Hkf2L7AxTwuKroNGnS2AwFtmOGzQ2C1Cs2Jfh963Oh83BBVzptuAlhlugncpC9RSIsZsn6JKtrsfjwuLwWfcCXtvKfb6BTpJu3EPcZs8EChhaKLeWd6GwyKjtLeyEkBsNr8XxbfHr2XeciY5Urr1Q3PaPrg8CTEvvfpahRcnPBlLMhBvSxcg7HijiVcKDbTUlJaiNVuUlh() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="h-[195.75px] relative shrink-0 w-full" data-name="AB6AXuBMIGOggze07LN1GjbC1JyocRnQpiQpO54g52acIT_ccNEcQSaCyzuvVS7o4HKF2l7AXTwu-kroNGn-s2AwFtmOGzQ2c1CS2jfh9-63oh83b_BVzptuAlhlugncpC9rSIsZsn6jKtrsfjwuLwWfcCXtv-kfb6BTpJU3ePCZs8EChhaKLeWD6GwyKJTLeyEKBsNR-8XXBFHr2xeciY5URR1Q3paPRG8cTEvvfpahRcnPBlLMhBvSXCG7HijiVcKDbT-UlJaiNVuULH-0">
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
@@ -458,17 +550,21 @@ function Ab6AXuBmigOggze07Ln1GjbC1JyocRnQpiQpO54G52AcItCcNEcQSaCyzuvVs7O4Hkf2L7A
 }
 
 function StatusBadge2() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="absolute bg-[#e4e2e2] content-stretch flex flex-col items-start px-[13px] py-[7px] right-[16px] rounded-[8px] top-[16px]" data-name="Status Badge">
       <div aria-hidden="true" className="absolute border border-[#ddc1b4] border-solid inset-0 pointer-events-none rounded-[8px]" />
       <div className="flex flex-col font-['Manrope:Regular',sans-serif] font-normal h-[15px] justify-center leading-[0] relative shrink-0 text-[#7a3100] text-[10px] tracking-[1px] uppercase w-[83.92px]">
-        <p className="leading-[15px]">REVIEW DRAFT</p>
+        <p className="leading-[15px]">{t("rEVIEWDRAFT")}</p>
       </div>
     </div>
   );
 }
 
 function Background2() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="bg-[#fbf9f8] relative rounded-tl-[12px] rounded-tr-[12px] shrink-0 w-full z-[2]" data-name="Background">
       <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex flex-col items-start justify-center overflow-clip relative rounded-[inherit] size-full">
@@ -480,26 +576,32 @@ function Background2() {
 }
 
 function Heading3() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="content-stretch flex flex-col items-start relative shrink-0 w-full" data-name="Heading 3">
       <div className="flex flex-col font-['Manrope:Bold',sans-serif] font-bold h-[25px] justify-center leading-[0] relative shrink-0 text-[#1b1c1c] text-[20px] tracking-[-0.5px] w-[220.5px]">
-        <p className="leading-[25px]">HVAC System Layout v2</p>
+        <p className="leading-[25px]">{t("hVACSystemLayoutV2")}</p>
       </div>
     </div>
   );
 }
 
 function Container25() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="content-stretch flex flex-col items-start relative shrink-0 w-full" data-name="Container">
       <div className="flex flex-col font-['Manrope:Regular',sans-serif] font-normal h-[20px] justify-center leading-[0] relative shrink-0 text-[#564239] text-[14px] w-[148.75px]">
-        <p className="leading-[20px]">Ground floor - lobby</p>
+        <p className="leading-[20px]">{t("groundFloorLobby")}</p>
       </div>
     </div>
   );
 }
 
 function Container24() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="content-stretch flex flex-col gap-[4px] items-start relative shrink-0 w-[220.5px]" data-name="Container">
       <Heading3 />
@@ -509,6 +611,8 @@ function Container24() {
 }
 
 function Container26() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="h-[16px] relative shrink-0 w-[4px]" data-name="Container">
       <svg className="absolute block inset-0 size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 4 16">
@@ -521,6 +625,8 @@ function Container26() {
 }
 
 function Button2() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="content-stretch flex items-center justify-center relative rounded-[12px] shrink-0 size-[32px]" data-name="Button">
       <Container26 />
@@ -529,6 +635,8 @@ function Button2() {
 }
 
 function Container23() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="content-stretch flex items-start justify-between relative shrink-0 w-full" data-name="Container">
       <Container24 />
@@ -538,16 +646,20 @@ function Container23() {
 }
 
 function Container28() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="content-stretch flex flex-col items-start relative shrink-0 w-full" data-name="Container">
       <div className="flex flex-col font-['Manrope:Regular',sans-serif] font-normal justify-center leading-[0] relative shrink-0 text-[#564239] text-[10px] tracking-[1px] uppercase w-full">
-        <p className="leading-[15px]">DUE</p>
+        <p className="leading-[15px]">{t("dUE")}</p>
       </div>
     </div>
   );
 }
 
 function Margin4() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="content-stretch flex flex-col items-start pb-[4px] relative shrink-0 w-full" data-name="Margin">
       <Container28 />
@@ -556,6 +668,8 @@ function Margin4() {
 }
 
 function Container29() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="content-stretch flex flex-col items-start relative shrink-0 w-full" data-name="Container">
       <div className="flex flex-col font-['Manrope:Regular',sans-serif] font-normal justify-center leading-[0] relative shrink-0 text-[#7a3100] text-[14px] w-full">
@@ -566,6 +680,8 @@ function Container29() {
 }
 
 function Container27() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="col-1 justify-self-stretch relative row-1 self-start shrink-0" data-name="Container">
       <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex flex-col items-start relative size-full">
@@ -577,16 +693,20 @@ function Container27() {
 }
 
 function Container30() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="content-stretch flex flex-col items-start relative shrink-0 w-full" data-name="Container">
       <div className="flex flex-col font-['Manrope:Regular',sans-serif] font-normal justify-center leading-[0] relative shrink-0 text-[#564239] text-[10px] tracking-[1px] uppercase w-full">
-        <p className="leading-[15px]">ASSIGNED</p>
+        <p className="leading-[15px]">{t("aSSIGNED")}</p>
       </div>
     </div>
   );
 }
 
 function Margin5() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="relative shrink-0 w-full" data-name="Margin">
       <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex flex-col items-start pb-[4px] relative size-full">
@@ -597,11 +717,13 @@ function Margin5() {
 }
 
 function Container31() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="relative shrink-0 w-full" data-name="Container">
       <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex flex-col items-start relative size-full">
         <div className="flex flex-col font-['Manrope:Regular',sans-serif] font-normal justify-center leading-[0] relative shrink-0 text-[#7a3100] text-[14px] w-full">
-          <p className="leading-[20px]">Raju Harihar</p>
+          <p className="leading-[20px]">{t("rajuHarihar")}</p>
         </div>
       </div>
     </div>
@@ -609,6 +731,8 @@ function Container31() {
 }
 
 function VerticalBorder2() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="col-2 justify-self-stretch relative row-1 self-start shrink-0" data-name="VerticalBorder">
       <div aria-hidden="true" className="absolute border-[#ddc1b4] border-l border-solid inset-0 pointer-events-none" />
@@ -621,6 +745,8 @@ function VerticalBorder2() {
 }
 
 function HorizontalBorder2() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="grid grid-cols-[repeat(2,minmax(0,1fr))] grid-rows-[_39px] pt-[17px] relative shrink-0 w-full" data-name="HorizontalBorder">
       <div aria-hidden="true" className="absolute border-[#ddc1b4] border-solid border-t inset-0 pointer-events-none" />
@@ -631,6 +757,8 @@ function HorizontalBorder2() {
 }
 
 function Container22() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="relative shrink-0 w-full z-[1]" data-name="Container">
       <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex flex-col gap-[16px] items-start p-[24px] relative size-full">
@@ -642,6 +770,8 @@ function Container22() {
 }
 
 function ApprovalCard2() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="bg-[#fbf9f8] content-stretch flex flex-col isolate items-start p-px relative rounded-[12px] shrink-0 w-full" data-name="Approval Card 3">
       <div aria-hidden="true" className="absolute border border-[#ddc1b4] border-solid inset-0 pointer-events-none rounded-[12px]" />
@@ -652,6 +782,8 @@ function ApprovalCard2() {
 }
 
 function ApprovalList() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="content-stretch flex flex-col gap-[40px] items-start relative shrink-0 w-full" data-name="Approval List">
       <ApprovalCard />
@@ -662,6 +794,8 @@ function ApprovalList() {
 }
 
 function MainContentCanvas() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="absolute content-stretch flex flex-col gap-[32px] items-start left-[-0.25px] pb-[32px] pt-[7px] px-[20px] right-[0.25px] top-[64px]" data-name="Main - Content Canvas">
       <SectionHeader />
@@ -671,6 +805,8 @@ function MainContentCanvas() {
 }
 
 function Container32() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="h-[18px] relative shrink-0 w-[16px]" data-name="Container">
       <svg className="absolute block inset-0 size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 16 18">
@@ -683,16 +819,20 @@ function Container32() {
 }
 
 function Margin6() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="content-stretch flex flex-col items-start pt-[4px] relative shrink-0" data-name="Margin">
       <div className="flex flex-col font-['Manrope:SemiBold',sans-serif] font-semibold h-[15px] justify-center leading-[0] relative shrink-0 text-[#564239] text-[10px] tracking-[1px] uppercase w-[33.13px]">
-        <p className="leading-[15px]">HOME</p>
+        <p className="leading-[15px]">{t("hOME")}</p>
       </div>
     </div>
   );
 }
 
 function LinkHomeActive() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="col-1 content-stretch flex flex-col h-[63px] items-center justify-center ml-0 mt-0 relative row-1 w-[97.5px]" data-name="Link - Home Active">
       <Container32 />
@@ -702,16 +842,20 @@ function LinkHomeActive() {
 }
 
 function Container33() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="absolute content-stretch flex flex-col items-start left-[30.75px] top-[36px]" data-name="Container">
       <div className="flex flex-col font-['Manrope:SemiBold',sans-serif] font-semibold h-[15px] justify-center leading-[0] relative shrink-0 text-[10px] text-white tracking-[1px] uppercase w-[36.7px]">
-        <p className="leading-[15px]">TASKS</p>
+        <p className="leading-[15px]">{t("tASKS")}</p>
       </div>
     </div>
   );
 }
 
 function LinkDecisions() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="bg-[#7a3100] col-1 h-[63px] ml-[97.5px] mt-0 relative row-1 w-[97.5px]" data-name="Link - Decisions">
       <div className="absolute h-[20px] left-[39.75px] top-[12px] w-[18px]" data-name="Icon">
@@ -725,6 +869,8 @@ function LinkDecisions() {
 }
 
 function Container34() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="h-[19px] relative shrink-0 w-[22px]" data-name="Container">
       <svg className="absolute block inset-0 size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 22 19">
@@ -737,16 +883,20 @@ function Container34() {
 }
 
 function Margin7() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="content-stretch flex flex-col items-start pt-[4px] relative shrink-0" data-name="Margin">
       <div className="flex flex-col font-['Manrope:SemiBold',sans-serif] font-semibold h-[15px] justify-center leading-[0] relative shrink-0 text-[#564239] text-[10px] tracking-[1px] uppercase w-[41.67px]">
-        <p className="leading-[15px]">ISSUES</p>
+        <p className="leading-[15px]">{t("iSSUES")}</p>
       </div>
     </div>
   );
 }
 
 function LinkIssues() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="col-1 content-stretch flex flex-col h-[63px] items-center justify-center ml-[195px] mt-0 relative row-1 w-[97.5px]" data-name="Link - Issues">
       <Container34 />
@@ -756,6 +906,8 @@ function LinkIssues() {
 }
 
 function Container35() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="h-[12px] relative shrink-0 w-[22px]" data-name="Container">
       <svg className="absolute block inset-0 size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 22 12">
@@ -768,16 +920,20 @@ function Container35() {
 }
 
 function Margin8() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="content-stretch flex flex-col items-start pt-[4px] relative shrink-0" data-name="Margin">
       <div className="flex flex-col font-['Manrope:SemiBold',sans-serif] font-semibold h-[15px] justify-center leading-[0] relative shrink-0 text-[#564239] text-[10px] tracking-[1px] uppercase w-[52.45px]">
-        <p className="leading-[15px]">TIMELINE</p>
+        <p className="leading-[15px]">{t("tIMELINE")}</p>
       </div>
     </div>
   );
 }
 
 function LinkTimeline() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="col-1 content-stretch flex flex-col h-[63px] items-center justify-center ml-[292.5px] mt-0 relative row-1 w-[97.5px]" data-name="Link - Timeline">
       <Container35 />
@@ -787,6 +943,8 @@ function LinkTimeline() {
 }
 
 function Group() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="grid-cols-[max-content] grid-rows-[max-content] inline-grid leading-[0] place-items-start relative shrink-0">
       <LinkHomeActive />
@@ -798,6 +956,8 @@ function Group() {
 }
 
 function BottomNavBarShell() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="absolute bg-[#fbf9f8] content-stretch flex h-[64px] items-start justify-center left-[-0.25px] pt-px top-[1463px] w-[412px]" data-name="BottomNavBar Shell">
       <div aria-hidden="true" className="absolute border-[#8a7267] border-solid border-t inset-0 pointer-events-none" />
@@ -807,6 +967,8 @@ function BottomNavBarShell() {
 }
 
 function Container36() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="relative shrink-0 size-[14px]" data-name="Container">
       <svg className="absolute block inset-0 size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 14 14">
@@ -819,16 +981,20 @@ function Container36() {
 }
 
 function Container37() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="content-stretch flex flex-col items-center relative shrink-0" data-name="Container">
       <div className="flex flex-col font-['Manrope:Bold',sans-serif] font-bold justify-center leading-[0] relative shrink-0 text-[14px] text-center text-white tracking-[1.4px] uppercase whitespace-nowrap">
-        <p className="leading-[20px]">ADD TASK</p>
+        <p className="leading-[20px]">{t("aDDTASK")}</p>
       </div>
     </div>
   );
 }
 
 function Button3() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="-translate-x-1/2 absolute bg-[#7a3100] content-stretch flex gap-[11.99px] h-[54px] items-center justify-center left-[calc(50%-0.25px)] rounded-[12px] top-[1388px] w-[364px]" data-name="Button">
       <div className="absolute bg-[rgba(255,255,255,0)] h-[54px] left-0 rounded-[9999px] shadow-[0px_10px_15px_-3px_rgba(0,0,0,0.1),0px_4px_6px_-4px_rgba(0,0,0,0.1)] top-0 w-[180px]" data-name="Button:shadow" />
@@ -839,6 +1005,8 @@ function Button3() {
 }
 
 function MdiExchange() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="absolute left-[317.94px] size-[25.833px] top-[19.58px]" data-name="mdi:exchange">
       <svg className="absolute block inset-0 size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 25.8333 25.8333">
@@ -856,11 +1024,13 @@ function MdiExchange() {
 }
 
 function LangChangeButton() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="absolute contents left-[308px] top-[17px]" data-name="Lang Change Button">
       <div className="absolute bg-[#7a3100] h-[31px] left-[308px] rounded-[28.615px] top-[17px] w-[71.538px]" />
       <div className="-translate-y-1/2 absolute capitalize flex flex-col font-['Outfit:Regular','Noto_Sans_Kannada:Regular',sans-serif] justify-center leading-[0] left-[343.77px] text-[15.296px] text-white top-[31.08px] tracking-[-0.1683px] whitespace-nowrap" style={{ fontVariationSettings: "'wdth' 100, 'wght' 400" }}>
-        <p className="leading-[1.5]">ಕನ್ನ</p>
+        <p className="leading-[1.5]">{t("langPillLabel")}</p>
       </div>
       <MdiExchange />
     </div>
@@ -868,6 +1038,8 @@ function LangChangeButton() {
 }
 
 function HeaderTopAppBar() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="absolute bg-white h-[64px] left-0 top-0 w-[412px]" data-name="Header - TopAppBar">
       <LangChangeButton />
@@ -897,6 +1069,8 @@ function HeaderTopAppBar() {
 }
 
 function Container38() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="h-[18px] relative shrink-0 w-[16px]" data-name="Container">
       <svg className="absolute block inset-0 size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 16 18">
@@ -909,16 +1083,20 @@ function Container38() {
 }
 
 function Margin9() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="content-stretch flex flex-col items-start pt-[4px] relative shrink-0" data-name="Margin">
       <div className="flex flex-col font-['Manrope:SemiBold',sans-serif] font-semibold h-[15px] justify-center leading-[0] relative shrink-0 text-[#564239] text-[10px] tracking-[1px] uppercase w-[33.13px]">
-        <p className="leading-[15px]">HOME</p>
+        <p className="leading-[15px]">{t("hOME")}</p>
       </div>
     </div>
   );
 }
 
 function LinkHomeActive1() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="col-1 content-stretch flex flex-col h-[63px] items-center justify-center ml-0 mt-0 relative row-1 w-[97.5px]" data-name="Link - Home Active">
       <Container38 />
@@ -928,16 +1106,20 @@ function LinkHomeActive1() {
 }
 
 function Container39() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="absolute content-stretch flex flex-col items-start left-[30.75px] top-[36px]" data-name="Container">
       <div className="flex flex-col font-['Manrope:SemiBold',sans-serif] font-semibold h-[15px] justify-center leading-[0] relative shrink-0 text-[10px] text-white tracking-[1px] uppercase w-[36.7px]">
-        <p className="leading-[15px]">TASKS</p>
+        <p className="leading-[15px]">{t("tASKS")}</p>
       </div>
     </div>
   );
 }
 
 function LinkDecisions1() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="bg-[#7a3100] col-1 h-[63px] ml-[97.5px] mt-0 relative row-1 w-[97.5px]" data-name="Link - Decisions">
       <div className="absolute h-[20px] left-[39.75px] top-[12px] w-[18px]" data-name="Icon">
@@ -951,6 +1133,8 @@ function LinkDecisions1() {
 }
 
 function Container40() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="h-[19px] relative shrink-0 w-[22px]" data-name="Container">
       <svg className="absolute block inset-0 size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 22 19">
@@ -963,16 +1147,20 @@ function Container40() {
 }
 
 function Margin10() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="content-stretch flex flex-col items-start pt-[4px] relative shrink-0" data-name="Margin">
       <div className="flex flex-col font-['Manrope:SemiBold',sans-serif] font-semibold h-[15px] justify-center leading-[0] relative shrink-0 text-[#564239] text-[10px] tracking-[1px] uppercase w-[41.67px]">
-        <p className="leading-[15px]">ISSUES</p>
+        <p className="leading-[15px]">{t("iSSUES")}</p>
       </div>
     </div>
   );
 }
 
 function LinkIssues1() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="col-1 content-stretch flex flex-col h-[63px] items-center justify-center ml-[195px] mt-0 relative row-1 w-[97.5px]" data-name="Link - Issues">
       <Container40 />
@@ -982,6 +1170,8 @@ function LinkIssues1() {
 }
 
 function Container41() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="h-[12px] relative shrink-0 w-[22px]" data-name="Container">
       <svg className="absolute block inset-0 size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 22 12">
@@ -994,16 +1184,20 @@ function Container41() {
 }
 
 function Margin11() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="content-stretch flex flex-col items-start pt-[4px] relative shrink-0" data-name="Margin">
       <div className="flex flex-col font-['Manrope:SemiBold',sans-serif] font-semibold h-[15px] justify-center leading-[0] relative shrink-0 text-[#564239] text-[10px] tracking-[1px] uppercase w-[52.45px]">
-        <p className="leading-[15px]">TIMELINE</p>
+        <p className="leading-[15px]">{t("tIMELINE")}</p>
       </div>
     </div>
   );
 }
 
 function LinkTimeline1() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="col-1 content-stretch flex flex-col h-[63px] items-center justify-center ml-[292.5px] mt-0 relative row-1 w-[97.5px]" data-name="Link - Timeline">
       <Container41 />
@@ -1013,6 +1207,8 @@ function LinkTimeline1() {
 }
 
 function Group1() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="grid-cols-[max-content] grid-rows-[max-content] inline-grid leading-[0] place-items-start relative shrink-0">
       <LinkHomeActive1 />
@@ -1024,6 +1220,8 @@ function Group1() {
 }
 
 function BottomNavBarShell1() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="absolute bg-[#fbf9f8] content-stretch flex h-[64px] items-start justify-center left-0 pt-px top-[1654px] w-[412px]" data-name="BottomNavBar Shell">
       <div aria-hidden="true" className="absolute border-[#8a7267] border-solid border-t inset-0 pointer-events-none" />
@@ -1033,6 +1231,8 @@ function BottomNavBarShell1() {
 }
 
 export default function Component2Tasks() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="bg-white relative size-full" data-name="2. Tasks">
       <MainContentCanvas />

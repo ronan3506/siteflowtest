@@ -5,6 +5,8 @@ import { useLanguage } from "../../i18n/LanguageContext";
 import { useTranslations } from "../../i18n/translations";
 
 function ChecklistRow({ text }: { text: string }) {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="flex items-center gap-[12px]">
       <div className="size-[20px] shrink-0">
@@ -28,7 +30,7 @@ export function Screen4({ onNext }: { onNext: () => void }) {
       <div className="absolute bg-[#faf8f7] flex h-[64px] items-center justify-between left-0 right-0 top-0 px-[24px] z-10">
         <div className="inline-grid grid-cols-[max-content] grid-rows-[max-content] leading-[0] place-items-start relative shrink-0">
           <div className="col-start-1 row-start-1 flex flex-col font-['Inter:Black',sans-serif] font-black justify-center leading-[0] not-italic text-[29.501px] text-black tracking-[1.3963px] uppercase w-[188px] whitespace-nowrap">
-            <p className="leading-[42.144px]">s teFLOW</p>
+            <p className="leading-[42.144px]">{t("sTeFLOW")}</p>
           </div>
           <div className="col-start-1 row-start-1 h-[21.546px] ml-[17.46px] mt-[10.41px] w-[16.655px] relative">
             <svg className="absolute inset-0 size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 16.6555 21.5459">

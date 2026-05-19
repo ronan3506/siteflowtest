@@ -1,3 +1,5 @@
+import { useLanguage } from "../../i18n/LanguageContext";
+import { useTranslations } from "../../i18n/translations";
 "use client";
 
 import * as React from "react";
@@ -51,6 +53,8 @@ function Carousel({
   children,
   ...props
 }: React.ComponentProps<"div"> & CarouselProps) {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   const [carouselRef, api] = useEmblaCarousel(
     {
       ...opts,
@@ -133,6 +137,8 @@ function Carousel({
 }
 
 function CarouselContent({ className, ...props }: React.ComponentProps<"div">) {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   const { carouselRef, orientation } = useCarousel();
 
   return (
@@ -154,6 +160,8 @@ function CarouselContent({ className, ...props }: React.ComponentProps<"div">) {
 }
 
 function CarouselItem({ className, ...props }: React.ComponentProps<"div">) {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   const { orientation } = useCarousel();
 
   return (
@@ -177,6 +185,8 @@ function CarouselPrevious({
   size = "icon",
   ...props
 }: React.ComponentProps<typeof Button>) {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   const { orientation, scrollPrev, canScrollPrev } = useCarousel();
 
   return (
@@ -196,7 +206,7 @@ function CarouselPrevious({
       {...props}
     >
       <ArrowLeft />
-      <span className="sr-only">Previous slide</span>
+      <span className="sr-only">{t("previousSlide")}</span>
     </Button>
   );
 }
@@ -207,6 +217,8 @@ function CarouselNext({
   size = "icon",
   ...props
 }: React.ComponentProps<typeof Button>) {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   const { orientation, scrollNext, canScrollNext } = useCarousel();
 
   return (
@@ -226,7 +238,7 @@ function CarouselNext({
       {...props}
     >
       <ArrowRight />
-      <span className="sr-only">Next slide</span>
+      <span className="sr-only">{t("nextSlide")}</span>
     </Button>
   );
 }

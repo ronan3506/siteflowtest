@@ -1,6 +1,10 @@
+import { useLanguage } from "../i18n/LanguageContext";
+import { useTranslations } from "../i18n/translations";
 import { useState } from "react";
 
 function MenuScreenHeader({ onBack, label }: { onBack: () => void; label: string }) {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div
       className="sticky top-0 left-0 right-0 z-10 flex items-center"
@@ -26,6 +30,8 @@ function MenuScreenHeader({ onBack, label }: { onBack: () => void; label: string
 }
 
 function SectionLabel({ children }: { children: string }) {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <p
       className="font-['Manrope:Regular',sans-serif] uppercase"
@@ -37,6 +43,8 @@ function SectionLabel({ children }: { children: string }) {
 }
 
 function SettingsCard({ children }: { children: React.ReactNode }) {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div
       className="bg-white border border-[#e6e1dc] rounded-[14px]"
@@ -58,6 +66,8 @@ function ToggleRow({
   value: boolean;
   onChange: (v: boolean) => void;
 }) {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div
       className="flex items-center justify-between"
@@ -122,6 +132,8 @@ function SelectRow({
   options: string[];
   onChange: (v: string) => void;
 }) {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div
       className="flex items-center justify-between"
@@ -162,6 +174,8 @@ function SelectRow({
 }
 
 function InfoRow({ label, value, last }: { label: string; value: string; last?: boolean }) {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div
       className="flex items-center justify-between"
@@ -184,6 +198,8 @@ function InfoRow({ label, value, last }: { label: string; value: string; last?: 
 }
 
 export function SettingsPanel({ onBack }: { onBack: () => void }) {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   const [language, setLanguage] = useState("English");
   const [pushNotifications, setPushNotifications] = useState(true);
   const [siteAlerts, setSiteAlerts] = useState(true);
@@ -200,17 +216,17 @@ export function SettingsPanel({ onBack }: { onBack: () => void }) {
           className="font-['Manrope:Regular',sans-serif] uppercase"
           style={{ fontSize: 10, letterSpacing: "1.1px", color: "#564239", marginBottom: 4 }}
         >
-          PREFERENCES
+          {t("pREFERENCES")}
         </p>
         <p
           className="font-['Manrope:Bold',sans-serif] font-bold uppercase"
           style={{ fontSize: 22, letterSpacing: "-0.5px", color: "#1a1a1a", lineHeight: "26px", marginBottom: 24 }}
         >
-          SETTINGS
+          {t("sETTINGS")}
         </p>
 
         {/* Language */}
-        <SectionLabel>LANGUAGE</SectionLabel>
+        <SectionLabel>{t("lANGUAGE")}</SectionLabel>
         <SettingsCard>
           <SelectRow
             label="App Language"
@@ -223,13 +239,13 @@ export function SettingsPanel({ onBack }: { onBack: () => void }) {
               className="font-['Manrope:Regular',sans-serif]"
               style={{ fontSize: 11, color: "#b8afa9" }}
             >
-              More regional languages coming soon
+              {t("moreRegionalLanguagesComingSoon")}
             </p>
           </div>
         </SettingsCard>
 
         {/* Notifications */}
-        <SectionLabel>NOTIFICATIONS</SectionLabel>
+        <SectionLabel>{t("nOTIFICATIONS")}</SectionLabel>
         <SettingsCard>
           <ToggleRow
             label="Push Notifications"
@@ -247,10 +263,10 @@ export function SettingsPanel({ onBack }: { onBack: () => void }) {
             <div className="flex items-center justify-between">
               <div>
                 <p className="font-['Manrope:Medium',sans-serif] font-medium" style={{ fontSize: 14, color: "#1a1a1a" }}>
-                  Task Updates
+                  {t("taskUpdates")}
                 </p>
                 <p className="font-['Manrope:Regular',sans-serif]" style={{ fontSize: 11, color: "#6b5e55", marginTop: 2 }}>
-                  Assignments and approvals
+                  {t("assignmentsAndApprovals")}
                 </p>
               </div>
               <button
@@ -277,12 +293,12 @@ export function SettingsPanel({ onBack }: { onBack: () => void }) {
         </SettingsCard>
 
         {/* Display */}
-        <SectionLabel>DISPLAY</SectionLabel>
+        <SectionLabel>{t("dISPLAY")}</SectionLabel>
         <SettingsCard>
           <div style={{ padding: "14px 16px" }}>
             <div className="flex items-center justify-between">
               <p className="font-['Manrope:Medium',sans-serif] font-medium" style={{ fontSize: 14, color: "#1a1a1a" }}>
-                Theme
+                {t("theme")}
               </p>
               <div className="flex gap-[6px]">
                 <button
@@ -294,7 +310,7 @@ export function SettingsPanel({ onBack }: { onBack: () => void }) {
                     cursor: "pointer",
                   }}
                 >
-                  <span className="font-['Manrope:Medium',sans-serif] font-medium" style={{ fontSize: 12, color: theme === "Light" ? "white" : "#564239" }}>Light</span>
+                  <span className="font-['Manrope:Medium',sans-serif] font-medium" style={{ fontSize: 12, color: theme === "Light" ? "white" : "#564239" }}>{t("light")}</span>
                 </button>
                 <button
                   style={{
@@ -304,18 +320,18 @@ export function SettingsPanel({ onBack }: { onBack: () => void }) {
                   }}
                   disabled
                 >
-                  <span className="font-['Manrope:Regular',sans-serif]" style={{ fontSize: 12, color: "#564239" }}>Dark</span>
+                  <span className="font-['Manrope:Regular',sans-serif]" style={{ fontSize: 12, color: "#564239" }}>{t("dark")}</span>
                 </button>
               </div>
             </div>
             <p className="font-['Manrope:Regular',sans-serif]" style={{ fontSize: 11, color: "#b8afa9", marginTop: 8 }}>
-              Dark mode — coming soon
+              {t("darkModeComingSoon")}
             </p>
           </div>
         </SettingsCard>
 
         {/* Account */}
-        <SectionLabel>ACCOUNT</SectionLabel>
+        <SectionLabel>{t("aCCOUNT")}</SectionLabel>
         <SettingsCard>
           <InfoRow label="Name" value="Arjun Singh" />
           <InfoRow label="Phone" value="+91 98765 43210" />
@@ -341,7 +357,7 @@ export function SettingsPanel({ onBack }: { onBack: () => void }) {
             className="font-['Manrope:Bold',sans-serif] font-bold uppercase"
             style={{ fontSize: 12, letterSpacing: "0.6px", color: "#c62828" }}
           >
-            LOG OUT
+            {t("lOGOUT")}
           </span>
         </button>
       </div>

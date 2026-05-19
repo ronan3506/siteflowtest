@@ -1,3 +1,5 @@
+import { useLanguage } from "../i18n/LanguageContext";
+import { useTranslations } from "../i18n/translations";
 import { useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import svgPaths from "../../imports/8ProjectTimelineDailyLog-1/svg-59cqx3vezz";
@@ -59,6 +61,8 @@ const ALL_ENTRIES: TimelineEntry[] = [
 // ─── Icon helpers ──────────────────────────────────────────────────────────────
 
 function CompletedIcon() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="absolute bg-[#e9e8e7] left-[16px] rounded-[6px] size-[40px] top-[16px]">
       <div className="absolute h-[15.021px] left-[12.28px] top-[12.49px] w-[15.438px]">
@@ -71,6 +75,8 @@ function CompletedIcon() {
 }
 
 function IssueIcon() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="absolute bg-[rgba(186,26,26,0.1)] left-[16px] rounded-[6px] size-[40px] top-[16px]">
       <div className="absolute h-[15.833px] left-[10.83px] top-[12.08px] w-[18.333px]">
@@ -83,6 +89,8 @@ function IssueIcon() {
 }
 
 function ResolvedIcon() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="absolute bg-[#e9e8e7] left-[16px] rounded-[6px] size-[40px] top-[16px]">
       <div className="absolute left-[11.67px] size-[16.667px] top-[11.67px]">
@@ -95,6 +103,8 @@ function ResolvedIcon() {
 }
 
 function DecisionIcon() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="absolute bg-[#e9e8e7] left-[16px] rounded-[6px] size-[40px] top-[16px]">
       <div className="absolute h-[15.833px] left-[12.5px] top-[12.08px] w-[15px]">
@@ -107,6 +117,8 @@ function DecisionIcon() {
 }
 
 function ClearanceIcon() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="absolute bg-[#e9e8e7] left-[16px] rounded-[6px] size-[40px] top-[25px]">
       <div className="absolute h-[15.875px] left-[12.5px] top-[12.06px] w-[15px]">
@@ -121,6 +133,8 @@ function ClearanceIcon() {
 // ─── Entry card components ─────────────────────────────────────────────────────
 
 function EntryCompleted({ entry, onClick }: { entry: TimelineEntry; onClick?: () => void }) {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div
       className="relative bg-[#fbf9f8] border border-[#ddc1b4] border-solid drop-shadow-[0px_1px_1px_rgba(0,0,0,0.05)] h-[74px] rounded-[12px] w-[358px]"
@@ -143,6 +157,8 @@ function EntryCompleted({ entry, onClick }: { entry: TimelineEntry; onClick?: ()
 }
 
 function EntryIssue({ entry, onClick }: { entry: TimelineEntry; onClick?: () => void }) {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div
       className="relative bg-[#fbf9f8] border-[#ddc1b4] border-b border-r border-solid border-t drop-shadow-[0px_1px_1px_rgba(0,0,0,0.05)] h-[104px] rounded-[12px] w-[358px]"
@@ -164,7 +180,7 @@ function EntryIssue({ entry, onClick }: { entry: TimelineEntry; onClick?: () => 
           style={{ height: 21, paddingLeft: 7, paddingRight: 7 }}
         >
           <span className="font-['Manrope:Bold',sans-serif] font-bold text-[#c62828] leading-[normal] tracking-[0.3658px] uppercase whitespace-nowrap" style={{ fontSize: 9.145 }}>
-            WORK PAUSED
+            {t("wORKPAUSED")}
           </span>
         </div>
       </div>
@@ -173,6 +189,8 @@ function EntryIssue({ entry, onClick }: { entry: TimelineEntry; onClick?: () => 
 }
 
 function EntryResolved({ entry }: { entry: TimelineEntry }) {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="relative bg-[#fbf9f8] border border-[#ddc1b4] border-solid drop-shadow-[0px_1px_1px_rgba(0,0,0,0.05)] h-[74px] rounded-[12px] w-[358px]">
       <ResolvedIcon />
@@ -191,6 +209,8 @@ function EntryResolved({ entry }: { entry: TimelineEntry }) {
 }
 
 function EntryDecision({ entry, onClick }: { entry: TimelineEntry; onClick?: () => void }) {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div
       className="relative bg-[#fbf9f8] border-[#ddc1b4] border-b border-r border-solid border-t drop-shadow-[0px_1px_1px_rgba(0,0,0,0.05)] h-[93px] rounded-[12px] w-[358px]"
@@ -220,6 +240,8 @@ function EntryDecision({ entry, onClick }: { entry: TimelineEntry; onClick?: () 
 }
 
 function EntrySiteUpdate({ entry, onClick }: { entry: TimelineEntry; onClick?: () => void }) {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div
       className="relative bg-[#fbf9f8] border border-[#ddc1b4] border-solid h-[225px] overflow-clip rounded-[8px] shadow-[0px_1px_2px_0px_rgba(0,0,0,0.05)] w-[358px]"
@@ -249,6 +271,8 @@ function EntrySiteUpdate({ entry, onClick }: { entry: TimelineEntry; onClick?: (
 }
 
 function EntryClearance({ entry }: { entry: TimelineEntry }) {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="relative bg-[#fbf9f8] border border-[#ddc1b4] border-solid drop-shadow-[0px_1px_1px_rgba(0,0,0,0.05)] h-[93px] rounded-[8px] w-[358px]">
       <ClearanceIcon />
@@ -269,6 +293,8 @@ function EntryClearance({ entry }: { entry: TimelineEntry }) {
 // ─── Date group header ─────────────────────────────────────────────────────────
 
 function DateGroupHeader({ label }: { label: string }) {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="bg-[#efeded] h-[34px] rounded-[8px] w-[358px] relative mb-[16px]">
       <div className="-translate-y-1/2 absolute flex flex-col font-['Manrope:Medium',sans-serif] font-medium justify-center leading-[0] left-[12px] text-[#564239] text-[12px] top-[17px] tracking-[1.2px] uppercase whitespace-nowrap">
@@ -295,6 +321,8 @@ export default function InteractiveTimeline({
   onOpenSiteUpdate,
   onFiltersChange,
 }: InteractiveTimelineProps) {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   const [timeFilter, setTimeFilter] = useState<TimeFilter>("today");
   const [activityFilter, setActivityFilter] = useState<ActivityFilter>("all");
 
@@ -365,12 +393,12 @@ export default function InteractiveTimeline({
         <div className="absolute h-[88px] left-0 top-0 w-[390px]">
           <div className="absolute h-[30px] left-[16px] top-[32px]">
             <div className="-translate-y-1/2 absolute flex flex-col font-['Manrope:Bold',sans-serif] font-bold justify-center leading-[0] left-0 text-[#1a1a1a] text-[30px] top-[15px] tracking-[-0.75px] uppercase whitespace-nowrap">
-              <p className="leading-[30px]">PROJECT TIMELINE</p>
+              <p className="leading-[30px]">{t("pROJECTTIMELINE")}</p>
             </div>
           </div>
           <div className="absolute h-[18px] left-[16px] top-[70px]">
             <div className="-translate-y-1/2 absolute flex flex-col font-['Manrope:Medium',sans-serif] font-medium justify-center leading-[0] left-0 text-[#564239] text-[12px] top-[9px] tracking-[0.3px] uppercase whitespace-nowrap">
-              <p className="leading-[18px]">DAILY SITE ACTIVITY AND PROGRESS LOG</p>
+              <p className="leading-[18px]">{t("dAILYSITEACTIVITYANDPROGRESSLOG")}</p>
             </div>
           </div>
         </div>
@@ -467,7 +495,7 @@ export default function InteractiveTimeline({
                 className="flex flex-col items-center justify-center py-[60px]"
               >
                 <div className="font-['Manrope:Regular',sans-serif] text-[12px] text-[#564239] tracking-[0.5px] uppercase">
-                  NO ACTIVITY FOR THIS FILTER
+                  {t("nOACTIVITYFORTHISFILTER")}
                 </div>
               </motion.div>
             )}

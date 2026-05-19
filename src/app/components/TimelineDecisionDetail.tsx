@@ -1,8 +1,12 @@
+import { useLanguage } from "../i18n/LanguageContext";
+import { useTranslations } from "../i18n/translations";
 import imgHvac from "../../imports/2Tasks-1/d57fc7764a294dadd06d3cb669552a9de986742d.png";
 import imgRef1 from "../../imports/4ApprovalDetailMobile-1/266786354298a33b573a5ff16e549f44d6da91bb.png";
 import imgRef2 from "../../imports/4ApprovalDetailMobile-1/8211e308a79c82aa65044667c538b43bba82efae.png";
 
 function DetailHeader({ onBack }: { onBack: () => void }) {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div
       className="absolute left-0 top-0 w-full"
@@ -26,7 +30,7 @@ function DetailHeader({ onBack }: { onBack: () => void }) {
           className="font-['Manrope:Bold',sans-serif] font-bold uppercase whitespace-nowrap"
           style={{ fontSize: 16, letterSpacing: "0.8px", color: "#7a3100", marginLeft: 16 }}
         >
-          TIMELINE
+          {t("tIMELINE")}
         </span>
       </div>
     </div>
@@ -34,6 +38,8 @@ function DetailHeader({ onBack }: { onBack: () => void }) {
 }
 
 function ImpactPill({ label, value, accent }: { label: string; value: string; accent: string }) {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div
       className="flex-1 rounded-[12px] border border-[#e6e1dc]"
@@ -56,6 +62,8 @@ function ImpactPill({ label, value, accent }: { label: string; value: string; ac
 }
 
 function RefFile({ icon, name, type }: { icon: string; name: string; type: string }) {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div
       className="flex items-center gap-[12px] bg-[#f7f4f2] border border-[#e6e1dc] rounded-[10px]"
@@ -86,6 +94,8 @@ function RefFile({ icon, name, type }: { icon: string; name: string; type: strin
 }
 
 export default function TimelineDecisionDetail({ onBack }: { onBack: () => void }) {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="relative bg-[#fbf9f8]" style={{ width: 412 }}>
       <DetailHeader onBack={onBack} />
@@ -98,7 +108,7 @@ export default function TimelineDecisionDetail({ onBack }: { onBack: () => void 
           className="font-['Manrope:Regular',sans-serif] uppercase"
           style={{ fontSize: 10, letterSpacing: "1.1px", color: "#564239", marginBottom: 6 }}
         >
-          DECISION LOG
+          {t("dECISIONLOG")}
         </p>
 
         {/* Title */}
@@ -106,7 +116,7 @@ export default function TimelineDecisionDetail({ onBack }: { onBack: () => void 
           className="font-['Manrope:Bold',sans-serif] font-bold uppercase"
           style={{ fontSize: 24, letterSpacing: "-0.6px", color: "#1a1a1a", lineHeight: "28px", marginBottom: 4 }}
         >
-          HVAC CHANGE APPROVED
+          {t("hVACCHANGEAPPROVED")}
         </p>
 
         {/* Timestamp */}
@@ -139,7 +149,7 @@ export default function TimelineDecisionDetail({ onBack }: { onBack: () => void 
               className="font-['Manrope:Bold',sans-serif] font-bold uppercase"
               style={{ fontSize: 9, letterSpacing: "0.6px", color: "#ffffff" }}
             >
-              DECISION MADE
+              {t("dECISIONMADE")}
             </span>
           </div>
         </div>
@@ -159,13 +169,13 @@ export default function TimelineDecisionDetail({ onBack }: { onBack: () => void 
             className="font-['Manrope:Regular',sans-serif] uppercase"
             style={{ fontSize: 9, letterSpacing: "0.9px", color: "#6b5e55", marginBottom: 5 }}
           >
-            APPROVED BY
+            {t("aPPROVEDBY")}
           </p>
           <p
             className="font-['Manrope:Medium',sans-serif] font-medium"
             style={{ fontSize: 13, color: "#1a1a1a" }}
           >
-            Project Manager Deepak R.
+            {t("projectManagerDeepakR")}
           </p>
         </div>
 
@@ -178,13 +188,13 @@ export default function TimelineDecisionDetail({ onBack }: { onBack: () => void 
             className="font-['Manrope:Regular',sans-serif] uppercase"
             style={{ fontSize: 10, letterSpacing: "0.8px", color: "#564239", marginBottom: 8 }}
           >
-            DECISION SUMMARY
+            {t("dECISIONSUMMARY")}
           </p>
           <p
             className="font-['Manrope:Regular',sans-serif]"
             style={{ fontSize: 13, color: "#2d241e", lineHeight: "20px" }}
           >
-            Original ducting layout conflicted with revised beam positions on 2nd floor. Change order approved to reroute HVAC trunk lines via the east corridor. Additional materials and labour accounted for in the cost revision.
+            {t("originalDuctingLayoutConflictedWithRevisedBeamPositionsOn2ndFloorChangeOrderApprovedToRerouteHVACTrunkLinesViaTheEastCorridorAdditionalMaterialsAndLabourAccountedForInTheCostRevision")}
           </p>
         </div>
 
@@ -197,13 +207,13 @@ export default function TimelineDecisionDetail({ onBack }: { onBack: () => void 
             className="font-['Manrope:Regular',sans-serif] uppercase"
             style={{ fontSize: 10, letterSpacing: "0.8px", color: "#564239", marginBottom: 8 }}
           >
-            SITE NOTES
+            {t("sITENOTES")}
           </p>
           <p
             className="font-['Manrope:Regular',sans-serif]"
             style={{ fontSize: 13, color: "#2d241e", lineHeight: "20px" }}
           >
-            Mechanical subcontractor briefed on revised routing. Updated drawings to be issued by EOD. No structural implications beyond the cost and schedule adjustment.
+            {t("mechanicalSubcontractorBriefedOnRevisedRoutingUpdatedDrawingsToBeIssuedByEODNoStructuralImplicationsBeyondTheCostAndScheduleAdjustment")}
           </p>
         </div>
 
@@ -213,7 +223,7 @@ export default function TimelineDecisionDetail({ onBack }: { onBack: () => void 
             className="font-['Manrope:Regular',sans-serif] uppercase"
             style={{ fontSize: 10, letterSpacing: "0.8px", color: "#564239", marginBottom: 12 }}
           >
-            REFERENCE PHOTOS
+            {t("rEFERENCEPHOTOS")}
           </p>
           <div className="flex gap-[10px]">
             <div style={{ flex: 1, height: 92, borderRadius: 10, overflow: "hidden" }}>
@@ -231,7 +241,7 @@ export default function TimelineDecisionDetail({ onBack }: { onBack: () => void 
             className="font-['Manrope:Regular',sans-serif] uppercase"
             style={{ fontSize: 10, letterSpacing: "0.8px", color: "#564239", marginBottom: 12 }}
           >
-            REFERENCE FILES
+            {t("rEFERENCEFILES")}
           </p>
           <div className="flex flex-col gap-[8px]">
             <RefFile icon="📐" name="HVAC-Revised-Layout-v2.dwg" type="AutoCAD Drawing" />

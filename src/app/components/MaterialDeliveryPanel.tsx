@@ -1,3 +1,5 @@
+import { useLanguage } from "../i18n/LanguageContext";
+import { useTranslations } from "../i18n/translations";
 import { useState } from "react";
 import imgDelivery from "../../imports/2Tasks-1/d57fc7764a294dadd06d3cb669552a9de986742d.png";
 import imgSite from "../../imports/4ApprovalDetailMobile-1/59a9c517fb11ea105e061b3f8e152833fd21db43.png";
@@ -28,6 +30,8 @@ const STATUS_CONFIG: Record<DeliveryStatus, { label: string; bg: string; color: 
 };
 
 function PanelHeader({ onBack }: { onBack: () => void }) {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div
       className="sticky top-0 left-0 right-0 z-10 flex items-center"
@@ -45,7 +49,7 @@ function PanelHeader({ onBack }: { onBack: () => void }) {
           className="font-['Manrope:Bold',sans-serif] font-bold uppercase"
           style={{ fontSize: 15, letterSpacing: "0.7px", color: "#7a3100", marginLeft: 14 }}
         >
-          TODAY'S BOARD
+          {t("tODAYSBOARD")}
         </span>
       </button>
     </div>
@@ -53,6 +57,8 @@ function PanelHeader({ onBack }: { onBack: () => void }) {
 }
 
 function StatusPill({ status }: { status: DeliveryStatus }) {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   const cfg = STATUS_CONFIG[status];
   return (
     <div
@@ -86,6 +92,8 @@ function MaterialRow({
   material: Material;
   last: boolean;
 }) {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div
       style={{
@@ -148,6 +156,8 @@ export function MaterialDeliveryPanel({
   onBack: () => void;
   onMarkReceived: () => void;
 }) {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   const [materials, setMaterials] = useState<Material[]>(INITIAL_MATERIALS);
   const [marked, setMarked] = useState(false);
 
@@ -178,13 +188,13 @@ export function MaterialDeliveryPanel({
           className="font-['Manrope:Regular',sans-serif] uppercase"
           style={{ fontSize: 10, letterSpacing: "1.1px", color: "#564239", marginBottom: 4 }}
         >
-          TODAY'S BOARD
+          {t("tODAYSBOARD")}
         </p>
         <p
           className="font-['Manrope:Bold',sans-serif] font-bold uppercase"
           style={{ fontSize: 22, letterSpacing: "-0.5px", color: "#1a1a1a", lineHeight: "26px", marginBottom: 4 }}
         >
-          MATERIAL DELIVERY
+          {t("mATERIALDELIVERY")}
         </p>
 
         {/* Overall status + zone */}
@@ -203,7 +213,7 @@ export function MaterialDeliveryPanel({
               className="font-['Manrope:Bold',sans-serif] font-bold uppercase"
               style={{ fontSize: 10, letterSpacing: "0.5px", color: "#e65100" }}
             >
-              PENDING
+              {t("pENDING")}
             </span>
           </div>
           <span
@@ -254,7 +264,7 @@ export function MaterialDeliveryPanel({
             className="font-['Manrope:Regular',sans-serif] uppercase"
             style={{ fontSize: 9, letterSpacing: "0.8px", color: "#6b5e55", marginBottom: 12 }}
           >
-            DELIVERY REFERENCE
+            {t("dELIVERYREFERENCE")}
           </p>
           <div className="flex gap-[10px]">
             <div style={{ flex: 1.4, height: 90, borderRadius: 10, overflow: "hidden" }}>
@@ -275,13 +285,13 @@ export function MaterialDeliveryPanel({
             className="font-['Manrope:Regular',sans-serif] uppercase"
             style={{ fontSize: 9, letterSpacing: "0.8px", color: "#6b5e55", marginBottom: 8 }}
           >
-            DELIVERY NOTES
+            {t("dELIVERYNOTES")}
           </p>
           <p
             className="font-['Manrope:Regular',sans-serif]"
             style={{ fontSize: 13, color: "#2d241e", lineHeight: "20px" }}
           >
-            Steel and cement to be offloaded at East Gate. Driver must report to site office on arrival. HVAC ducting delivery rescheduled due to supplier delay — new ETA to be confirmed.
+            {t("steelAndCementToBeOffloadedAtEastGateDriverMustReportToSiteOfficeOnArrivalHVACDuctingDeliveryRescheduledDueToSupplierDelayNewETAToBeConfirmed")}
           </p>
         </div>
 
@@ -294,7 +304,7 @@ export function MaterialDeliveryPanel({
             className="font-['Manrope:Regular',sans-serif] uppercase"
             style={{ fontSize: 9, letterSpacing: "0.8px", color: "#6b5e55", marginBottom: 10 }}
           >
-            CONTACT PERSON
+            {t("cONTACTPERSON")}
           </p>
           <div className="flex items-center justify-between">
             <div>
@@ -302,13 +312,13 @@ export function MaterialDeliveryPanel({
                 className="font-['Manrope:Medium',sans-serif] font-medium"
                 style={{ fontSize: 14, color: "#1a1a1a", marginBottom: 2 }}
               >
-                Logistics Coordinator
+                {t("logisticsCoordinator")}
               </p>
               <p
                 className="font-['Manrope:Regular',sans-serif]"
                 style={{ fontSize: 12, color: "#6b5e55" }}
               >
-                Suresh Nair · +91 98400 12345
+                {t("sureshNair919840012345")}
               </p>
             </div>
             <div

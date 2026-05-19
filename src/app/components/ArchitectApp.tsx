@@ -266,6 +266,8 @@ function PersistentHeader({ onMenuOpen }: { onMenuOpen: () => void }) {
 
 // ─── BackHeader — detail screens only. No language button. ────────────────────
 function BackHeader({ onBack, label }: { onBack: () => void; label: string }) {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div
       className="absolute top-0 left-0 right-0 bg-[#fbf9f8] z-40 flex items-center"
@@ -298,6 +300,8 @@ function ArchitectBottomNav({
   active: TabScreen;
   onNav: (t: TabScreen) => void;
 }) {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   const icons: Record<TabScreen, JSX.Element> = {
     home: (
       <svg viewBox="0 0 16 18" fill="none" className="w-[16px] h-[18px]">
@@ -369,6 +373,8 @@ function ArchScrollArea({
   reserveNav?: boolean;
   children: React.ReactNode;
 }) {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div
       className="no-scrollbar absolute inset-0 overflow-y-auto overflow-x-hidden"
@@ -404,6 +410,8 @@ function StageScrollArea({
   clipTop?: number;
   children: React.ReactNode;
 }) {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   const visibleH = (contentHeight - clipTop) * SCALE;
   return (
     <div
@@ -439,6 +447,8 @@ function DecisionDetailContent({
   onApprove: () => void;
   onReject: () => void;
 }) {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <ArchScrollArea contentHeight={1060} reserveNav={false}>
       {/* Hero Image Section */}
@@ -475,7 +485,7 @@ function DecisionDetailContent({
             <div aria-hidden="true" className="absolute border-[#e5e0d8] border-b border-solid inset-0 pointer-events-none" />
             <div className="relative shrink-0">
               <div className="flex flex-col font-['Manrope:Regular',sans-serif] font-normal h-[15px] justify-center leading-[0] relative shrink-0 text-[#8c7b70] text-[10px] tracking-[0.5px] uppercase">
-                <p className="leading-[15px]">COST</p>
+                <p className="leading-[15px]">{t("cOST")}</p>
               </div>
               <div className="flex flex-col font-['Manrope:Medium',sans-serif] font-medium h-[28px] justify-center leading-[0] relative shrink-0 text-[20px]" style={{ color: decision.cost.color }}>
                 <p className="leading-[28px]">{decision.cost.label}</p>
@@ -492,7 +502,7 @@ function DecisionDetailContent({
             <div aria-hidden="true" className="absolute border-[#e5e0d8] border-b border-solid inset-0 pointer-events-none" />
             <div className="relative shrink-0">
               <div className="flex flex-col font-['Manrope:Regular',sans-serif] font-normal h-[15px] justify-center leading-[0] relative shrink-0 text-[#8c7b70] text-[10px] tracking-[0.5px] uppercase">
-                <p className="leading-[15px]">TIME</p>
+                <p className="leading-[15px]">{t("tIME")}</p>
               </div>
               <div className="flex flex-col font-['Manrope:Medium',sans-serif] font-medium h-[28px] justify-center leading-[0] relative shrink-0 text-[20px]" style={{ color: decision.time.color }}>
                 <p className="leading-[28px]">{decision.time.label}</p>
@@ -509,7 +519,7 @@ function DecisionDetailContent({
             <div aria-hidden="true" className="absolute border-[#e5e0d8] border-b border-solid inset-0 pointer-events-none" />
             <div className="relative shrink-0">
               <div className="flex flex-col font-['Manrope:Regular',sans-serif] font-normal h-[15px] justify-center leading-[0] relative shrink-0 text-[#8c7b70] text-[10px] tracking-[0.5px] uppercase">
-                <p className="leading-[15px]">RISK</p>
+                <p className="leading-[15px]">{t("rISK")}</p>
               </div>
               <div className="flex flex-col font-['Manrope:Medium',sans-serif] font-medium h-[28px] justify-center leading-[0] relative shrink-0 text-[#0d5e44] text-[20px]">
                 <p className="leading-[28px]">{decision.risk.label}</p>
@@ -543,22 +553,22 @@ function DecisionDetailContent({
           {/* Details labels — left column */}
           <div className="absolute content-stretch flex flex-col items-start left-0 overflow-clip p-[10px] top-0">
             <div className="flex flex-col font-['Manrope:Medium',sans-serif] font-medium justify-center leading-[0] relative shrink-0 text-[#8c7b70] text-[12px] whitespace-nowrap">
-              <p className="font-['Manrope:Bold',sans-serif] font-bold leading-[16px] mb-0">DETAILS</p>
+              <p className="font-['Manrope:Bold',sans-serif] font-bold leading-[16px] mb-0">{t("dETAILS")}</p>
               <p className="leading-[16px] mb-0">&nbsp;</p>
-              <p className="leading-[16px] mb-0">Requested By</p>
+              <p className="leading-[16px] mb-0">{t("requestedBy")}</p>
               <p className="leading-[16px] mb-0">&nbsp;</p>
-              <p className="leading-[16px] mb-0">Reason</p>
+              <p className="leading-[16px] mb-0">{t("reason")}</p>
               <p className="leading-[16px] mb-0">&nbsp;</p>
-              <p className="leading-[16px] mb-0">Reference</p>
+              <p className="leading-[16px] mb-0">{t("reference")}</p>
               <p className="leading-[16px] mb-0">&nbsp;</p>
-              <p className="leading-[16px]">Linked To</p>
+              <p className="leading-[16px]">{t("linkedTo")}</p>
             </div>
           </div>
 
           {/* Details values — right column */}
           <div className="absolute content-stretch flex flex-col items-start left-[134px] overflow-clip p-[10px] top-[0.5px] w-[218px]">
             <div className="flex flex-col font-['Manrope:Medium',sans-serif] font-medium justify-center leading-[0] relative shrink-0 text-[#8c7b70] text-[12px] text-right w-full whitespace-pre-wrap">
-              <p className="decoration-solid font-['Manrope:ExtraBold',sans-serif] font-extrabold leading-[16px] mb-0 text-[#7a3100] underline">View Drawings</p>
+              <p className="decoration-solid font-['Manrope:ExtraBold',sans-serif] font-extrabold leading-[16px] mb-0 text-[#7a3100] underline">{t("viewDrawings")}</p>
               <p className="leading-[16px] mb-0">&nbsp;</p>
               <p className="leading-[16px] mb-0">{decision.requestedBy}</p>
               <p className="leading-[16px] mb-0">&nbsp;</p>
@@ -577,7 +587,7 @@ function DecisionDetailContent({
                 <div className="content-stretch flex items-start justify-center pb-[55px] pt-[18px] px-[17px] relative size-full">
                   <div className="flex-[1_0_0] min-w-px relative">
                     <div className="flex flex-col font-['Manrope:Regular',sans-serif] font-normal justify-center leading-[0] relative shrink-0 text-[16px] text-[rgba(140,123,112,0.5)] w-full">
-                      <p className="leading-[normal]">Ask a question...</p>
+                      <p className="leading-[normal]">{t("askAQuestion")}</p>
                     </div>
                   </div>
                 </div>
@@ -604,7 +614,7 @@ function DecisionDetailContent({
                   <path d={detailSvgPaths.p2317cf00} fill="white" />
                 </svg>
               </div>
-              <span className="font-['Manrope:Regular',sans-serif] font-normal text-[16px] text-center text-white tracking-[-0.3px] uppercase">REJECT</span>
+              <span className="font-['Manrope:Regular',sans-serif] font-normal text-[16px] text-center text-white tracking-[-0.3px] uppercase">{t("rEJECT")}</span>
             </button>
             <button
               onClick={onApprove}
@@ -615,7 +625,7 @@ function DecisionDetailContent({
                   <path d={detailSvgPaths.p32d13d00} fill="white" />
                 </svg>
               </div>
-              <span className="font-['Manrope:Bold',sans-serif] font-bold text-[16px] text-center text-white tracking-[-0.3px] uppercase">APPROVE</span>
+              <span className="font-['Manrope:Bold',sans-serif] font-bold text-[16px] text-center text-white tracking-[-0.3px] uppercase">{t("aPPROVE")}</span>
             </button>
           </div>
         </div>
@@ -626,6 +636,8 @@ function DecisionDetailContent({
 
 // ─── ScreenFrame — motion wrapper for detail screens ─────────────────────────
 function ScreenFrame({ children }: { children: React.ReactNode }) {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <motion.div
       className="absolute inset-0"
@@ -656,6 +668,8 @@ function Overlay({
   onClick: () => void;
   label: string;
 }) {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <button
       onClick={onClick}
@@ -711,6 +725,8 @@ function RejectionSheet({
   onClose: () => void;
   onSubmit: () => void;
 }) {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   const [selected, setSelected] = useState<string | null>(null);
   const [note, setNote] = useState("");
 
@@ -757,7 +773,7 @@ function RejectionSheet({
                 {/* Header */}
                 <div className="content-stretch flex flex-col gap-[4px] items-start w-full">
                   <div className="flex flex-col font-['Manrope:Bold',sans-serif] font-bold justify-center leading-[0] text-[#1a1a1a] text-[24px] tracking-[-0.6px] w-full">
-                    <p className="leading-[32px]">Why are you rejecting?</p>
+                    <p className="leading-[32px]">{t("whyAreYouRejecting")}</p>
                   </div>
                   {/* Spacer (matches Figma Background element) */}
                   <div className="h-[4px] w-[48px]" />
@@ -838,7 +854,7 @@ function RejectionSheet({
                         <div className="absolute bg-[#7a3100] inset-0 rounded-[12px] shadow-[0px_10px_15px_-3px_rgba(92,64,51,0.2),0px_4px_6px_-4px_rgba(92,64,51,0.2)]" />
                         <div className="relative flex flex-col items-center">
                           <span className="font-['Manrope:Regular',sans-serif] font-normal text-[#fdfcfb] text-[14px] text-center tracking-[1.4px] uppercase leading-[20px]">
-                            SUBMIT REJECTION
+                            {t("sUBMITREJECTION")}
                           </span>
                         </div>
                         <div className="relative shrink-0 size-[16px]">
@@ -869,6 +885,8 @@ function HomeTab({
   onOpenDecisions: () => void;
   onOpenIssues: () => void;
 }) {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   // Cards sit inside ActionRequiredSection. With the Figma header (64px flex item)
   // hidden via CSS, all Main content shifts up by 64px.
   const ACTION_TOP = 347;
@@ -908,6 +926,8 @@ const DECISION_IDS: DecisionId[] = ["acLayout", "marble", "lighting"];
 const DECISION_LABELS = ["AC Layout Change", "Marble Finish Selection", "Lighting Upgrade"];
 
 function DecisionsTab({ onReview }: { onReview: (id: DecisionId) => void }) {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   // Card tops measured from content-area top (Figma header is CSS-hidden, removing its 64px from flow).
   // Layout: pt-8 (8px) + SectionHeroHeader (~125px) + gap-40 (40px) + BentoStats (141.5px) + gap-40 (40px) = ~355px.
   const CARD_TOP = 355;
@@ -935,6 +955,8 @@ function DecisionsTab({ onReview }: { onReview: (id: DecisionId) => void }) {
 // Issues tab — clipTop=64 aligns top spacing with ContractorApp (see StageScrollArea comment).
 // contentHeight=1490: last element (obs card 2) ends at native y≈1461, +29px breathing room.
 function IssuesTab({ onViewIssue }: { onViewIssue: () => void }) {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <StageScrollArea contentHeight={1490} clipTop={64}>
       <IssuesListRich onViewColumnIssue={onViewIssue} />
@@ -956,6 +978,8 @@ function TimelineTab({
   onOpenSiteUpdate: () => void;
   onOpenIssue: () => void;
 }) {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   const [tf, setTf] = useState<TFilter>("today");
   const [af, setAf] = useState<AFilter>("all");
 
@@ -983,6 +1007,8 @@ function ReviewDecisionDetail({
   onApprove: () => void;
   onReject: () => void;
 }) {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <ScreenFrame>
       <div className="absolute inset-0 bg-[#fdfbf7]">
@@ -1003,6 +1029,8 @@ const C7_HEADER_NATIVE = 64;
 const C7_CONTENT_NATIVE = 1180;
 
 function IssueDetailScreen() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   const visibleH = (C7_CONTENT_NATIVE - C7_HEADER_NATIVE) * SCALE;
   return (
     <ScreenFrame>
@@ -1029,6 +1057,8 @@ function IssueDetailScreen() {
 
 // Timeline detail screens — match contractor flow exactly with proper centering
 function TimelineTaskDetailScreen({ taskId, onBack }: { taskId: TimelineTaskId; onBack: () => void }) {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <ScreenFrame>
       <div className="no-scrollbar absolute inset-0 overflow-y-auto overflow-x-hidden bg-[#fbf9f8]">
@@ -1041,6 +1071,8 @@ function TimelineTaskDetailScreen({ taskId, onBack }: { taskId: TimelineTaskId; 
 }
 
 function TimelineDecisionDetailScreen({ onBack }: { onBack: () => void }) {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <ScreenFrame>
       <div className="no-scrollbar absolute inset-0 overflow-y-auto overflow-x-hidden bg-[#fbf9f8]">
@@ -1053,6 +1085,8 @@ function TimelineDecisionDetailScreen({ onBack }: { onBack: () => void }) {
 }
 
 function TimelineSiteUpdateScreen({ onBack }: { onBack: () => void }) {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <ScreenFrame>
       <div className="no-scrollbar absolute inset-0 overflow-y-auto overflow-x-hidden bg-[#fbf9f8]">
@@ -1078,6 +1112,8 @@ const FIGMA_HIDE_CSS = `
 
 // ─── Root ─────────────────────────────────────────────────────────────────────
 export function ArchitectApp({ onSwitchProfile }: { onSwitchProfile?: (role: string) => void } = {}) {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   const [activeTab, setActiveTab] = useState<TabScreen>("home");
   const [activeDetail, setActiveDetail] = useState<DetailScreen | null>(null);
   const [activeDecisionId, setActiveDecisionId] = useState<DecisionId>("acLayout");

@@ -1,3 +1,5 @@
+import { useLanguage } from "../../i18n/LanguageContext";
+import { useTranslations } from "../../i18n/translations";
 import * as React from "react";
 import { Slot } from "@radix-ui/react-slot";
 import { cva, type VariantProps } from "class-variance-authority";
@@ -30,8 +32,9 @@ function Badge({
   variant,
   asChild = false,
   ...props
-}: React.ComponentProps<"span"> &
-  VariantProps<typeof badgeVariants> & { asChild?: boolean }) {
+}: React.ComponentProps<"span"> {t("VariantProps")}<typeof badgeVariants> & { asChild?: boolean }) {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   const Comp = asChild ? Slot : "span";
 
   return (

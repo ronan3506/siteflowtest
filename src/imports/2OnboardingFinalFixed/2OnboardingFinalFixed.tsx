@@ -7,6 +7,8 @@ function HeroIllustration() {
 }
 
 function MainContent() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="absolute h-[463px] left-0 top-[46px] w-[390px]" data-name="Main Content">
       <HeroIllustration />
@@ -15,6 +17,8 @@ function MainContent() {
 }
 
 function PaginationDots() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="absolute h-[10px] left-0 top-[706px] w-[390px]" data-name="Pagination Dots">
       <div className="absolute bg-[#7a3100] left-[172px] rounded-[9999px] size-[10px] top-0" data-name="Background" />
@@ -25,6 +29,8 @@ function PaginationDots() {
 }
 
 function Container1() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="absolute h-[24.5px] left-0 top-[1.25px] w-[23.333px]" data-name="Container">
       <svg className="absolute block inset-0 size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 23.3333 24.5">
@@ -49,6 +55,8 @@ function Container2() {
 }
 
 function SimplifiedRow() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="absolute h-[27px] left-[112px] top-0 w-[166px]" data-name="Simplified Row 1">
       <Container1 />
@@ -58,6 +66,8 @@ function SimplifiedRow() {
 }
 
 function Container3() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="absolute h-[23.392px] left-0 top-[1.8px] w-[23.333px]" data-name="Container">
       <svg className="absolute block inset-0 size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 23.3333 23.3917">
@@ -82,6 +92,8 @@ function Container4() {
 }
 
 function SimplifiedRow1() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="absolute h-[27px] left-[112px] top-[31px] w-[166px]" data-name="Simplified Row 2">
       <Container3 />
@@ -91,6 +103,8 @@ function SimplifiedRow1() {
 }
 
 function Container() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="absolute h-[58px] left-[-1.5px] top-[616px] w-[390px]" data-name="Container">
       <SimplifiedRow />
@@ -112,6 +126,8 @@ function Group() {
 }
 
 function Group1() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="absolute contents left-0 top-0">
       <div className="absolute h-[56px] left-0 rounded-[12px] shadow-[0px_10px_15px_-3px_rgba(122,49,0,0.2),0px_4px_6px_-4px_rgba(122,49,0,0.2)] top-0 w-[343px]" data-name="Button - Primary Action:shadow" />
@@ -121,6 +137,8 @@ function Group1() {
 }
 
 function ButtonPrimaryAction() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="absolute bg-[#7a3100] h-[56px] left-[23px] rounded-[12px] top-[740px] w-[343px]" data-name="Button - Primary Action">
       <Group1 />
@@ -129,6 +147,8 @@ function ButtonPrimaryAction() {
 }
 
 function MdiExchange() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="size-[18px] shrink-0" data-name="mdi:exchange">
       <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 25.8333 25.8333">
@@ -162,11 +182,13 @@ function LangChangeButton() {
 }
 
 function HeaderTopAppBar() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="absolute bg-[#faf8f7] h-[64px] left-0 top-0 w-[390px] flex items-center justify-between px-[24px]" data-name="Header - TopAppBar">
       <div className="inline-grid grid-cols-[max-content] grid-rows-[max-content] leading-[0] place-items-start relative shrink-0">
         <div className="col-start-1 row-start-1 flex flex-col font-['Inter:Black',sans-serif] font-black justify-center leading-[0] not-italic text-[29.501px] text-black tracking-[1.3963px] uppercase w-[188px] whitespace-nowrap">
-          <p className="leading-[42.144px]">s teFLOW</p>
+          <p className="leading-[42.144px]">{t("sTeFLOW")}</p>
         </div>
         <div className="col-start-1 row-start-1 h-[21.546px] ml-[17.46px] mt-[10.41px] w-[16.655px] relative">
           <svg className="absolute inset-0 size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 16.6555 21.5459">
@@ -180,6 +202,8 @@ function HeaderTopAppBar() {
 }
 
 function ConstructionWorkerDiggingWithShovelVectorized() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="absolute h-[311px] left-[-29.5px] top-[151px] w-[431px]" data-name="Construction worker digging with shovel [Vectorized]">
       <svg className="absolute block inset-0 size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 431 311">

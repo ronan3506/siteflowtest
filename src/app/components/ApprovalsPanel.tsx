@@ -1,3 +1,5 @@
+import { useLanguage } from "../i18n/LanguageContext";
+import { useTranslations } from "../i18n/translations";
 import { useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
@@ -207,6 +209,8 @@ const DECISION_CHIP: Record<DecisionStatus, { bg: string; text: string; dot: str
 // ─── Shared atoms ─────────────────────────────────────────────────────────────
 
 function MenuScreenHeader({ onBack, label }: { onBack: () => void; label: string }) {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div
       className="sticky top-0 left-0 right-0 z-10 flex items-center"
@@ -232,6 +236,8 @@ function MenuScreenHeader({ onBack, label }: { onBack: () => void; label: string
 }
 
 function ReqStatusChip({ status }: { status: RequestStatus }) {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   const c = REQUEST_CHIP[status];
   return (
     <span
@@ -253,6 +259,8 @@ function ReqStatusChip({ status }: { status: RequestStatus }) {
 }
 
 function DecChip({ status }: { status: DecisionStatus }) {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   const c = DECISION_CHIP[status];
   return (
     <span
@@ -281,6 +289,8 @@ function DecChip({ status }: { status: DecisionStatus }) {
 }
 
 function RecipientTag({ to }: { to: Recipient }) {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   const isArch = to === "Architect";
   return (
     <span
@@ -301,6 +311,8 @@ function RecipientTag({ to }: { to: Recipient }) {
 }
 
 function ViewBtn({ onClick }: { onClick: () => void }) {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <button
       onClick={onClick}
@@ -316,12 +328,14 @@ function ViewBtn({ onClick }: { onClick: () => void }) {
         flexShrink: 0,
       }}
     >
-      VIEW
+      {t("vIEW")}
     </button>
   );
 }
 
 function ImpactPair({ cost, delay }: { cost: string; delay: string }) {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="flex items-center gap-[14px]">
       {[{ label: "Cost", value: cost }, { label: "Delay", value: delay }].map((p) => (
@@ -346,6 +360,8 @@ function ImpactPair({ cost, delay }: { cost: string; delay: string }) {
 
 // Full-width hero image for detail pages
 function HeroImage({ src }: { src: string }) {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div
       style={{
@@ -372,6 +388,8 @@ function pad(n: number) {
 }
 
 function StatBoxLight({ line1, line2, value }: { line1: string; line2: string; value: number }) {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div
       style={{
@@ -403,6 +421,8 @@ function StatBoxLight({ line1, line2, value }: { line1: string; line2: string; v
 }
 
 function StatBoxDark({ line1, line2, value }: { line1: string; line2: string; value: number }) {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div
       style={{
@@ -441,6 +461,8 @@ function TabBar({
   active: TabId;
   onChange: (t: TabId) => void;
 }) {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   const tabs: { id: TabId; label: string }[] = [
     { id: "requests",  label: "Requests Sent"    },
     { id: "decisions", label: "Decision Updates" },
@@ -494,6 +516,8 @@ function TabBar({
 // ─── Request card ─────────────────────────────────────────────────────────────
 
 function RequestCard({ item, onView }: { item: RequestItem; onView: () => void }) {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div
       style={{
@@ -546,6 +570,8 @@ function RequestCard({ item, onView }: { item: RequestItem; onView: () => void }
 // ─── Decision card ────────────────────────────────────────────────────────────
 
 function DecisionCard({ item, onView }: { item: DecisionItem; onView: () => void }) {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div
       style={{
@@ -615,6 +641,8 @@ function ApprovalsListScreen({
   onViewRequest: (id: string) => void;
   onViewDecision: (id: string) => void;
 }) {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   const pendingCount = REQUESTS.length;
   const responseCount = DECISIONS.length;
 
@@ -629,13 +657,13 @@ function ApprovalsListScreen({
             className="font-['Manrope:Bold',sans-serif] font-bold uppercase"
             style={{ fontSize: 22, letterSpacing: "-0.4px", color: "#1a1a1a", lineHeight: "28px" }}
           >
-            Approvals
+            {t("approvals")}
           </p>
           <p
             className="font-['Manrope:Regular',sans-serif]"
             style={{ fontSize: 12, color: "#8a7267", marginTop: 4 }}
           >
-            Requests sent and responses received
+            {t("requestsSentAndResponsesReceived")}
           </p>
         </div>
 
@@ -691,6 +719,8 @@ const HISTORY_DOTS: Record<RequestStatus, [boolean, boolean, boolean]> = {
 };
 
 function HistoryTrack({ status }: { status: RequestStatus }) {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   const [sent, viewed, responded] = HISTORY_DOTS[status];
   const steps = [
     { label: "Sent", done: sent },
@@ -745,6 +775,8 @@ function RequestDetailScreen({
   onBack: () => void;
   onReminder: () => void;
 }) {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   const item = REQUESTS.find((r) => r.id === requestId)!;
   const isPending = item.status === "Pending" || item.status === "Under Review";
 
@@ -860,7 +892,7 @@ function RequestDetailScreen({
               className="font-['Manrope:Regular',sans-serif] uppercase"
               style={{ fontSize: 9, letterSpacing: "0.8px", color: "#8a7267", marginBottom: 13 }}
             >
-              REQUEST HISTORY
+              {t("rEQUESTHISTORY")}
             </p>
             <HistoryTrack status={item.status} />
           </div>
@@ -902,7 +934,7 @@ function RequestDetailScreen({
                   letterSpacing: "0.8px",
                 }}
               >
-                SEND REMINDER
+                {t("sENDREMINDER")}
               </button>
             </>
           )}
@@ -925,6 +957,8 @@ function DecisionDetailScreen({
   onContinueWork: () => void;
   onRevise: () => void;
 }) {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   const item = DECISIONS.find((d) => d.id === decisionId)!;
   const cfg = DECISION_CHIP[item.status];
   const isApproved = item.status === "Approved";
@@ -1042,7 +1076,7 @@ function DecisionDetailScreen({
               className="font-['Manrope:Regular',sans-serif] uppercase"
               style={{ fontSize: 9, letterSpacing: "0.8px", color: "#8a7267", marginBottom: 8 }}
             >
-              RECOMMENDED NEXT STEP
+              {t("rECOMMENDEDNEXTSTEP")}
             </p>
             <p
               className="font-['Manrope:Regular',sans-serif]"
@@ -1069,7 +1103,7 @@ function DecisionDetailScreen({
                   boxShadow: "0px 2px 8px rgba(122,49,0,0.22)",
                 }}
               >
-                Continue Work
+                {t("continueWork")}
               </button>
             ) : (
               <button
@@ -1086,7 +1120,7 @@ function DecisionDetailScreen({
                   boxShadow: "0px 2px 8px rgba(122,49,0,0.22)",
                 }}
               >
-                Revise and Resubmit
+                {t("reviseAndResubmit")}
               </button>
             )}
             <button
@@ -1102,7 +1136,7 @@ function DecisionDetailScreen({
                 border: "1.5px solid #c5bfba",
               }}
             >
-              Back
+              {t("back")}
             </button>
           </div>
         </div>
@@ -1127,6 +1161,8 @@ export function ApprovalsPanel({
   onBack: () => void;
   onShowToast: (msg: string) => void;
 }) {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   const [tab,  setTab]  = useState<TabId>("requests");
   const [sub,  setSub]  = useState<SubScreen>({ view: "list" });
 

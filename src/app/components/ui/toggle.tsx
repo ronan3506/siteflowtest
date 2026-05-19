@@ -1,3 +1,5 @@
+import { useLanguage } from "../../i18n/LanguageContext";
+import { useTranslations } from "../../i18n/translations";
 "use client";
 
 import * as React from "react";
@@ -33,8 +35,9 @@ function Toggle({
   variant,
   size,
   ...props
-}: React.ComponentProps<typeof TogglePrimitive.Root> &
-  VariantProps<typeof toggleVariants>) {
+}: React.ComponentProps<typeof TogglePrimitive.Root> {t("VariantProps")}<typeof toggleVariants>) {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <TogglePrimitive.Root
       data-slot="toggle"

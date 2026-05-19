@@ -1,3 +1,5 @@
+import { useLanguage } from "../../i18n/LanguageContext";
+import { useTranslations } from "../../i18n/translations";
 import * as React from "react";
 import { Slot } from "@radix-ui/react-slot";
 import { cva, type VariantProps } from "class-variance-authority";
@@ -40,10 +42,11 @@ function Button({
   size,
   asChild = false,
   ...props
-}: React.ComponentProps<"button"> &
-  VariantProps<typeof buttonVariants> & {
+}: React.ComponentProps<"button"> {t("VariantProps")}<typeof buttonVariants> & {
     asChild?: boolean;
   }) {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   const Comp = asChild ? Slot : "button";
 
   return (

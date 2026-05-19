@@ -1,3 +1,5 @@
+import { useLanguage } from "../i18n/LanguageContext";
+import { useTranslations } from "../i18n/translations";
 import imgConcrete from "../../imports/2Tasks-1/4ea645fc116eac63e2f3c66d66eb76f4d0a012b9.png";
 import imgStructural from "../../imports/2Tasks-1/ca136f8c2e4dfdf09b12dbb1967f19f5ccdc5083.png";
 import imgTile from "../../imports/2Tasks-1/d57fc7764a294dadd06d3cb669552a9de986742d.png";
@@ -107,6 +109,8 @@ const SUBTASKS: Record<SubtaskDetailId, SubtaskData> = {
 };
 
 function DetailHeader({ label, onBack }: { label: string; onBack: () => void }) {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div
       className="absolute left-0 top-0 w-full"
@@ -144,6 +148,8 @@ export default function SubtaskDetailPanel({
   subtaskId: SubtaskDetailId;
   onBack: () => void;
 }) {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   const task = SUBTASKS[subtaskId];
 
   return (
@@ -157,7 +163,7 @@ export default function SubtaskDetailPanel({
           className="font-['Manrope:Regular',sans-serif] uppercase"
           style={{ fontSize: 10, letterSpacing: "1.1px", color: "#564239", marginBottom: 6 }}
         >
-          SUBTASK LOG
+          {t("sUBTASKLOG")}
         </p>
 
         {/* Title */}
@@ -224,7 +230,7 @@ export default function SubtaskDetailPanel({
               className="font-['Manrope:Bold',sans-serif] font-bold uppercase"
               style={{ fontSize: 9, letterSpacing: "0.6px", color: "#ffffff" }}
             >
-              COMPLETED
+              {t("cOMPLETED")}
             </span>
           </div>
         </div>
@@ -270,7 +276,7 @@ export default function SubtaskDetailPanel({
             className="font-['Manrope:Regular',sans-serif] uppercase"
             style={{ fontSize: 9, letterSpacing: "0.9px", color: "#6b5e55", marginBottom: 5 }}
           >
-            APPROVED BY
+            {t("aPPROVEDBY")}
           </p>
           <p
             className="font-['Manrope:Medium',sans-serif] font-medium"
@@ -286,7 +292,7 @@ export default function SubtaskDetailPanel({
             className="font-['Manrope:Regular',sans-serif] uppercase"
             style={{ fontSize: 10, letterSpacing: "0.8px", color: "#564239", marginBottom: 14 }}
           >
-            ASSIGNED WORKERS
+            {t("aSSIGNEDWORKERS")}
           </p>
           <div className="flex gap-[20px]">
             {task.workers.map((w) => (
@@ -336,7 +342,7 @@ export default function SubtaskDetailPanel({
             className="font-['Manrope:Regular',sans-serif] uppercase"
             style={{ fontSize: 10, letterSpacing: "0.8px", color: "#564239", marginBottom: 8 }}
           >
-            SUPERVISOR NOTES
+            {t("sUPERVISORNOTES")}
           </p>
           <p
             className="font-['Manrope:Regular',sans-serif]"
@@ -352,7 +358,7 @@ export default function SubtaskDetailPanel({
             className="font-['Manrope:Regular',sans-serif] uppercase"
             style={{ fontSize: 10, letterSpacing: "0.8px", color: "#564239", marginBottom: 14 }}
           >
-            PROGRESS HISTORY
+            {t("pROGRESSHISTORY")}
           </p>
           <div className="flex flex-col">
             {task.steps.map((step, i) => (
@@ -405,7 +411,7 @@ export default function SubtaskDetailPanel({
             className="font-['Manrope:Regular',sans-serif] uppercase"
             style={{ fontSize: 10, letterSpacing: "0.8px", color: "#564239", marginBottom: 12 }}
           >
-            SITE PHOTOS
+            {t("sITEPHOTOS")}
           </p>
           <div className="flex gap-[10px]">
             <div style={{ flex: 1, height: 92, borderRadius: 10, overflow: "hidden" }}>

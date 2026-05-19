@@ -1,6 +1,10 @@
+import { useLanguage } from "../../app/i18n/LanguageContext";
+import { useTranslations } from "../../app/i18n/translations";
 import svgPaths from "./svg-yhq21bozjf";
 
 function BackgroundDecorativeElements() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="absolute inset-[0_0_177px_0] opacity-5" data-name="Background Decorative Elements">
       <div className="absolute bg-[#7a3100] blur-[32px] left-[-80px] rounded-[9999px] size-[256px] top-[215.25px]" data-name="Background+Blur" />
@@ -10,26 +14,32 @@ function BackgroundDecorativeElements() {
 }
 
 function Heading() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="content-stretch flex flex-col items-center relative shrink-0 w-full" data-name="Heading 2">
       <div className="flex flex-col font-['Manrope:Bold',sans-serif] font-bold justify-center leading-[0] relative shrink-0 text-[#1b1c1c] text-[22px] text-center whitespace-nowrap">
-        <p className="leading-[28.6px]">Select your language</p>
+        <p className="leading-[28.6px]">{t("selectYourLanguage")}</p>
       </div>
     </div>
   );
 }
 
 function Container() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="content-stretch flex flex-col items-center relative shrink-0 w-full" data-name="Container">
       <div className="flex flex-col font-['Manrope:Medium',sans-serif] font-medium justify-center leading-[0] relative shrink-0 text-[#564239] text-[15px] text-center whitespace-nowrap">
-        <p className="leading-[22.5px]">Choose the language you are comfortable with</p>
+        <p className="leading-[22.5px]">{t("chooseTheLanguageYouAreComfortableWith")}</p>
       </div>
     </div>
   );
 }
 
 function TitleSection() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="content-stretch flex flex-col gap-[7px] items-start relative shrink-0 w-full" data-name="Title Section">
       <Heading />
@@ -39,11 +49,13 @@ function TitleSection() {
 }
 
 function Container2() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="h-[22.5px] relative shrink-0 w-[53.33px]" data-name="Container">
       <div className="bg-clip-padding border-0 border-[transparent] border-solid relative size-full">
         <div className="-translate-x-1/2 -translate-y-1/2 absolute flex flex-col font-['Manrope:Bold',sans-serif] font-bold justify-center leading-[0] left-1/2 text-[#7a3100] text-[15px] text-center top-[10.5px] whitespace-nowrap">
-          <p className="leading-[22.5px]">English</p>
+          <p className="leading-[22.5px]">{t("english")}</p>
         </div>
       </div>
     </div>
@@ -51,6 +63,8 @@ function Container2() {
 }
 
 function Container3() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="relative shrink-0 size-[20px]" data-name="Container">
       <svg className="absolute block inset-0 size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 20 20">
@@ -63,6 +77,8 @@ function Container3() {
 }
 
 function ButtonEnglishSelectedStateExample() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="bg-[#ffdbcb] h-[56px] relative rounded-[12px] shrink-0 w-full" data-name="Button - English - Selected State Example">
       <div aria-hidden="true" className="absolute border-2 border-[#7a3100] border-solid inset-0 pointer-events-none rounded-[12px]" />
@@ -77,6 +93,8 @@ function ButtonEnglishSelectedStateExample() {
 }
 
 function Container4() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="h-[22.5px] relative shrink-0 w-[75.92px]" data-name="Container">
       <div className="bg-clip-padding border-0 border-[transparent] border-solid relative size-full">
@@ -89,6 +107,8 @@ function Container4() {
 }
 
 function ButtonHindiUnselectedStateExample() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="bg-[#f5f3f3] h-[56px] relative rounded-[12px] shrink-0 w-full" data-name="Button - Hindi - Unselected State Example">
       <div aria-hidden="true" className="absolute border border-[#ddc1b4] border-solid inset-0 pointer-events-none rounded-[12px]" />
@@ -105,6 +125,8 @@ function ButtonHindiUnselectedStateExample() {
 }
 
 function Container1() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="content-stretch flex flex-col gap-[16px] items-start relative shrink-0 w-full" data-name="Container">
       <ButtonEnglishSelectedStateExample />
@@ -114,16 +136,20 @@ function Container1() {
 }
 
 function Container5() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="h-[22.5px] relative shrink-0 w-[115.86px]" data-name="Container">
       <div className="-translate-x-1/2 -translate-y-1/2 absolute flex flex-col font-['Manrope:Bold',sans-serif] font-bold justify-center leading-[0] left-1/2 text-[#7a3100] text-[15px] text-center top-[10.5px] whitespace-nowrap">
-        <p className="leading-[22.5px]">More languages</p>
+        <p className="leading-[22.5px]">{t("moreLanguages")}</p>
       </div>
     </div>
   );
 }
 
 function Container6() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="h-[4.317px] relative shrink-0 w-[7px]" data-name="Container">
       <svg className="absolute block inset-0 size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 7 4.31667">
@@ -136,6 +162,8 @@ function Container6() {
 }
 
 function Button() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="content-stretch flex gap-[8px] items-center px-[4px] relative shrink-0" data-name="Button">
       <Container5 />
@@ -145,6 +173,8 @@ function Button() {
 }
 
 function Container7() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="relative shrink-0" data-name="Container">
       <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex flex-col items-center relative size-full">
@@ -157,6 +187,8 @@ function Container7() {
 }
 
 function Button1() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="bg-[#f5f3f3] h-[56px] relative rounded-[12px] shrink-0 w-full" data-name="Button">
       <div aria-hidden="true" className="absolute border border-[#ddc1b4] border-solid inset-0 pointer-events-none rounded-[12px]" />
@@ -170,6 +202,8 @@ function Button1() {
 }
 
 function Container8() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="relative shrink-0" data-name="Container">
       <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex flex-col items-center relative size-full">
@@ -182,6 +216,8 @@ function Container8() {
 }
 
 function Button2() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="bg-[#f5f3f3] h-[56px] relative rounded-[12px] shrink-0 w-full" data-name="Button">
       <div aria-hidden="true" className="absolute border border-[#ddc1b4] border-solid inset-0 pointer-events-none rounded-[12px]" />
@@ -195,6 +231,8 @@ function Button2() {
 }
 
 function Container9() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="relative shrink-0" data-name="Container">
       <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex flex-col items-center relative size-full">
@@ -207,6 +245,8 @@ function Container9() {
 }
 
 function Button3() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="bg-[#f5f3f3] h-[56px] relative rounded-[12px] shrink-0 w-full" data-name="Button">
       <div aria-hidden="true" className="absolute border border-[#ddc1b4] border-solid inset-0 pointer-events-none rounded-[12px]" />
@@ -220,6 +260,8 @@ function Button3() {
 }
 
 function Container10() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="relative shrink-0" data-name="Container">
       <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex flex-col items-center relative size-full">
@@ -232,6 +274,8 @@ function Container10() {
 }
 
 function Button4() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="bg-[#f5f3f3] h-[56px] relative rounded-[12px] shrink-0 w-full" data-name="Button">
       <div aria-hidden="true" className="absolute border border-[#ddc1b4] border-solid inset-0 pointer-events-none rounded-[12px]" />
@@ -245,6 +289,8 @@ function Button4() {
 }
 
 function Container11() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="relative shrink-0" data-name="Container">
       <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex flex-col items-center relative size-full">
@@ -257,6 +303,8 @@ function Container11() {
 }
 
 function Button5() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="bg-[#f5f3f3] h-[56px] relative rounded-[12px] shrink-0 w-full" data-name="Button">
       <div aria-hidden="true" className="absolute border border-[#ddc1b4] border-solid inset-0 pointer-events-none rounded-[12px]" />
@@ -270,6 +318,8 @@ function Button5() {
 }
 
 function Container12() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="relative shrink-0" data-name="Container">
       <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex flex-col items-center relative size-full">
@@ -282,6 +332,8 @@ function Container12() {
 }
 
 function Button6() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="bg-[#f5f3f3] h-[56px] relative rounded-[12px] shrink-0 w-full" data-name="Button">
       <div aria-hidden="true" className="absolute border border-[#ddc1b4] border-solid inset-0 pointer-events-none rounded-[12px]" />
@@ -295,6 +347,8 @@ function Button6() {
 }
 
 function Container13() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="relative shrink-0" data-name="Container">
       <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex flex-col items-center relative size-full">
@@ -307,6 +361,8 @@ function Container13() {
 }
 
 function Button7() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="bg-[#f5f3f3] h-[56px] relative rounded-[12px] shrink-0 w-full" data-name="Button">
       <div aria-hidden="true" className="absolute border border-[#ddc1b4] border-solid inset-0 pointer-events-none rounded-[12px]" />
@@ -320,6 +376,8 @@ function Button7() {
 }
 
 function Container14() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="relative shrink-0" data-name="Container">
       <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex flex-col items-center relative size-full">
@@ -332,6 +390,8 @@ function Container14() {
 }
 
 function Button8() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="bg-[#f5f3f3] h-[56px] relative rounded-[12px] shrink-0 w-full" data-name="Button">
       <div aria-hidden="true" className="absolute border border-[#ddc1b4] border-solid inset-0 pointer-events-none rounded-[12px]" />
@@ -345,6 +405,8 @@ function Button8() {
 }
 
 function AdditionalLanguageGridListStyle() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="content-stretch flex flex-col gap-[12px] items-start relative shrink-0 w-full" data-name="Additional Language Grid (List style)">
       <Button1 />
@@ -360,6 +422,8 @@ function AdditionalLanguageGridListStyle() {
 }
 
 function ProgressiveDisclosureMoreLanguages() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="content-stretch flex flex-col gap-[16px] items-start relative shrink-0 w-full" data-name="Progressive Disclosure: More Languages">
       <Button />
@@ -369,6 +433,8 @@ function ProgressiveDisclosureMoreLanguages() {
 }
 
 function SectionPrimaryLanguageOptions() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="content-stretch flex flex-col gap-[24px] items-start relative shrink-0 w-full" data-name="Section - Primary Language Options">
       <Container1 />
@@ -378,6 +444,8 @@ function SectionPrimaryLanguageOptions() {
 }
 
 function Main() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="absolute content-stretch flex flex-col gap-[32px] h-[815px] items-start left-0 overflow-auto pb-[128px] pt-px px-[24px] right-0 top-[64px]" data-name="Main">
       <TitleSection />
@@ -387,16 +455,20 @@ function Main() {
 }
 
 function Group() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="absolute contents left-[130.5px] top-[14px]">
       <div className="-translate-x-1/2 -translate-y-1/2 absolute flex flex-col font-['Manrope:Bold',sans-serif] font-bold justify-center leading-[0] left-[171.5px] text-[18px] text-center text-white top-[28px] whitespace-nowrap">
-        <p className="leading-[28px]">Continue</p>
+        <p className="leading-[28px]">{t("continue")}</p>
       </div>
     </div>
   );
 }
 
 function Group1() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="absolute contents left-0 top-0">
       <div className="absolute h-[56px] left-0 rounded-[12px] shadow-[0px_10px_15px_-3px_rgba(122,49,0,0.2),0px_4px_6px_-4px_rgba(122,49,0,0.2)] top-0 w-[343px]" data-name="Button - Primary Action:shadow" />
@@ -406,6 +478,8 @@ function Group1() {
 }
 
 function ButtonPrimaryAction() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="bg-[#7a3100] h-[56px] relative rounded-[12px] shrink-0 w-[343px]" data-name="Button - Primary Action">
       <div className="bg-clip-padding border-0 border-[transparent] border-solid relative size-full">
@@ -416,6 +490,8 @@ function ButtonPrimaryAction() {
 }
 
 function FixedBottomActionArea() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="absolute backdrop-blur-[6px] bg-white bottom-0 content-stretch flex h-[128px] items-start justify-center left-0 pb-[24px] pt-[25px] px-[24px] right-0" data-name="Fixed Bottom Action Area">
       <div aria-hidden="true" className="absolute border-[rgba(221,193,180,0.3)] border-solid border-t inset-0 pointer-events-none" />
@@ -425,10 +501,12 @@ function FixedBottomActionArea() {
 }
 
 function Group2() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="grid-cols-[max-content] grid-rows-[max-content] inline-grid leading-[0] place-items-start relative shrink-0">
       <div className="col-1 flex flex-col font-['Inter:Black',sans-serif] font-black h-[42.452px] justify-center ml-0 mt-0 not-italic relative row-1 text-[29.501px] text-black tracking-[1.3963px] uppercase w-[188px]">
-        <p className="leading-[42.144px]">s teFLOW</p>
+        <p className="leading-[42.144px]">{t("sTeFLOW")}</p>
       </div>
       <div className="col-1 h-[21.546px] ml-[17.46px] mt-[10.41px] relative row-1 w-[16.655px]" data-name="Vector">
         <svg className="absolute block inset-0 size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 16.6555 21.5459">
@@ -440,6 +518,8 @@ function Group2() {
 }
 
 function Container15() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="absolute content-stretch flex flex-col items-start left-[114px] top-[8px] w-[162px]" data-name="Container">
       <Group2 />
@@ -448,6 +528,8 @@ function Container15() {
 }
 
 export default function Component1LanguageSelectionCleaned() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="relative size-full" style={{ backgroundImage: "linear-gradient(90deg, rgb(251, 249, 248) 0%, rgb(251, 249, 248) 100%), linear-gradient(90deg, rgb(255, 255, 255) 0%, rgb(255, 255, 255) 100%)" }} data-name="1. Language Selection (Cleaned)">
       <BackgroundDecorativeElements />

@@ -1,3 +1,5 @@
+import { useLanguage } from "../../i18n/LanguageContext";
+import { useTranslations } from "../../i18n/translations";
 "use client";
 
 import * as React from "react";
@@ -15,18 +17,24 @@ function Dialog({
 function DialogTrigger({
   ...props
 }: React.ComponentProps<typeof DialogPrimitive.Trigger>) {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return <DialogPrimitive.Trigger data-slot="dialog-trigger" {...props} />;
 }
 
 function DialogPortal({
   ...props
 }: React.ComponentProps<typeof DialogPrimitive.Portal>) {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return <DialogPrimitive.Portal data-slot="dialog-portal" {...props} />;
 }
 
 function DialogClose({
   ...props
 }: React.ComponentProps<typeof DialogPrimitive.Close>) {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return <DialogPrimitive.Close data-slot="dialog-close" {...props} />;
 }
 
@@ -34,6 +42,8 @@ function DialogOverlay({
   className,
   ...props
 }: React.ComponentProps<typeof DialogPrimitive.Overlay>) {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <DialogPrimitive.Overlay
       data-slot="dialog-overlay"
@@ -51,6 +61,8 @@ function DialogContent({
   children,
   ...props
 }: React.ComponentProps<typeof DialogPrimitive.Content>) {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <DialogPortal data-slot="dialog-portal">
       <DialogOverlay />
@@ -65,7 +77,7 @@ function DialogContent({
         {children}
         <DialogPrimitive.Close className="ring-offset-background focus:ring-ring data-[state=open]:bg-accent data-[state=open]:text-muted-foreground absolute top-4 right-4 rounded-xs opacity-70 transition-opacity hover:opacity-100 focus:ring-2 focus:ring-offset-2 focus:outline-hidden disabled:pointer-events-none [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4">
           <XIcon />
-          <span className="sr-only">Close</span>
+          <span className="sr-only">{t("close")}</span>
         </DialogPrimitive.Close>
       </DialogPrimitive.Content>
     </DialogPortal>
@@ -73,6 +85,8 @@ function DialogContent({
 }
 
 function DialogHeader({ className, ...props }: React.ComponentProps<"div">) {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div
       data-slot="dialog-header"
@@ -83,6 +97,8 @@ function DialogHeader({ className, ...props }: React.ComponentProps<"div">) {
 }
 
 function DialogFooter({ className, ...props }: React.ComponentProps<"div">) {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div
       data-slot="dialog-footer"
@@ -99,6 +115,8 @@ function DialogTitle({
   className,
   ...props
 }: React.ComponentProps<typeof DialogPrimitive.Title>) {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <DialogPrimitive.Title
       data-slot="dialog-title"
@@ -112,6 +130,8 @@ function DialogDescription({
   className,
   ...props
 }: React.ComponentProps<typeof DialogPrimitive.Description>) {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <DialogPrimitive.Description
       data-slot="dialog-description"

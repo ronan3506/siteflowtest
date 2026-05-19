@@ -1,4 +1,8 @@
+import { useLanguage } from "../../app/i18n/LanguageContext";
+import { useTranslations } from "../../app/i18n/translations";
 function Container1() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="absolute h-[241px] left-px top-0 w-[357px]" data-name="Container">
       <div className="absolute inset-[-2.49%_-1.68%]">
@@ -24,6 +28,8 @@ function Container1() {
 }
 
 function Container3() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return <div className="absolute h-[56px] left-0 top-0 w-[111px]" data-name="Container" />;
 }
 
@@ -32,6 +38,8 @@ function Container4() {
 }
 
 function Container2() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="absolute h-[84.5px] left-[122.5px] top-[20px] w-[111px]" data-name="Container">
       <Container3 />
@@ -41,16 +49,20 @@ function Container2() {
 }
 
 function BackgroundShadow() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="absolute bg-[#e8f5e9] drop-shadow-[0px_1px_1px_rgba(0,0,0,0.05)] h-[24.5px] left-[225.5px] rounded-[6px] top-[80px] w-[84px]" data-name="Background+Shadow">
       <div className="-translate-x-1/2 -translate-y-1/2 absolute flex flex-col font-['Manrope:ExtraBold',sans-serif] font-extrabold justify-center leading-[0] left-[42px] text-[#2e7d32] text-[11px] text-center top-[12.25px] tracking-[0.55px] uppercase whitespace-nowrap">
-        <p className="leading-[16.5px]">ON TRACK</p>
+        <p className="leading-[16.5px]">{t("oNTRACK")}</p>
       </div>
     </div>
   );
 }
 
 function OverlayBorder() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="absolute bg-[rgba(255,255,255,0.5)] border border-[rgba(221,193,180,0.2)] border-solid h-[8px] left-0 overflow-clip rounded-[9999px] top-[16px] w-[316px]" data-name="Overlay+Border">
       <div className="absolute bg-[#7a3100] h-[6px] left-0 rounded-bl-[12px] rounded-tl-[12px] top-0 w-[213.52px]" data-name="Background" />
@@ -59,6 +71,8 @@ function OverlayBorder() {
 }
 
 function Margin() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="absolute h-[24px] left-[20px] top-[104.5px] w-[316px]" data-name="Margin">
       <OverlayBorder />
@@ -67,6 +81,8 @@ function Margin() {
 }
 
 function Container6() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="absolute h-[27px] left-[11px] top-[11px] w-[78px]" data-name="Container">
       <div className="-translate-x-1/2 -translate-y-1/2 absolute flex flex-col font-['Manrope:ExtraBold',sans-serif] font-extrabold justify-center leading-[0] left-[39px] text-[#7a3100] text-[18px] text-center top-[13.5px] whitespace-nowrap">
@@ -77,17 +93,21 @@ function Container6() {
 }
 
 function Container7() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="absolute h-[27px] left-[11px] top-[38px] w-[78px]" data-name="Container">
       <div className="-translate-x-1/2 -translate-y-1/2 absolute flex flex-col font-['Manrope:Bold',sans-serif] font-bold justify-center leading-[0] left-[39px] text-[#564239] text-[9px] text-center top-[13.5px] uppercase whitespace-nowrap">
-        <p className="leading-[13.5px] mb-0">PENDING</p>
-        <p className="leading-[13.5px]">DECISIONS</p>
+        <p className="leading-[13.5px] mb-0">{t("pENDING")}</p>
+        <p className="leading-[13.5px]">{t("dECISIONS")}</p>
       </div>
     </div>
   );
 }
 
 function OverlayBorderShadowOverlayBlur() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="backdrop-blur-[4px] bg-[rgba(255,255,255,0.85)] col-1 h-[76px] justify-self-stretch relative rounded-[12px] row-1 shrink-0" data-name="Overlay+Border+Shadow+OverlayBlur">
       <div aria-hidden="true" className="absolute border border-[rgba(255,255,255,0.8)] border-solid inset-0 pointer-events-none rounded-[12px] shadow-[0px_1px_2px_0px_rgba(0,0,0,0.05)]" />
@@ -98,6 +118,8 @@ function OverlayBorderShadowOverlayBlur() {
 }
 
 function Container8() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="absolute h-[27px] left-[11px] top-[11px] w-[78px]" data-name="Container">
       <div className="-translate-x-1/2 -translate-y-1/2 absolute flex flex-col font-['Manrope:ExtraBold',sans-serif] font-extrabold justify-center leading-[0] left-[39px] text-[#ba1a1a] text-[18px] text-center top-[13.5px] whitespace-nowrap">
@@ -108,16 +130,20 @@ function Container8() {
 }
 
 function Container9() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="absolute h-[14px] left-[11px] top-[38px] w-[78px]" data-name="Container">
       <div className="-translate-x-1/2 -translate-y-1/2 absolute flex flex-col font-['Manrope:Bold',sans-serif] font-bold justify-center leading-[0] left-[39px] text-[#564239] text-[9px] text-center top-[7px] uppercase whitespace-nowrap">
-        <p className="leading-[13.5px]">ACTIVE ISSUES</p>
+        <p className="leading-[13.5px]">{t("aCTIVEISSUES")}</p>
       </div>
     </div>
   );
 }
 
 function OverlayBorderShadowOverlayBlur1() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="backdrop-blur-[4px] bg-[rgba(255,255,255,0.85)] col-2 h-[76.5px] justify-self-stretch relative rounded-[12px] row-1 shrink-0" data-name="Overlay+Border+Shadow+OverlayBlur">
       <div aria-hidden="true" className="absolute border border-[rgba(255,255,255,0.8)] border-solid inset-0 pointer-events-none rounded-[12px] shadow-[0px_1px_2px_0px_rgba(0,0,0,0.05)]" />
@@ -128,6 +154,8 @@ function OverlayBorderShadowOverlayBlur1() {
 }
 
 function Container10() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="absolute h-[27px] left-[11px] top-[11px] w-[78px]" data-name="Container">
       <div className="-translate-x-1/2 -translate-y-1/2 absolute flex flex-col font-['Manrope:ExtraBold',sans-serif] font-extrabold justify-center leading-[0] left-[39px] text-[#1b1c1c] text-[18px] text-center top-[13.5px] whitespace-nowrap">
@@ -138,16 +166,20 @@ function Container10() {
 }
 
 function Container11() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="absolute h-[14px] left-[11px] top-[38px] w-[78px]" data-name="Container">
       <div className="-translate-x-1/2 -translate-y-1/2 absolute flex flex-col font-['Manrope:Bold',sans-serif] font-bold justify-center leading-[0] left-[39px] text-[#564239] text-[9px] text-center top-[7px] uppercase whitespace-nowrap">
-        <p className="leading-[13.5px]">DAYS REMAINING</p>
+        <p className="leading-[13.5px]">{t("dAYSREMAINING")}</p>
       </div>
     </div>
   );
 }
 
 function OverlayBorderShadowOverlayBlur2() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="backdrop-blur-[4px] bg-[rgba(255,255,255,0.85)] col-3 h-[76.5px] justify-self-stretch relative rounded-[12px] row-1 shrink-0" data-name="Overlay+Border+Shadow+OverlayBlur">
       <div aria-hidden="true" className="absolute border border-[rgba(255,255,255,0.8)] border-solid inset-0 pointer-events-none rounded-[12px] shadow-[0px_1px_2px_0px_rgba(0,0,0,0.05)]" />
@@ -158,6 +190,8 @@ function OverlayBorderShadowOverlayBlur2() {
 }
 
 function Container5() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="absolute gap-x-[8px] gap-y-[8px] grid grid-cols-[repeat(3,minmax(0,1fr))] grid-rows-[_76px] left-0 top-[16px] w-[316px]" data-name="Container">
       <OverlayBorderShadowOverlayBlur />
@@ -168,6 +202,8 @@ function Container5() {
 }
 
 function Margin1() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="absolute h-[92px] left-[20px] top-[128.5px] w-[316px]" data-name="Margin">
       <Container5 />
@@ -176,6 +212,8 @@ function Margin1() {
 }
 
 export default function Container() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="relative size-full" data-name="Container">
       <Container1 />
@@ -188,9 +226,9 @@ export default function Container() {
       <Margin1 />
       <div className="-translate-y-1/2 absolute flex flex-col font-['Manrope:ExtraBold',sans-serif] font-extrabold justify-center leading-[0] left-[21px] text-[#7a3100] text-[30px] top-[59px] tracking-[-0.75px] uppercase whitespace-nowrap">
         <p className="leading-[33px]">
-          PROJECT
+          {t("pROJECT")}
           <br aria-hidden="true" />
-          STATUS
+          {t("sTATUS")}
         </p>
       </div>
     </div>

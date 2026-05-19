@@ -1,3 +1,5 @@
+import { useLanguage } from "../i18n/LanguageContext";
+import { useTranslations } from "../i18n/translations";
 import imgConcrete from "../../imports/2Tasks-1/4ea645fc116eac63e2f3c66d66eb76f4d0a012b9.png";
 import imgStructural from "../../imports/2Tasks-1/ca136f8c2e4dfdf09b12dbb1967f19f5ccdc5083.png";
 import imgHvac from "../../imports/2Tasks-1/d57fc7764a294dadd06d3cb669552a9de986742d.png";
@@ -49,6 +51,8 @@ const TASKS: CompletedTask[] = [
 ];
 
 function MenuScreenHeader({ onBack, label }: { onBack: () => void; label: string }) {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div
       className="sticky top-0 left-0 right-0 z-10 flex items-center"
@@ -80,6 +84,8 @@ function TaskCard({
   task: CompletedTask;
   onOpen?: () => void;
 }) {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div
       onClick={task.clickable ? onOpen : undefined}
@@ -187,6 +193,8 @@ export function CompletedTasksPanel({
   onBack: () => void;
   onOpenTask: (id: OpenableTaskId) => void;
 }) {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="flex flex-col min-h-full bg-[#fbf9f8]">
       <MenuScreenHeader onBack={onBack} label="MENU" />
@@ -197,13 +205,13 @@ export function CompletedTasksPanel({
           className="font-['Manrope:Regular',sans-serif] uppercase"
           style={{ fontSize: 10, letterSpacing: "1.1px", color: "#564239", marginBottom: 4 }}
         >
-          TASK LOG
+          {t("tASKLOG")}
         </p>
         <p
           className="font-['Manrope:Bold',sans-serif] font-bold uppercase"
           style={{ fontSize: 22, letterSpacing: "-0.5px", color: "#1a1a1a", lineHeight: "26px", marginBottom: 4 }}
         >
-          COMPLETED TASKS
+          {t("cOMPLETEDTASKS")}
         </p>
         <p
           className="font-['Manrope:Regular',sans-serif]"
@@ -227,7 +235,7 @@ export function CompletedTasksPanel({
             className="font-['Manrope:Medium',sans-serif] font-medium"
             style={{ fontSize: 12, color: "#3d6b52" }}
           >
-            All tasks approved and logged
+            {t("allTasksApprovedAndLogged")}
           </p>
         </div>
 

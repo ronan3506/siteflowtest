@@ -1,3 +1,5 @@
+import { useLanguage } from "../../i18n/LanguageContext";
+import { useTranslations } from "../../i18n/translations";
 "use client";
 
 import * as React from "react";
@@ -13,18 +15,24 @@ function Sheet({ ...props }: React.ComponentProps<typeof SheetPrimitive.Root>) {
 function SheetTrigger({
   ...props
 }: React.ComponentProps<typeof SheetPrimitive.Trigger>) {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return <SheetPrimitive.Trigger data-slot="sheet-trigger" {...props} />;
 }
 
 function SheetClose({
   ...props
 }: React.ComponentProps<typeof SheetPrimitive.Close>) {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return <SheetPrimitive.Close data-slot="sheet-close" {...props} />;
 }
 
 function SheetPortal({
   ...props
 }: React.ComponentProps<typeof SheetPrimitive.Portal>) {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return <SheetPrimitive.Portal data-slot="sheet-portal" {...props} />;
 }
 
@@ -32,6 +40,8 @@ function SheetOverlay({
   className,
   ...props
 }: React.ComponentProps<typeof SheetPrimitive.Overlay>) {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <SheetPrimitive.Overlay
       data-slot="sheet-overlay"
@@ -52,6 +62,8 @@ function SheetContent({
 }: React.ComponentProps<typeof SheetPrimitive.Content> & {
   side?: "top" | "right" | "bottom" | "left";
 }) {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <SheetPortal>
       <SheetOverlay />
@@ -74,7 +86,7 @@ function SheetContent({
         {children}
         <SheetPrimitive.Close className="ring-offset-background focus:ring-ring data-[state=open]:bg-secondary absolute top-4 right-4 rounded-xs opacity-70 transition-opacity hover:opacity-100 focus:ring-2 focus:ring-offset-2 focus:outline-hidden disabled:pointer-events-none">
           <XIcon className="size-4" />
-          <span className="sr-only">Close</span>
+          <span className="sr-only">{t("close")}</span>
         </SheetPrimitive.Close>
       </SheetPrimitive.Content>
     </SheetPortal>
@@ -82,6 +94,8 @@ function SheetContent({
 }
 
 function SheetHeader({ className, ...props }: React.ComponentProps<"div">) {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div
       data-slot="sheet-header"
@@ -92,6 +106,8 @@ function SheetHeader({ className, ...props }: React.ComponentProps<"div">) {
 }
 
 function SheetFooter({ className, ...props }: React.ComponentProps<"div">) {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div
       data-slot="sheet-footer"
@@ -105,6 +121,8 @@ function SheetTitle({
   className,
   ...props
 }: React.ComponentProps<typeof SheetPrimitive.Title>) {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <SheetPrimitive.Title
       data-slot="sheet-title"
@@ -118,6 +136,8 @@ function SheetDescription({
   className,
   ...props
 }: React.ComponentProps<typeof SheetPrimitive.Description>) {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <SheetPrimitive.Description
       data-slot="sheet-description"

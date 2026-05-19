@@ -1,6 +1,6 @@
 import { AnimatePresence, motion } from "motion/react";
 import { useLanguage } from "../i18n/LanguageContext";
-import { ALL_LANGS, LANG_LABELS } from "../i18n/translations";
+import { ALL_LANGS, LANG_LABELS, useTranslations } from "../i18n/translations";
 import type { LangCode } from "../i18n/LanguageContext";
 
 export function LangPickerModal({
@@ -11,6 +11,7 @@ export function LangPickerModal({
   onClose: () => void;
 }) {
   const { lang, setLang } = useLanguage();
+  const t = useTranslations(lang);
 
   return (
     <AnimatePresence>
@@ -37,7 +38,7 @@ export function LangPickerModal({
             {/* Handle */}
             <div className="w-[40px] h-[4px] bg-[#ddc1b4] rounded-full mx-auto mb-[20px]" />
             <p className="font-['Manrope:Bold',sans-serif] font-bold text-[16px] text-[#1b1c1c] px-[24px] mb-[16px]">
-              Select Language
+              {t("selectLanguage")}
             </p>
             <div className="flex flex-col gap-[8px] px-[16px] max-h-[420px] overflow-y-auto">
               {ALL_LANGS.map((code: LangCode) => {

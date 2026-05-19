@@ -1,3 +1,5 @@
+import { useLanguage } from "../i18n/LanguageContext";
+import { useTranslations } from "../i18n/translations";
 export type ZoneId = "structural" | "interior" | "hvac";
 export type SubtaskId = "concrete_slab" | "rebar_placement" | "tile_laying" | "duct_installation";
 
@@ -64,6 +66,8 @@ const ZONES: Record<ZoneId, ZoneData> = {
 };
 
 function PanelHeader({ onBack }: { onBack: () => void }) {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div
       className="sticky top-0 left-0 right-0 z-10 flex items-center"
@@ -81,7 +85,7 @@ function PanelHeader({ onBack }: { onBack: () => void }) {
           className="font-['Manrope:Bold',sans-serif] font-bold uppercase"
           style={{ fontSize: 15, letterSpacing: "0.7px", color: "#7a3100", marginLeft: 14 }}
         >
-          ACTIVE TASKS
+          {t("aCTIVETASKS")}
         </span>
       </button>
     </div>
@@ -89,6 +93,8 @@ function PanelHeader({ onBack }: { onBack: () => void }) {
 }
 
 function StatusIcon({ status }: { status: "completed" | "in_progress" | "pending" }) {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   if (status === "completed") {
     return (
       <div
@@ -136,6 +142,8 @@ function SubtaskRow({
   onOpen: (() => void) | null;
   last: boolean;
 }) {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   const isClickable = subtask.status === "completed" && onOpen !== null;
 
   return (
@@ -200,6 +208,8 @@ export function ActiveTaskSubtasksPanel({
   onBack: () => void;
   onOpenSubtask: (id: SubtaskId) => void;
 }) {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   const zone = ZONES[zoneId];
   const completedCount = zone.subtasks.filter((s) => s.status === "completed").length;
 
@@ -320,7 +330,7 @@ export function ActiveTaskSubtasksPanel({
             className="font-['Manrope:Regular',sans-serif]"
             style={{ fontSize: 11, color: "#b8afa9", lineHeight: "16px" }}
           >
-            Tap a completed subtask to view its full detail log.
+            {t("tapACompletedSubtaskToViewItsFullDetailLog")}
           </p>
         </div>
       </div>

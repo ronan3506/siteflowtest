@@ -1,3 +1,5 @@
+import { useLanguage } from "../../i18n/LanguageContext";
+import { useTranslations } from "../../i18n/translations";
 "use client";
 
 import * as React from "react";
@@ -20,8 +22,9 @@ function ToggleGroup({
   size,
   children,
   ...props
-}: React.ComponentProps<typeof ToggleGroupPrimitive.Root> &
-  VariantProps<typeof toggleVariants>) {
+}: React.ComponentProps<typeof ToggleGroupPrimitive.Root> {t("VariantProps")}<typeof toggleVariants>) {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <ToggleGroupPrimitive.Root
       data-slot="toggle-group"
@@ -46,8 +49,9 @@ function ToggleGroupItem({
   variant,
   size,
   ...props
-}: React.ComponentProps<typeof ToggleGroupPrimitive.Item> &
-  VariantProps<typeof toggleVariants>) {
+}: React.ComponentProps<typeof ToggleGroupPrimitive.Item> {t("VariantProps")}<typeof toggleVariants>) {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   const context = React.useContext(ToggleGroupContext);
 
   return (

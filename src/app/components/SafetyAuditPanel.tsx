@@ -1,9 +1,13 @@
+import { useLanguage } from "../i18n/LanguageContext";
+import { useTranslations } from "../i18n/translations";
 import { useState } from "react";
 import imgSiteA from "../../imports/4ApprovalDetailMobile-1/59a9c517fb11ea105e061b3f8e152833fd21db43.png";
 import imgSiteB from "../../imports/4ApprovalDetailMobile-1/7145531c5ea9f6711eef9f9b12e4fcaf46e570d1.png";
 import imgOfficer from "../../imports/3TaskAssignmentMobile-1/181963f2d49061eccafc8eb373f52a6dd6870927.png";
 
 function PanelHeader({ onBack }: { onBack: () => void }) {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div
       className="sticky top-0 left-0 right-0 z-10 flex items-center"
@@ -21,7 +25,7 @@ function PanelHeader({ onBack }: { onBack: () => void }) {
           className="font-['Manrope:Bold',sans-serif] font-bold uppercase"
           style={{ fontSize: 15, letterSpacing: "0.7px", color: "#7a3100", marginLeft: 14 }}
         >
-          TODAY'S BOARD
+          {t("tODAYSBOARD")}
         </span>
       </button>
     </div>
@@ -57,6 +61,8 @@ function CheckRow({
   onToggle: () => void;
   last: boolean;
 }) {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <button
       onClick={onToggle}
@@ -114,6 +120,8 @@ function CheckRow({
 }
 
 function SectionHeader({ label }: { label: string }) {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <p
       className="font-['Manrope:Regular',sans-serif] uppercase"
@@ -138,6 +146,8 @@ export function SafetyAuditPanel({
   onBack: () => void;
   onSubmit: () => void;
 }) {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   const initialState = CHECKLIST.reduce((acc, item) => ({ ...acc, [item.id]: false }), {} as Record<string, boolean>);
   const [checked, setChecked] = useState<Record<string, boolean>>(initialState);
 
@@ -157,13 +167,13 @@ export function SafetyAuditPanel({
           className="font-['Manrope:Regular',sans-serif] uppercase"
           style={{ fontSize: 10, letterSpacing: "1.1px", color: "#564239", marginBottom: 4 }}
         >
-          TODAY'S BOARD
+          {t("tODAYSBOARD")}
         </p>
         <p
           className="font-['Manrope:Bold',sans-serif] font-bold uppercase"
           style={{ fontSize: 22, letterSpacing: "-0.5px", color: "#1a1a1a", lineHeight: "26px", marginBottom: 4 }}
         >
-          SAFETY AUDIT
+          {t("sAFETYAUDIT")}
         </p>
 
         {/* Meta row */}
@@ -182,14 +192,14 @@ export function SafetyAuditPanel({
               className="font-['Manrope:Bold',sans-serif] font-bold uppercase"
               style={{ fontSize: 10, letterSpacing: "0.5px", color: "#c62828" }}
             >
-              PRIORITY 01
+              {t("pRIORITY1")}
             </span>
           </div>
           <span
             className="font-['Manrope:Regular',sans-serif]"
             style={{ fontSize: 12, color: "#6b5e55" }}
           >
-            East Terrace · Due Today
+            {t("eastTerraceDueToday")}
           </span>
         </div>
 
@@ -203,7 +213,7 @@ export function SafetyAuditPanel({
               className="font-['Manrope:Regular',sans-serif] uppercase"
               style={{ fontSize: 9, letterSpacing: "0.8px", color: "#6b5e55" }}
             >
-              CHECKLIST PROGRESS
+              {t("cHECKLISTPROGRESS")}
             </p>
             <p
               className="font-['Manrope:Bold',sans-serif] font-bold"
@@ -255,7 +265,7 @@ export function SafetyAuditPanel({
             className="font-['Manrope:Regular',sans-serif] uppercase"
             style={{ fontSize: 9, letterSpacing: "0.8px", color: "#6b5e55", marginBottom: 10 }}
           >
-            ASSIGNED SAFETY OFFICER
+            {t("aSSIGNEDSAFETYOFFICER")}
           </p>
           <div className="flex items-center gap-[12px]">
             <div
@@ -282,13 +292,13 @@ export function SafetyAuditPanel({
                 className="font-['Manrope:Medium',sans-serif] font-medium"
                 style={{ fontSize: 14, color: "#1a1a1a", marginBottom: 2 }}
               >
-                Raju M.
+                {t("rajuM")}
               </p>
               <p
                 className="font-['Manrope:Regular',sans-serif] uppercase"
                 style={{ fontSize: 9, letterSpacing: "0.6px", color: "#7a3100" }}
               >
-                SITE SAFETY SUPERVISOR
+                {t("sITESAFETYSUPERVISOR")}
               </p>
             </div>
             <div style={{ marginLeft: "auto" }}>
@@ -311,7 +321,7 @@ export function SafetyAuditPanel({
             className="font-['Manrope:Regular',sans-serif] uppercase"
             style={{ fontSize: 9, letterSpacing: "0.8px", color: "#6b5e55", marginBottom: 12 }}
           >
-            SITE PHOTOS
+            {t("sITEPHOTOS")}
           </p>
           <div className="flex gap-[10px]">
             <div style={{ flex: 1, height: 80, borderRadius: 10, overflow: "hidden" }}>
@@ -340,7 +350,7 @@ export function SafetyAuditPanel({
             className="font-['Manrope:Regular',sans-serif]"
             style={{ fontSize: 11, color: "#b8afa9", marginTop: 8 }}
           >
-            Tap + to attach additional site photos
+            {t("tapToAttachAdditionalSitePhotos")}
           </p>
         </div>
       </div>
@@ -379,7 +389,7 @@ export function SafetyAuditPanel({
             className="font-['Manrope:Bold',sans-serif] font-bold uppercase"
             style={{ fontSize: 13, letterSpacing: "0.6px", color: "white" }}
           >
-            SUBMIT AUDIT
+            {t("sUBMITAUDIT")}
           </span>
         </button>
       </div>

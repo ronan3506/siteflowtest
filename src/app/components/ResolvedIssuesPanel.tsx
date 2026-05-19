@@ -1,3 +1,5 @@
+import { useLanguage } from "../i18n/LanguageContext";
+import { useTranslations } from "../i18n/translations";
 import { useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
@@ -185,6 +187,8 @@ const STATUS_CHIP: Record<IssueStatus, { bg: string; text: string; dot: string }
 // ─── Shared atoms ─────────────────────────────────────────────────────────────
 
 function MenuScreenHeader({ onBack, label }: { onBack: () => void; label: string }) {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div
       className="sticky top-0 left-0 right-0 z-10 flex items-center"
@@ -210,6 +214,8 @@ function MenuScreenHeader({ onBack, label }: { onBack: () => void; label: string
 }
 
 function StatusChip({ status }: { status: IssueStatus }) {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   const c = STATUS_CHIP[status];
   return (
     <span
@@ -243,6 +249,8 @@ function StatusChip({ status }: { status: IssueStatus }) {
 }
 
 function ViewBtn({ onClick }: { onClick: () => void }) {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <button
       onClick={onClick}
@@ -258,12 +266,14 @@ function ViewBtn({ onClick }: { onClick: () => void }) {
         flexShrink: 0,
       }}
     >
-      VIEW
+      {t("vIEW")}
     </button>
   );
 }
 
 function HeroImage({ src }: { src: string }) {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div
       style={{
@@ -290,6 +300,8 @@ function pad(n: number) {
 }
 
 function StatBoxLight({ line1, line2, value }: { line1: string; line2: string; value: number }) {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div
       style={{
@@ -321,6 +333,8 @@ function StatBoxLight({ line1, line2, value }: { line1: string; line2: string; v
 }
 
 function StatBoxDark({ line1, line2, value }: { line1: string; line2: string; value: number }) {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div
       style={{
@@ -353,6 +367,8 @@ function StatBoxDark({ line1, line2, value }: { line1: string; line2: string; va
 // ─── Issue card ───────────────────────────────────────────────────────────────
 
 function IssueCard({ item, onView }: { item: ResolvedIssue; onView: () => void }) {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div
       style={{
@@ -441,6 +457,8 @@ function ResolvedIssuesListScreen({
   onBack: () => void;
   onViewIssue: (id: string) => void;
 }) {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="absolute inset-0 flex flex-col" style={{ backgroundColor: "#faf8f6" }}>
       <MenuScreenHeader onBack={onBack} label="Back" />
@@ -452,13 +470,13 @@ function ResolvedIssuesListScreen({
             className="font-['Manrope:Bold',sans-serif] font-bold uppercase"
             style={{ fontSize: 22, letterSpacing: "-0.4px", color: "#1a1a1a", lineHeight: "28px" }}
           >
-            Resolved Issues
+            {t("resolvedIssues")}
           </p>
           <p
             className="font-['Manrope:Regular',sans-serif]"
             style={{ fontSize: 12, color: "#8a7267", marginTop: 4 }}
           >
-            Documented fixes and completed issue resolutions
+            {t("documentedFixesAndCompletedIssueResolutions")}
           </p>
         </div>
 
@@ -486,6 +504,8 @@ function ResolvedIssuesListScreen({
 // ─── Detail screen ────────────────────────────────────────────────────────────
 
 function DetailBlock({ label, value }: { label: string; value: string }) {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div
       style={{
@@ -519,6 +539,8 @@ function ResolvedIssueDetailScreen({
   issueId: string;
   onBack: () => void;
 }) {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   const item = ISSUES.find((i) => i.id === issueId)!;
   const chipColors = STATUS_CHIP[item.status];
 
@@ -630,7 +652,7 @@ function ResolvedIssueDetailScreen({
                 className="font-['Manrope:Regular',sans-serif] uppercase"
                 style={{ fontSize: 9, letterSpacing: "0.7px", color: "#8a7267", marginBottom: 4 }}
               >
-                DATE CLOSED
+                {t("dATECLOSED")}
               </p>
               <p
                 className="font-['Manrope:SemiBold',sans-serif] font-semibold"
@@ -655,7 +677,7 @@ function ResolvedIssueDetailScreen({
               className="font-['Manrope:Regular',sans-serif] uppercase"
               style={{ fontSize: 9, letterSpacing: "0.8px", color: chipColors.text, marginBottom: 8 }}
             >
-              FINAL OUTCOME
+              {t("fINALOUTCOME")}
             </p>
             <p
               className="font-['Manrope:Regular',sans-serif]"
@@ -683,7 +705,7 @@ function ResolvedIssueDetailScreen({
               border: "1.5px solid #c5bfba",
             }}
           >
-            Back to Resolved Issues
+            {t("backToResolvedIssues")}
           </button>
         </div>
       </div>
@@ -698,6 +720,8 @@ type SubScreen = { view: "list" } | { view: "detail"; id: string };
 const EASE = [0.22, 1, 0.36, 1] as const;
 
 export function ResolvedIssuesPanel({ onBack }: { onBack: () => void }) {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   const [sub, setSub] = useState<SubScreen>({ view: "list" });
 
   return (
