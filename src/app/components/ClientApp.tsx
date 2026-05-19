@@ -11,7 +11,7 @@ import TimelineDecisionDetail from "./TimelineDecisionDetail";
 import TimelineSiteUpdateDetail from "./TimelineSiteUpdateDetail";
 import { useLanguage } from "../i18n/LanguageContext";
 import { useTranslations } from "../i18n/translations";
-import { LangPickerModal } from "./screens/LangPickerModal";
+import { LangPickerModal } from "./LangPickerModal";
 
 // Client Figma screen imports
 import Component2Descisons from "../../imports/2Descisons/2Descisons";

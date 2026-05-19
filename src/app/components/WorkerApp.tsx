@@ -4,7 +4,7 @@ import headerSvgPaths from "../../imports/1TodayBoardHomeScreen-1/svg-dgyex2e769
 import { Screen5 } from "./screens/Screen5";
 import { useLanguage } from "../i18n/LanguageContext";
 import { useTranslations } from "../i18n/translations";
-import { LangPickerModal } from "./screens/LangPickerModal";
+import { LangPickerModal } from "./LangPickerModal";
 
 // ─── Images (relative imports matching the Figma source directories) ──────────
 import imgImage2 from "../../imports/1TaskListHomeFinalColor/f068387a9ecb0831125f5b8205e70bd6b4c10d22.png";

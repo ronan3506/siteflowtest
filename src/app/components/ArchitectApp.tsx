@@ -27,7 +27,7 @@ import TimelineDecisionDetail from "./TimelineDecisionDetail";
 import TimelineSiteUpdateDetail from "./TimelineSiteUpdateDetail";
 import { useLanguage } from "../i18n/LanguageContext";
 import { useTranslations } from "../i18n/translations";
-import { LangPickerModal } from "./screens/LangPickerModal";
+import { LangPickerModal } from "./LangPickerModal";
 
 // ─── Types ────────────────────────────────────────────────────────────────────
 

@@ -17,7 +17,7 @@ import TimelineDecisionDetail from "./TimelineDecisionDetail";
 import TimelineSiteUpdateDetail from "./TimelineSiteUpdateDetail";
 import { useLanguage } from "../i18n/LanguageContext";
 import { useTranslations } from "../i18n/translations";
-import { LangPickerModal } from "./screens/LangPickerModal";
+import { LangPickerModal } from "./LangPickerModal";
 import rejectionSvgPaths from "../../imports/5RejectionFlowMobile-1/svg-3gz9lwa83t";
 import headerSvgPaths from "../../imports/1TodayBoardHomeScreen-1/svg-dgyex2e769";
 import { HamburgerDrawer, type MenuAction } from "./HamburgerDrawer";
