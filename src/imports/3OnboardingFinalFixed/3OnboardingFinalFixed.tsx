@@ -41,10 +41,12 @@ function Container2() {
 }
 
 function Container3() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="absolute h-[26px] left-[45px] top-0 w-[111.91px]" data-name="Container">
       <div className="-translate-x-1/2 -translate-y-1/2 absolute flex flex-col font-['Manrope:Medium',sans-serif] font-medium justify-center leading-[0] left-[55.96px] text-[#1b1c1c] text-[17px] text-center top-[13px] whitespace-nowrap">
-        <p className="leading-[25.5px]">Fix issues fast</p>
+        <p className="leading-[25.5px]">{t("fixIssuesFast")}</p>
       </div>
     </div>
   );
@@ -80,10 +82,12 @@ function Container4() {
 }
 
 function Container5() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="absolute h-[26px] left-[152px] top-[-3px] w-[138.34px]" data-name="Container">
       <div className="-translate-x-1/2 -translate-y-1/2 absolute flex flex-col font-['Manrope:Medium',sans-serif] font-medium justify-center leading-[0] left-[69.17px] text-[#1b1c1c] text-[17px] text-center top-[13px] whitespace-nowrap">
-        <p className="leading-[25.5px]">Approve changes</p>
+        <p className="leading-[25.5px]">{t("approveChanges")}</p>
       </div>
     </div>
   );
@@ -100,10 +104,12 @@ function Container() {
 }
 
 function Group() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="absolute contents left-[150px] top-[14px]">
       <div className="-translate-x-1/2 -translate-y-1/2 absolute flex flex-col font-['Manrope:Bold',sans-serif] font-bold justify-center leading-[0] left-[171px] text-[18px] text-center text-white top-[28px] whitespace-nowrap">
-        <p className="leading-[28px]">Next</p>
+        <p className="leading-[28px]">{t("next")}</p>
       </div>
     </div>
   );
@@ -178,13 +184,15 @@ function HeaderTopAppBar() {
 }
 
 export default function Component3OnboardingFinalFixed() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="relative size-full" style={{ backgroundImage: "linear-gradient(90deg, rgb(251, 249, 248) 0%, rgb(251, 249, 248) 100%), linear-gradient(90deg, rgb(255, 255, 255) 0%, rgb(255, 255, 255) 100%)" }} data-name="3. Onboarding - Final (Fixed)">
       <MainContent />
       <PaginationDots />
       <Container />
       <div className="-translate-x-1/2 -translate-y-1/2 absolute flex flex-col font-['Manrope:ExtraBold',sans-serif] font-extrabold justify-center leading-[0] left-[202.5px] text-[#9f4301] text-[32px] text-center top-[564px] whitespace-nowrap">
-        <p className="leading-[35.2px]">Submit Approvals</p>
+        <p className="leading-[35.2px]">{t("submitApprovals")}</p>
       </div>
       <ButtonPrimaryAction />
       <HeaderTopAppBar />

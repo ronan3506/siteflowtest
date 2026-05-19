@@ -37,10 +37,12 @@ function Container1() {
 }
 
 function Container2() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="absolute h-[27px] left-[39.33px] top-0 w-[124.55px]" data-name="Container">
       <div className="-translate-y-1/2 absolute flex flex-col font-['Manrope:Medium',sans-serif] font-medium justify-center leading-[0] left-0 text-[#1b1c1c] text-[18px] top-[13.5px] whitespace-nowrap">
-        <p className="leading-[27px]">Track progress</p>
+        <p className="leading-[27px]">{t("trackProgress")}</p>
       </div>
     </div>
   );
@@ -68,10 +70,12 @@ function Container3() {
 }
 
 function Container4() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="absolute h-[27px] left-[39.33px] top-0 w-[106px]" data-name="Container">
       <div className="-translate-y-1/2 absolute flex flex-col font-['Manrope:Medium',sans-serif] font-medium justify-center leading-[0] left-0 text-[#1b1c1c] text-[18px] top-[13.5px] whitespace-nowrap">
-        <p className="leading-[27px]">See updates</p>
+        <p className="leading-[27px]">{t("seeUpdates")}</p>
       </div>
     </div>
   );
@@ -96,10 +100,12 @@ function Container() {
 }
 
 function Group() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="absolute contents left-[150px] top-[14px]">
       <div className="-translate-x-1/2 -translate-y-1/2 absolute flex flex-col font-['Manrope:Bold',sans-serif] font-bold justify-center leading-[0] left-[171px] text-[18px] text-center text-white top-[28px] whitespace-nowrap">
-        <p className="leading-[28px]">Next</p>
+        <p className="leading-[28px]">{t("next")}</p>
       </div>
     </div>
   );
@@ -279,13 +285,15 @@ function ConstructionWorkerDiggingWithShovelVectorized() {
 }
 
 export default function Component2OnboardingFinalFixed() {
+  const { lang } = useLanguage();
+  const t = useTranslations(lang);
   return (
     <div className="relative size-full" style={{ backgroundImage: "linear-gradient(90deg, rgb(251, 249, 248) 0%, rgb(251, 249, 248) 100%), linear-gradient(90deg, rgb(255, 255, 255) 0%, rgb(255, 255, 255) 100%)" }} data-name="2. Onboarding - Final (Fixed)">
       <MainContent />
       <PaginationDots />
       <Container />
       <div className="-translate-x-1/2 -translate-y-1/2 absolute flex flex-col font-['Manrope:ExtraBold',sans-serif] font-extrabold justify-center leading-[0] left-[195.5px] text-[#9f4301] text-[32px] text-center top-[568px] whitespace-nowrap">
-        <p className="leading-[35.2px]">Assign Work</p>
+        <p className="leading-[35.2px]">{t("assignWork")}</p>
       </div>
       <ButtonPrimaryAction />
       <HeaderTopAppBar />
