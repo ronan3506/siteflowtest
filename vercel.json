@@ -1,0 +1,6 @@
+{
+  "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }],
+  "buildCommand": "npx pnpm install --no-frozen-lockfile && npx pnpm build",
+  "outputDirectory": "dist",
+  "installCommand": "npm install -g pnpm && pnpm install --no-frozen-lockfile"
+}
