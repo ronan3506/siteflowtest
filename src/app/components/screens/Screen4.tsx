@@ -20,7 +20,6 @@ function ChecklistRow({ text }: { text: string }) {
 }
 
 export function Screen4({ onNext }: { onNext: () => void }) {
-export function Screen4({ onNext }: { onNext: () => void }) {
   const { lang, setLangModalOpen } = useLanguage();
   const t = useTranslations(lang);
   return (
